@@ -1,13 +1,45 @@
-<TabView androidTabsPosition="bottom">
-    <TabViewItem title="Home" >
-        <Frame defaultPage="home/home-items-page" />
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <TabView androidTabsPosition="bottom" selectedIndex="{{ selectedTabIndex }}">
+
+    <TabViewItem title="Home">
+      <StackLayout>
+        <Frame defaultPage="home/home" />
+        <Label class="fas" text="&#xf002;"></Label>
+        <Label class="ibm7 h2" text="Home"></Label>
+      </StackLayout>
     </TabViewItem>
 
-    <TabViewItem title="Browse" >
-        <Frame defaultPage="browse/browse-page" />
+    <TabViewItem title="Browse">
+      <StackLayout>
+        <Frame defaultPage="browse/browse" />
+        <Label class="fas" text="&#xffae;"></Label>
+        <Label class="ibm7 h2" text="Browse"></Label>
+      </StackLayout>
     </TabViewItem>
 
-    <TabViewItem title="Search" >
-        <Frame defaultPage="search/search-page" />
+    <TabViewItem title="Search">
+      <StackLayout>
+        <Frame defaultPage="search/search" />
+        <Label class="fab" text="&#xf3eb;"></Label>
+        <Label class="ibm7 h2" text="Search"></Label>
+      </StackLayout>
     </TabViewItem>
-</TabView>
+
+    <TabViewItem title="Question">
+      <StackLayout>
+        <Frame defaultPage="question/question" />
+        <Label class="fab" text="&#xf3eb;"></Label>
+        <Label class="ibm7 h2" text="Question"></Label>
+      </StackLayout>
+    </TabViewItem>
+
+    <TabViewItem title="User">
+      <StackLayout>
+        <Frame defaultPage="user/login" />
+        <Label class="fab" text="&#xf508;"></Label>
+        <Label class="ibm7 h2" text="User"></Label>
+      </StackLayout>
+    </TabViewItem>
+
+  </TabView>
+</Page>

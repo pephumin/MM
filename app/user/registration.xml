@@ -1,0 +1,46 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd" class="page">
+
+  <ActionBar>
+    <Label class="ibm7 h2" text="New Member" />
+  </ActionBar>
+
+  <ScrollView>
+    <StackLayout class="container">
+
+      <!-- Title -->
+      <Label text="User Registratiom" class="title" />
+้
+      <StackLayout width="80%" marginTop="0" marginBottom="0">
+        <GridLayout columns="auto, *, auto" class="input-container">
+          <Label col="0" class="inputicon fas" text="&#xf0e0;"></Label>
+          <TextField col="1" hint="Your Email" text="{{ email }}" keyboardType="email" autocapitalizationType="none" />
+          <Label col="2" class="inputicon fas" text="&#xf00c;" color="green" visibility="{{ label1Visibility }}"></Label>
+        </GridLayout>
+
+        <GridLayout columns="auto, *, auto" class="input-container">
+          <Label col="0" class="inputicon fas" text="&#xf084;"></Label>
+          <TextField col="1" hint="Your Password" secure="true" text="{{ password }}" autocapitalizationType="none" />
+          <Label col="2" class="inputicon fas" text="&#xf00c;" color="green" visibility="{{ label2Visibility }}"></Label>
+        </GridLayout>
+
+        <GridLayout columns="auto, *, auto" class="input-container">
+          <Label col="0" class="inputicon fas" text="&#xf084;"></Label>
+          <TextField col="1" hint="Confirm Password Again" secure="true" text="{{ repassword }}" autocapitalizationType="none" />
+          <Label col="2" class="inputicon fas" text="&#xf00c;" color="green" visibility="{{ label3Visibility }}"></Label>
+        </GridLayout>
+
+        <!-- Feedback -->
+        <Label text="{{ feedbackMessage }}" class="feedback" textWrap="true" />
+
+        <!-- Submit Button -->
+        <Button text="Submit" tap="{{ register }}" class="btn btn-primary" />
+
+        <!-- Back to Login -->
+        <StackLayout orientation="horizontal" horizontalAlignment="center" marginTop="10">
+          <Button text="Back to Login" tap="{{ goToLogin }}" class="btn btn-link" />
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+
+</Page>

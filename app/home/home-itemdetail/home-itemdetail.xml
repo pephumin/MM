@@ -1,0 +1,43 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+
+  <ActionBar>
+    <Label class="ibm7 h2" text="{{ title }}" />
+  </ActionBar>
+
+  <ScrollView>
+    <StackLayout class="container">
+      <Image src="res://questionnaire" margin="10" />
+      <Label class="ibm7 h3" text="Description: " marginLeft="15"></Label>
+      <TextView>
+        <FormattedString>
+          <Span class="ibm5" text="{{ description === null ? '' : description }}" />
+        </FormattedString>
+      </TextView>
+      <!-- <Label class="ibm7 h3" text="Status: " marginLeft="15"></Label>
+      <TextView>
+        <FormattedString>
+          <Span class="ibm5" text="{{ status }}" />
+        </FormattedString>
+      </TextView> -->
+      <GridLayout rows="auto, auto" columns="*, *" marginTop="10">
+        <Label class="ibm7 h3" text="Created: " row="0" col="0" marginLeft="15"></Label>
+        <Label class="ibm7 h3" text="Updated: " row="0" col="1" marginLeft="15"></Label>
+        <StackLayout row="1" col="0">
+          <TextView>
+            <FormattedString>
+              <Span class="ibm5" text="{{ created }}" />
+            </FormattedString>
+          </TextView>
+        </StackLayout>
+        <StackLayout row="1" col="1">
+          <TextView>
+            <FormattedString>
+              <Span class="ibm5" text="{{ updated }}" />
+            </FormattedString>
+          </TextView>
+        </StackLayout>
+      </GridLayout>
+    </StackLayout>
+  </ScrollView>
+
+</Page>

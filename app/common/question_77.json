@@ -1,0 +1,6171 @@
+[
+    {
+        "type": "html",
+        "name": "Introduction",
+        "html": "ยินดีต้อนรับเข้าสู่งานวิจัยทดสอบผลิตภัณฑ์\n\nคุณคือผู้ที่ผ่านการคัดเลือกและได้รับสิทธิ์ในการเข้าร่วมแสดงความคิดเห็นกับงานวิจัยชิ้นนี้ ซึ่งเป็นงานวิจัยตลาดในเรื่องผลิตภัณฑ์บอร์ดไฟเบอร์ซีเมนใหม่ โดยจะใช้เวลารวมทั้งสิ้นโดยเฉลี่ยประมาณ 120 นาที\n\nเพื่อให้เป็นไปตามหลักการปฏิบัติสากลของการวิจัยตลาด เราไม่อ่านผลวิจัยเป็นรายบุคคล ความคิดเห้นของคุณจะถูกนำไปรวมกับของผู้อื่น ก่อนจะถูกประมวลผล และจะถูกนำไปวิเคราะห์ผลที่ภาพรวม  นอกจากนั้นเรายังมีนโยบายความเป็นส่วนตัว ที่ช่วยปกปิดข้อมูลทั้งหมดเป็นความลับ และจะถูกนำไปใช้สำหรับงานวิจัยเท่านั้น\n\nหากคุณยินดีที่จะเข้าร่วมแสดงความคิดเห็น คุณสามารถเริ่มต้นด้วยการใส่ PIN CODE ลงในช่องด้านล่างเพื่อยืนยันตัวตนและเพื่อเข้าสู่แบบสอบถามหลัก\n\nหมายเหตุ: การให้ช้อมูลที่เป็นเท็จ อาจจะนำมาซึ่งผลในด้านลบ อีกทั้งยังอาจจะมีผลทางด้านกฎหมายตามพระราชบัญญัติว่าด้วยการกระทำความผิดเกี่ยวกับคอมพิวเตอร์",
+        "id": 0
+    },
+    {
+        "type": "text",
+        "name": "PIN",
+        "title": "ใส่ PIN CODE เพื่อทำรายการต่อ (ขอรหัสได้จากพนักงานสัมภาษณ์หรือผู้ดูแลงานภาคสนามในพื้นที่)",
+        "accept": "Open-ended",
+        "id": 1
+    },
+    {
+        "type": "html",
+        "name": "Prelude1",
+        "html": "สำหรับพนักงานสัมภาษณ์\n\nทุกคำถามในส่วนนี้ จะถูกบันทึกโดยพนักงานสัมภาษณ์เท่านั้น โดยที่คำตอบส่วนใหญ่จะมีอยู่แล้วในแบบสอบถามคัดเลือก ซึ่งคำตอบจะต้องคัดลอกมาให้เหมือนกัน เพราะจะถูกใช้สำหรับการ QC/Edit\n\nตรวจสอบให้แน่ใจว่าได้ทำการบันทึกครบถ้วนทุกข้อ จากนั้นให้ดำเนินการต่อ เพื่อจะเข้าสู่แบบสอบถามหลัก โดยที่ผู้ให้สัมภาษณ์สามารถเลือกได้ว่า จะเป็นผู้ที่ทำแบบสอบถามเอง หรือจะให้พนักงานทำการสัมภาษณ์พร้อมบันทึกข้อมูลให้",
+        "id": 2
+    },
+    {
+        "type": "text",
+        "name": "Interviewer",
+        "title": "ชื่อและนามสกุล ของพนักงานสัมภาษณ์ (กรุณาตรวจสอบให้แน่ใจว่าสะกดชื่อและนามสกุลถูกต้องและเหมือนกันทุกครั้ง)",
+        "accept": "Open-ended",
+        "id": 3
+    },
+    {
+        "type": "multipletext",
+        "name": "RespondentInformation",
+        "title": "ข้อมูลของผู้ให้สัมภาษณ์ กรุณากรอกให้ครบทุกช่อง",
+        "items": [
+            {
+                "name": "First name",
+                "title": "ชื่อ"
+            },
+            {
+                "name": "Surname",
+                "title": "นามสกุล"
+            },
+            {
+                "name": "Address1",
+                "title": "บ้านเลขที่ / ซอย"
+            },
+            {
+                "name": "Address2",
+                "title": "แขวง / ตำบล"
+            },
+            {
+                "name": "Address3",
+                "title": "เขต / อำเภอ"
+            },
+            {
+                "name": "Province",
+                "title": "จังหวัด"
+            },
+            {
+                "name": "Mobile",
+                "title": "โทรศัพท์มือถือ"
+            },
+            {
+                "name": "Email",
+                "title": "อีเมล์"
+            }
+        ],
+        "colCount": 2,
+        "accept": "Open-ended",
+        "id": 4
+    },
+    {
+        "type": "matrixdropdown",
+        "columns": [
+            {
+                "name": "Gender",
+                "title": "เพศ",
+                "choices": [
+                    {
+                        "value": "Male",
+                        "text": "ผู้ชาย"
+                    },
+                    {
+                        "value": "Female",
+                        "text": "ผู้หญิง"
+                    }
+                ],
+                "isRequired": true
+            },
+            {
+                "name": "Age",
+                "title": "อายุ",
+                "choices": [
+                    {
+                        "value": "25-35 years old",
+                        "text": "25-35 ปี"
+                    },
+                    {
+                        "value": "36-45 years old",
+                        "text": "36-45 ปี"
+                    },
+                    {
+                        "value": "46-55 years old",
+                        "text": "46-55 ปี"
+                    },
+                    {
+                        "value": "55+ years old",
+                        "text": "55 ปีหรือมากกว่า"
+                    }
+                ],
+                "isRequired": true
+            },
+            {
+                "name": "SES",
+                "title": "สถานะภาพทางสังคม",
+                "choices": [
+                    {
+                        "value": "SES-A",
+                        "text": "SES-A (85,000 บาทหรือสูงกว่า)"
+                    },
+                    {
+                        "value": "SES-B",
+                        "text": "SES-B (50,000-84,999 บาท)"
+                    },
+                    {
+                        "value": "SES-C",
+                        "text": "SES-C (18,000-49,999 บาท)"
+                    },
+                    {
+                        "value": "SES-D",
+                        "text": "SES-D (7,500-17,999 บาท)"
+                    }
+                ],
+                "isRequired": true
+            }
+        ],
+        "name": "Demographic",
+        "title": "ข้อมูลประชากรศาสตร์ของผู้ให้สัมภาษณ์ (ลอกคำตอบจากแบบสอบถามส่วนคัดเลือก)",
+        "accept": "Single answer",
+        "id": 5
+    },
+    {
+        "type": "html",
+        "name": "Prelude2",
+        "html": "สำหรับพนักงานสัมภาษณ์\n\nทุกคำถามในส่วนนี้ จะถูกบันทึกโดยพนักงานสัมภาษณ์เท่านั้น โดยที่คำตอบส่วนใหญ่จะมีอยู่แล้วในแบบสอบถามคัดเลือก ซึ่งคำตอบจะต้องคัดลอกมาให้เหมือนกัน เพราะจะถูกใช้สำหรับการ QC/Edit\n\nตรวจสอบให้แน่ใจว่าได้ทำการบันทึกครบถ้วนทุกข้อ จากนั้นให้ดำเนินการต่อ เพื่อจะเข้าสู่แบบสอบถามหลัก โดยที่ผู้ให้สัมภาษณ์สามารถเลือกได้ว่า จะเป็นผู้ที่ทำแบบสอบถามเอง หรือจะให้พนักงานทำการสัมภาษณ์พร้อมบันทึกข้อมูลให้",
+        "id": 6
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Quota1",
+                "text": "โควต้า 1: XSC > XSH > XM >> YSH"
+            },
+            {
+                "value": "Quota2",
+                "text": "โควต้า 2: XSH > XM > XSC >> YSH "
+            },
+            {
+                "value": "Quota3",
+                "text": "โควต้า 3: XM > XSC > XSH >> YSH"
+            },
+            {
+                "value": "Quota4",
+                "text": "โควต้า 4: XSC > XM> XSH >> YSH"
+            }
+        ],
+        "name": "QuotaRotation",
+        "title": "โควต้า หมุนเวียน",
+        "accept": "Single answer",
+        "id": 7
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Board A",
+                "text": "แผงบอร์ด แถว ก.ไก่"
+            },
+            {
+                "value": "Board B",
+                "text": "แผงบอร์ด แถว ง.งู"
+            },
+            {
+                "value": "Board C",
+                "text": "แผงบอร์ด แถว ช.ช้าง"
+            }
+        ],
+        "name": "QuotaBoard",
+        "title": "แถวของแผงบอร์ดที่คุณต้องทาคือ",
+        "accept": "Single answer",
+        "id": 8
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "25 Oct 2021",
+                "text": "จันทร์ 25 ตุลาคม 2021"
+            },
+            {
+                "value": "26 Oct 2021",
+                "text": "อังคาร 26 ตุลาคม 2021"
+            },
+            {
+                "value": "27 Oct 2021",
+                "text": "พุธ 27 ตุลาคม 2021"
+            },
+            {
+                "value": "28 Oct 2021",
+                "text": "พฤหัส 28 ตุลาคม 202ๅ"
+            },
+            {
+                "value": "29 Oct 2021",
+                "text": "ศุกร์ 29 ตุลาคม 2021"
+            }
+        ],
+        "name": "QuotaDate",
+        "title": "วันที่มาทาสี",
+        "accept": "Single answer",
+        "id": 9
+    },
+    {
+        "type": "html",
+        "name": "IntroMain",
+        "html": "แบบสอบถามหลัก",
+        "id": 10
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "FibreCemenr",
+                "text": "ไฟเบอร์ซีเมนต์"
+            },
+            {
+                "value": "CementBoard",
+                "text": "ซีเมนต์บอร์ด"
+            },
+            {
+                "value": "SmoothBoard",
+                "text": "แผ่นเรียบ"
+            },
+            {
+                "value": "SmartBoard",
+                "text": "สมาร์ทบอร์ด"
+            },
+            {
+                "value": "WoodReplacemenr",
+                "text": "วัสดุทดแทนไม้"
+            }
+        ],
+        "name": "FCname",
+        "title": "โดยปกติ คุณเรียกแผ่นบอร์ดที่เรากำลังจะให้คุณทาสี ว่าอะไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 11
+    },
+    {
+        "type": "checkbox",
+        "name": "FCType",
+        "title": "คุณมักทาสี [ไฟเบอร์ซีเมนต์/ซีเมนต์บอร์ด/แผ่นเรียบ/สมาร์ทบอร์ด/วัสดุทดแทนไม้] กับงานประเภทใดบ้าง [หลายคำตอบ]",
+        "choices": [
+            {
+                "value": "Ceiling",
+                "text": "งานฝ้า"
+            },
+            {
+                "value": "Wall",
+                "text": "งานผนัง"
+            },
+            {
+                "value": "Floor",
+                "text": "งานพื้น"
+            },
+            {
+                "value": "Decorative woods",
+                "text": "ไม้ฝา ไม้เชิงชาย ไม้บัว ไม้มอบ ไม้รั้ว"
+            }
+        ],
+        "accept": "Multiple answer",
+        "id": 12
+    },
+    {
+        "type": "checkbox",
+        "name": "DecisionColour",
+        "title": "ในฐานะที่คุณเป็นช่างทาสี ใครมักเป็น คนตัดสินใจเลือกเฉดสี ที่ใช้ทา แผงบอร์ด [หลายคำตอบ]",
+        "choices": [
+            {
+                "value": "House Owner",
+                "text": "เจ้าของบ้าน (รวมไปถึงญาติเจ้าของบ้าน/ภรรยา/บุตร/ฯลฯ)"
+            },
+            {
+                "value": "Craftsman",
+                "text": "ช่าง"
+            },
+            {
+                "value": "Contractor",
+                "text": "ผู้รับเหมา"
+            },
+            {
+                "value": "Architect",
+                "text": "สถาปนิก"
+            },
+            {
+                "value": "Developer",
+                "text": "โครงการ"
+            }
+        ],
+        "accept": "Multiple answer",
+        "id": 13
+    },
+    {
+        "type": "checkbox",
+        "name": "FCInfoCheck",
+        "title": "ก่อนการซื้อแผงบอร์ด คุณ ตรวจสอบสินค้าและราคา ผ่านทางช่องทางใดบ้าง [หลายคำตอบ]",
+        "choices": [
+            {
+                "value": "Visit to shops/ stores",
+                "text": "สอบถามจากหน้าร้าน/ร้านค้า/ผู้จำหน่าย ไปเองที่หน้าร้าน"
+            },
+            {
+                "value": "Ask friends or family",
+                "text": "สอบถามจากเพื่อน/ญาติ/คนรู้จัก"
+            },
+            {
+                "value": "Ask contractor/ craftsman/ experts",
+                "text": "สอบถามจากผู้รับเหมา/ช่าง/ผู้ชำนาญการ"
+            },
+            {
+                "value": "Online: Internet browsing",
+                "text": "ผ่านช่องทางออนไลน์ เช่น กูเกิล เว็บไซต์"
+            },
+            {
+                "value": "Online: Marketplace",
+                "text": "ผ่านช่องทางออนไลน์ของร้าน เช่น แอพพลิเคชั่นร้านค้า หรือ ไลน์ร้านค้า"
+            },
+            {
+                "value": "Ask PC/ store employees",
+                "text": "ผ่านช่องทางออนไลน์ของพนักงานขาย เช่น ไลน์พีซี หรือ ไลน์พนักงานร้าน"
+            },
+            {
+                "value": "Call shops/ stores",
+                "text": "ผ่านการโทรศัพท์สอบถามที่ร้านค้า ผู้แทนจำหน่าย"
+            },
+            {
+                "value": "Prints",
+                "text": "จากสื่อสิ่งพิมพ์ต่างๆ เช่น หนังสือ/วารสาร/ใบปลิว"
+            },
+            {
+                "value": "I do not check",
+                "text": "ไม่ได้ตรวจสอบสินค้าและราคาก่อนซื้อ"
+            },
+            {
+                "value": "Never buy",
+                "text": "ไม่เคยซื้อ"
+            }
+        ],
+        "accept": "Multiple answer",
+        "id": 14
+    },
+    {
+        "type": "checkbox",
+        "name": "PrimrerUse",
+        "title": "คุณใช้ สีรองพื้น ประเภทใด ในการทา แผงบอร์ด [หลายคำตอบ]",
+        "choices": [
+            {
+                "value": "Old plaster primer",
+                "text": "สีรองพื้นปูนเก่า"
+            },
+            {
+                "value": "New plaster primer",
+                "text": "สีรองพื้นปูนใหม่"
+            },
+            {
+                "value": "Fibre Cement primer",
+                "text": "สีรองพื้นสำหรับทาไฟเบอร์ซีเมนต์โดยเฉพาะ"
+            },
+            {
+                "value": "I do not use",
+                "text": "ไม่ทาสีรองพื้น"
+            }
+        ],
+        "accept": "Multiple answer",
+        "id": 15
+    },
+    {
+        "type": "checkbox",
+        "name": "PaintUse",
+        "title": "แล้วคุณใช้ สีทาทับหน้า (สีจริง) ประเภทใด ในการทา แผงบอร์ด [หลายคำตอบ]",
+        "choices": [
+            {
+                "value": "Acrylic",
+                "text": "สีน้ำอะคริลิคทั่วไป"
+            },
+            {
+                "value": "FC",
+                "text": "สีทาไฟเบอร์ซีเมนต์โดยเฉพาะ"
+            },
+            {
+                "value": "Oil",
+                "text": "สีน้ำมัน"
+            }
+        ],
+        "accept": "Multiple answer",
+        "id": 16
+    },
+    {
+        "type": "checkbox",
+        "name": "FCPaintPurchase",
+        "title": "คุณซื้อ สีทาไฟเบอร์ซีเมนต์โดยเฉพาะ จากช่องทางใดบ้าง [หลายคำตอบ]",
+        "choices": [
+            {
+                "value": "General paint shops",
+                "text": "ร้านขายสีทั่วไป"
+            },
+            {
+                "value": "Modern trade (at store)",
+                "text": "ร้านโมเดิร์นเทรด เช่น โฮมโปร ไทวัสดุ ผ่านทางหน้าร้าน"
+            },
+            {
+                "value": "Modern trade (online)",
+                "text": "ร้านโมเดิร์นเทรด เช่น โฮมโปร ไทวัสดุ ผ่านทางออนไลน์"
+            },
+            {
+                "value": "Retailers (at shop)",
+                "text": "ร้านค้าปลีก ร้านค้าส่ง ร้านฮาร์ดแวร์ ผ่านทางหน้าร้าน"
+            },
+            {
+                "value": "Retailers (online)",
+                "text": "ร้านค้าปลีก ร้านค้าส่ง ร้านฮาร์ดแวร์ ผ่านทางออนไลน์"
+            },
+            {
+                "value": "Online marketplace",
+                "text": "ช่องทางออนไลน์: ตลาดออนไลน์ เช่น ลาซาด้า ช้อปปี้"
+            },
+            {
+                "value": "Manufacture websites",
+                "text": "ช่องทางออนไลน์: เว็บไซต์ของบริษัทผู้ผลิต"
+            },
+            {
+                "value": "Facebook page/ Instagram",
+                "text": "ช่องทางออนไลน์: เพจ/ร้านค้าของผู้ค้ารายย่อย เช่น เฟสบุ๊ค อินสตาแกรม"
+            },
+            {
+                "value": "Retailers (other methods)",
+                "text": "ติดต่อตรงกับผู้ค้ารายย่อยด้วยช่องทางอื่นๆ"
+            },
+            {
+                "value": "Never bought",
+                "text": "ยังไม่เคยซื้อสีทาไฟเบอร์ซีเมนต์โดยเฉพาะเลย"
+            }
+        ],
+        "accept": "Multiple answer",
+        "id": 17
+    },
+    {
+        "type": "checkbox",
+        "name": "FCBrandAwareness",
+        "title": "คุณรู้จัก/เคยได้ยิน สีทาไฟเบอร์ซีเมนต์โดยเฉพาะ ยี่ห้ออะไรต่อไปนี้บ้าง [หลายคำตอบ]",
+        "choices": [
+            {
+                "value": "TOA",
+                "text": "ทีโอเอ"
+            },
+            {
+                "value": "Beger",
+                "text": "เบเยอร์"
+            },
+            {
+                "value": "Shera",
+                "text": "เฌอร่า"
+            },
+            {
+                "value": "Rothenburg",
+                "text": "โรเทนเบิร์ก"
+            },
+            {
+                "value": "None",
+                "text": "ไม่รู้จัก"
+            }
+        ],
+        "accept": "Multiple answer",
+        "id": 18
+    },
+    {
+        "type": "checkbox",
+        "name": "FCBrandEverBought",
+        "title": "แล้วคุณเคยซื้อ สีทาไฟเบอร์ซีเมนต์โดยเฉพาะ ยี่ห้อใดบ้าง [หลายคำตอบ]",
+        "choices": [
+            {
+                "value": "TOA",
+                "text": "ทีโอเอ"
+            },
+            {
+                "value": "Beger",
+                "text": "เบเยอร์"
+            },
+            {
+                "value": "Shera",
+                "text": "เฌอร่า"
+            },
+            {
+                "value": "Rothenburg",
+                "text": "โรเทนเบิร์ก"
+            },
+            {
+                "value": "Cannot remember",
+                "text": "จำยี่ห้อไม่ได้"
+            }
+        ],
+        "visibleIf": "{FCPaintPurchase} != 'Never bought' ",
+        "accept": "Multiple answer",
+        "id": 19
+    },
+    {
+        "type": "html",
+        "name": "IntroProductA1",
+        "html": "บอร์ด XSH (ก่อนทาสี)",
+        "id": 20
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikeAppearanceA1",
+        "title": "หลังจากที่คุณได้เห็น แผงบอร์ด แล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 21
+    },
+    {
+        "type": "comment",
+        "name": "LikesA1",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับ แผงบอร์ด ทดสอบนี้บ้าง ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 22
+    },
+    {
+        "type": "comment",
+        "name": "DislikesA1",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับ แผงบอร์ด ทดสอบนี้บ้าง ไม่ชอบเพราะ....",
+        "accept": "Open-ended",
+        "id": 23
+    },
+    {
+        "type": "rating",
+        "name": "A1.1",
+        "title": "ความเรียบเนียนของแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 24
+    },
+    {
+        "type": "rating",
+        "name": "A2.1",
+        "title": "ความสม่ำเสมอของสีบนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 25
+    },
+    {
+        "type": "rating",
+        "name": "A3.1",
+        "title": "สีโดยรวมของแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 26
+    },
+    {
+        "type": "rating",
+        "name": "A4.1",
+        "title": "ปริมาณขุยที่อยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 27
+    },
+    {
+        "type": "rating",
+        "name": "A5.1",
+        "title": "ปริมาณเศษๆ (ที่ไม่ใช่ขุย) ที่ติดอยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 28
+    },
+    {
+        "type": "html",
+        "name": "IntroProductA2",
+        "html": "บอร์ด XSC (ก่อนทาสี)",
+        "id": 29
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikeAppearanceA2",
+        "title": "หลังจากที่คุณได้เห็น แผงบอร์ด แล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 30
+    },
+    {
+        "type": "comment",
+        "name": "LikesA2",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับ แผงบอร์ด ทดสอบนี้บ้าง ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 31
+    },
+    {
+        "type": "comment",
+        "name": "DislikesA2",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับ แผงบอร์ด ทดสอบนี้บ้าง ไม่ชอบเพราะ....",
+        "accept": "Open-ended",
+        "id": 32
+    },
+    {
+        "type": "rating",
+        "name": "A1.2",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 33
+    },
+    {
+        "type": "rating",
+        "name": "A2.2",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความสม่ำเสมอของสีบนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 34
+    },
+    {
+        "type": "rating",
+        "name": "A3.2",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ สีโดยรวมของแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 35
+    },
+    {
+        "type": "rating",
+        "name": "A4.2",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณขุยที่อยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 36
+    },
+    {
+        "type": "rating",
+        "name": "A5.2",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณเศษๆ (ที่ไม่ใช่ขุย) ที่ติดอยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 37
+    },
+    {
+        "type": "html",
+        "name": "IntroProductA3",
+        "html": "บอร์ด XM (ก่อนทาสี)",
+        "id": 38
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikeAppearanceA3",
+        "title": "หลังจากที่คุณได้เห็น แผงบอร์ด แล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 39
+    },
+    {
+        "type": "comment",
+        "name": "LikesA3",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับ แผงบอร์ด ทดสอบนี้บ้าง ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 40
+    },
+    {
+        "type": "comment",
+        "name": "DislikesA3",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับ แผงบอร์ด ทดสอบนี้บ้าง ไม่ชอบเพราะ....",
+        "accept": "Open-ended",
+        "id": 41
+    },
+    {
+        "type": "rating",
+        "name": "A1.3",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 42
+    },
+    {
+        "type": "rating",
+        "name": "A2.3",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความสม่ำเสมอของสีบนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 43
+    },
+    {
+        "type": "rating",
+        "name": "A3.3",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ สีโดยรวมของแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 44
+    },
+    {
+        "type": "rating",
+        "name": "A4.3",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณขุยที่อยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 45
+    },
+    {
+        "type": "rating",
+        "name": "A5.3",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณเศษๆ (ที่ไม่ใช่ขุย) ที่ติดอยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 46
+    },
+    {
+        "type": "html",
+        "name": "IntroProductA4",
+        "html": "บอร์ด YSH (ก่อนทาสี)",
+        "id": 47
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikeAppearanceA4",
+        "title": "หลังจากที่คุณได้เห็น แผงบอร์ด แล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 48
+    },
+    {
+        "type": "comment",
+        "name": "LikesA4",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับ แผงบอร์ด ทดสอบนี้บ้าง ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 49
+    },
+    {
+        "type": "comment",
+        "name": "DislikesA4",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับ แผงบอร์ด ทดสอบนี้บ้าง ไม่ชอบเพราะ....",
+        "accept": "Open-ended",
+        "id": 50
+    },
+    {
+        "type": "rating",
+        "name": "A1.4",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 51
+    },
+    {
+        "type": "rating",
+        "name": "A2.4",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความสม่ำเสมอของสีบนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 52
+    },
+    {
+        "type": "rating",
+        "name": "A3.4",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ สีโดยรวมของแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 53
+    },
+    {
+        "type": "rating",
+        "name": "A4.4",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณขุยที่อยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 54
+    },
+    {
+        "type": "rating",
+        "name": "A5.4",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณเศษๆ (ที่ไม่ใช่ขุย) ที่ติดอยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 55
+    },
+    {
+        "type": "html",
+        "name": "IntroProductB4",
+        "html": "บอร์ด YSH (ทาสีรองพื้น)",
+        "id": 56
+    },
+    {
+        "type": "multipletext",
+        "name": "WeightTimeB4",
+        "title": "บันทึกน้ำหนักและเวลา",
+        "items": [
+            {
+                "name": "WeightBefore",
+                "title": "น้ำหนักสี ก่อนเริ่มทา (กิโลกรัม)"
+            },
+            {
+                "name": "WeightAfter",
+                "title": "น้ำหนักสี หลังทาเสร็จ (กิโลกรัม)"
+            },
+            {
+                "name": "Weight",
+                "title": "ปริมาณสีที่ใช้ไปทั้งหมด (กิโลกรัม)"
+            },
+            {
+                "name": "TimeBefore",
+                "title": "บันทึกเวลา ตอนเริ่มทา"
+            },
+            {
+                "name": "TimeAfter",
+                "title": "บันทึกเวลา หลังทาเสร็จ"
+            },
+            {
+                "name": "Time",
+                "title": "เวลาที่ใช้ไปทั้งหมด (นาที)"
+            }
+        ],
+        "colCount": 3,
+        "accept": "Open-ended",
+        "id": 57
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingB4",
+        "title": "หลังจากที่คุณได้ทดลองทาสีแล้ว คะแนนระดับความชอบที่คุณมีต่อบอร์ดไฟเบอร์ซีเมนต์นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 58
+    },
+    {
+        "type": "rating",
+        "name": "B1.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ การกินสี (การดูดซึมสี)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กินสีน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กินสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 59
+    },
+    {
+        "type": "rating",
+        "name": "B2.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเต็ม-ความอิ่มของสี หรือ การกลบพื้นผิว",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 60
+    },
+    {
+        "type": "rating",
+        "name": "B3.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของพื้นผิวหลังทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 61
+    },
+    {
+        "type": "rating",
+        "name": "B4.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ แรงที่ใช้ในการทาสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ออกแรงน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ออกแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 62
+    },
+    {
+        "type": "html",
+        "name": "IntroProductC1",
+        "html": "บอร์ด XSH (ทาสีทับหน้าครั้งแรก)",
+        "id": 63
+    },
+    {
+        "type": "multipletext",
+        "name": "WeightTimeC1",
+        "title": "บันทึกน้ำหนักและเวลา",
+        "items": [
+            {
+                "name": "WeightBefore",
+                "title": "น้ำหนักสี ก่อนเริ่มทา (กิโลกรัม)"
+            },
+            {
+                "name": "WeightAfter",
+                "title": "น้ำหนักสี หลังทาเสร็จ (กิโลกรัม)"
+            },
+            {
+                "name": "Weight",
+                "title": "ปริมาณสีที่ใช้ไปทั้งหมด (กิโลกรัม)"
+            },
+            {
+                "name": "TimeBefore",
+                "title": "บันทึกเวลา ตอนเริ่มทา"
+            },
+            {
+                "name": "TimeAfter",
+                "title": "บันทึกเวลา หลังทาเสร็จ"
+            },
+            {
+                "name": "Time",
+                "title": "เวลาที่ใช้ไปทั้งหมด (นาที)"
+            }
+        ],
+        "colCount": 3,
+        "accept": "Open-ended",
+        "id": 64
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingC1",
+        "title": "หลังจากที่คุณได้ทดลองทาสีแล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 65
+    },
+    {
+        "type": "rating",
+        "name": "C1.1",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ การกินสี (การดูดซึมสี)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กินสีน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กินสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 66
+    },
+    {
+        "type": "rating",
+        "name": "C2.1",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเต็ม-ความอิ่มของสี หรือ การกลบพื้นผิว",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 67
+    },
+    {
+        "type": "rating",
+        "name": "C3.1",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของพื้นผิวหลังทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 68
+    },
+    {
+        "type": "rating",
+        "name": "C4.1",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ แรงที่ใช้ในการทาสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ออกแรงน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ออกแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 69
+    },
+    {
+        "type": "html",
+        "name": "IntroProductC2",
+        "html": "บอร์ด XSC (ทาสีทับหน้าครั้งแรก)",
+        "id": 70
+    },
+    {
+        "type": "multipletext",
+        "name": "WeightTimeC2",
+        "title": "บันทึกน้ำหนักและเวลา",
+        "items": [
+            {
+                "name": "WeightBefore",
+                "title": "น้ำหนักสี ก่อนเริ่มทา (กิโลกรัม)"
+            },
+            {
+                "name": "WeightAfter",
+                "title": "น้ำหนักสี หลังทาเสร็จ (กิโลกรัม)"
+            },
+            {
+                "name": "Weight",
+                "title": "ปริมาณสีที่ใช้ไปทั้งหมด (กิโลกรัม)"
+            },
+            {
+                "name": "TimeBefore",
+                "title": "บันทึกเวลา ตอนเริ่มทา"
+            },
+            {
+                "name": "TimeAfter",
+                "title": "บันทึกเวลา หลังทาเสร็จ"
+            },
+            {
+                "name": "Time",
+                "title": "เวลาที่ใช้ไปทั้งหมด (นาที)"
+            }
+        ],
+        "colCount": 3,
+        "accept": "Open-ended",
+        "id": 71
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingC2",
+        "title": "หลังจากที่คุณได้ทดลองทาสีแล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 72
+    },
+    {
+        "type": "rating",
+        "name": "C1.2",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ การกินสี (การดูดซึมสี)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กินสีน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กินสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 73
+    },
+    {
+        "type": "rating",
+        "name": "C2.2",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเต็ม-ความอิ่มของสี หรือ การกลบพื้นผิว",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 74
+    },
+    {
+        "type": "rating",
+        "name": "C3.2",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของพื้นผิวหลังทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 75
+    },
+    {
+        "type": "rating",
+        "name": "C4.2",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ แรงที่ใช้ในการทาสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ออกแรงน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ออกแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 76
+    },
+    {
+        "type": "html",
+        "name": "IntroProductC3",
+        "html": "บอร์ด XM (ทาสีทับหน้าครั้งแรก)",
+        "id": 77
+    },
+    {
+        "type": "multipletext",
+        "name": "WeightTimeC3",
+        "title": "บันทึกน้ำหนักและเวลา",
+        "items": [
+            {
+                "name": "WeightBefore",
+                "title": "น้ำหนักสี ก่อนเริ่มทา (กิโลกรัม)"
+            },
+            {
+                "name": "WeightAfter",
+                "title": "น้ำหนักสี หลังทาเสร็จ (กิโลกรัม)"
+            },
+            {
+                "name": "Weight",
+                "title": "ปริมาณสีที่ใช้ไปทั้งหมด (กิโลกรัม)"
+            },
+            {
+                "name": "TimeBefore",
+                "title": "บันทึกเวลา ตอนเริ่มทา"
+            },
+            {
+                "name": "TimeAfter",
+                "title": "บันทึกเวลา หลังทาเสร็จ"
+            },
+            {
+                "name": "Time",
+                "title": "เวลาที่ใช้ไปทั้งหมด (นาที)"
+            }
+        ],
+        "colCount": 3,
+        "accept": "Open-ended",
+        "id": 78
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingC3",
+        "title": "หลังจากที่คุณได้ทดลองทาสีแล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 79
+    },
+    {
+        "type": "rating",
+        "name": "C1.3",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ การกินสี (การดูดซึมสี)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กินสีน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กินสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 80
+    },
+    {
+        "type": "rating",
+        "name": "C2.3",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเต็ม-ความอิ่มของสี หรือ การกลบพื้นผิว",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 81
+    },
+    {
+        "type": "rating",
+        "name": "C3.3",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของพื้นผิวหลังทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 82
+    },
+    {
+        "type": "rating",
+        "name": "C4.3",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ แรงที่ใช้ในการทาสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ออกแรงน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ออกแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 83
+    },
+    {
+        "type": "html",
+        "name": "IntroProductC4",
+        "html": " บอร์ด YSH (ทาสีทับหน้าครั้งแรก)",
+        "id": 84
+    },
+    {
+        "type": "multipletext",
+        "name": "WeightTimeC4",
+        "title": "บันทึกน้ำหนักและเวลา",
+        "items": [
+            {
+                "name": "WeightBefore",
+                "title": "น้ำหนักสี ก่อนเริ่มทา (กิโลกรัม)"
+            },
+            {
+                "name": "WeightAfter",
+                "title": "น้ำหนักสี หลังทาเสร็จ (กิโลกรัม)"
+            },
+            {
+                "name": "Weight",
+                "title": "ปริมาณสีที่ใช้ไปทั้งหมด (กิโลกรัม)"
+            },
+            {
+                "name": "TimeBefore",
+                "title": "บันทึกเวลา ตอนเริ่มทา"
+            },
+            {
+                "name": "TimeAfter",
+                "title": "บันทึกเวลา หลังทาเสร็จ"
+            },
+            {
+                "name": "Time",
+                "title": "เวลาที่ใช้ไปทั้งหมด (นาที)"
+            }
+        ],
+        "colCount": 3,
+        "accept": "Open-ended",
+        "id": 85
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingC4",
+        "title": "หลังจากที่คุณได้ทดลองทาสีแล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 86
+    },
+    {
+        "type": "rating",
+        "name": "C1.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ การกินสี (การดูดซึมสี)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กินสีน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กินสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 87
+    },
+    {
+        "type": "rating",
+        "name": "C2.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเต็ม-ความอิ่มของสี หรือ การกลบพื้นผิว",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 88
+    },
+    {
+        "type": "rating",
+        "name": "C3.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของพื้นผิวหลังทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 89
+    },
+    {
+        "type": "rating",
+        "name": "C4.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ แรงที่ใช้ในการทาสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ออกแรงน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ออกแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 90
+    },
+    {
+        "type": "html",
+        "name": "IntroProductD1",
+        "html": "บอร์ด XSH (ทาสีทับหน้าครั้งที่สอง)",
+        "id": 91
+    },
+    {
+        "type": "multipletext",
+        "name": "WeightTimeD1",
+        "title": "บันทึกน้ำหนักและเวลา",
+        "items": [
+            {
+                "name": "WeightBefore",
+                "title": "น้ำหนักสี ก่อนเริ่มทา (กิโลกรัม)"
+            },
+            {
+                "name": "WeightAfter",
+                "title": "น้ำหนักสี หลังทาเสร็จ (กิโลกรัม)"
+            },
+            {
+                "name": "Weight",
+                "title": "ปริมาณสีที่ใช้ไปทั้งหมด (กิโลกรัม)"
+            },
+            {
+                "name": "TimeBefore",
+                "title": "บันทึกเวลา ตอนเริ่มทา"
+            },
+            {
+                "name": "TimeAfter",
+                "title": "บันทึกเวลา หลังทาเสร็จ"
+            },
+            {
+                "name": "Time",
+                "title": "เวลาที่ใช้ไปทั้งหมด (นาที)"
+            }
+        ],
+        "colCount": 3,
+        "accept": "Open-ended",
+        "id": 92
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingD1",
+        "title": "หลังจากที่คุณได้ทดลองทาสีแล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 93
+    },
+    {
+        "type": "rating",
+        "name": "D1,1",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ การกินสี (การดูดซึมสี)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กินสีน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กินสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 94
+    },
+    {
+        "type": "rating",
+        "name": "D2.1",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเต็ม-ความอิ่มของสี หรือ การกลบพื้นผิว",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 95
+    },
+    {
+        "type": "rating",
+        "name": "D3.1",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของพื้นผิวหลังทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 96
+    },
+    {
+        "type": "rating",
+        "name": "D4.1",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ แรงที่ใช้ในการทาสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ออกแรงน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ออกแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 97
+    },
+    {
+        "type": "html",
+        "name": "IntroProductD2",
+        "html": "บอร์ด XSC (ทาสีทับหน้าครั้งที่สอง)",
+        "id": 98
+    },
+    {
+        "type": "multipletext",
+        "name": "WeightTimeD2",
+        "title": "บันทึกน้ำหนักและเวลา",
+        "items": [
+            {
+                "name": "WeightBefore",
+                "title": "น้ำหนักสี ก่อนเริ่มทา (กิโลกรัม)"
+            },
+            {
+                "name": "WeightAfter",
+                "title": "น้ำหนักสี หลังทาเสร็จ (กิโลกรัม)"
+            },
+            {
+                "name": "Weight",
+                "title": "ปริมาณสีที่ใช้ไปทั้งหมด (กิโลกรัม)"
+            },
+            {
+                "name": "TimeBefore",
+                "title": "บันทึกเวลา ตอนเริ่มทา"
+            },
+            {
+                "name": "TimeAfter",
+                "title": "บันทึกเวลา หลังทาเสร็จ"
+            },
+            {
+                "name": "Time",
+                "title": "เวลาที่ใช้ไปทั้งหมด (นาที)"
+            }
+        ],
+        "colCount": 3,
+        "accept": "Open-ended",
+        "id": 99
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingD2",
+        "title": "หลังจากที่คุณได้ทดลองทาสีแล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 100
+    },
+    {
+        "type": "rating",
+        "name": "D1.2",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ การกินสี (การดูดซึมสี)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กินสีน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กินสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 101
+    },
+    {
+        "type": "rating",
+        "name": "D2.2",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเต็ม-ความอิ่มของสี หรือ การกลบพื้นผิว",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 102
+    },
+    {
+        "type": "rating",
+        "name": "D3.2",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของพื้นผิวหลังทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 103
+    },
+    {
+        "type": "rating",
+        "name": "D4.2",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ แรงที่ใช้ในการทาสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ออกแรงน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ออกแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 104
+    },
+    {
+        "type": "html",
+        "name": "IntroProductD3",
+        "html": "บอร์ด XM (ทาสีทับหน้าครั้งที่สอง)",
+        "id": 105
+    },
+    {
+        "type": "multipletext",
+        "name": "WeightTimeD3",
+        "title": "บันทึกน้ำหนักและเวลา",
+        "items": [
+            {
+                "name": "WeightBefore",
+                "title": "น้ำหนักสี ก่อนเริ่มทา (กิโลกรัม)"
+            },
+            {
+                "name": "WeightAfter",
+                "title": "น้ำหนักสี หลังทาเสร็จ (กิโลกรัม)"
+            },
+            {
+                "name": "Weight",
+                "title": "ปริมาณสีที่ใช้ไปทั้งหมด (กิโลกรัม)"
+            },
+            {
+                "name": "TimeBefore",
+                "title": "บันทึกเวลา ตอนเริ่มทา"
+            },
+            {
+                "name": "TimeAfter",
+                "title": "บันทึกเวลา หลังทาเสร็จ"
+            },
+            {
+                "name": "Time",
+                "title": "เวลาที่ใช้ไปทั้งหมด (นาที)"
+            }
+        ],
+        "colCount": 3,
+        "accept": "Open-ended",
+        "id": 106
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingD3",
+        "title": "หลังจากที่คุณได้ทดลองทาสีแล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 107
+    },
+    {
+        "type": "rating",
+        "name": "D1.3",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ การกินสี (การดูดซึมสี)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กินสีน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กินสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 108
+    },
+    {
+        "type": "rating",
+        "name": "D2.3",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเต็ม-ความอิ่มของสี หรือ การกลบพื้นผิว",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 109
+    },
+    {
+        "type": "rating",
+        "name": "D3.3",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของพื้นผิวหลังทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 110
+    },
+    {
+        "type": "rating",
+        "name": "D4.3",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ แรงที่ใช้ในการทาสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ออกแรงน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ออกแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 111
+    },
+    {
+        "type": "html",
+        "name": "IntroProductD4",
+        "html": "บอร์ด YSH (ทาสีทับหน้าครั้งที่สอง)",
+        "id": 112
+    },
+    {
+        "type": "multipletext",
+        "name": "WeightTimeD4",
+        "title": "บันทึกน้ำหนักและเวลา",
+        "items": [
+            {
+                "name": "WeightBefore",
+                "title": "น้ำหนักสี ก่อนเริ่มทา (กิโลกรัม)"
+            },
+            {
+                "name": "WeightAfter",
+                "title": "น้ำหนักสี หลังทาเสร็จ (กิโลกรัม)"
+            },
+            {
+                "name": "Weight",
+                "title": "ปริมาณสีที่ใช้ไปทั้งหมด (กิโลกรัม)"
+            },
+            {
+                "name": "TimeBefore",
+                "title": "บันทึกเวลา ตอนเริ่มทา"
+            },
+            {
+                "name": "TimeAfter",
+                "title": "บันทึกเวลา หลังทาเสร็จ"
+            },
+            {
+                "name": "Time",
+                "title": "เวลาที่ใช้ไปทั้งหมด (นาที)"
+            }
+        ],
+        "colCount": 3,
+        "accept": "Open-ended",
+        "id": 113
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingD4",
+        "title": "หลังจากที่คุณได้ทดลองทาสีแล้ว ระดับความชอบที่คุณมีต่อ แผงบอร์ด นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 114
+    },
+    {
+        "type": "rating",
+        "name": "D1.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ การกินสี (การดูดซึมสี)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กินสีน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กินสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 115
+    },
+    {
+        "type": "rating",
+        "name": "D2.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเต็ม-ความอิ่มของสี หรือ การกลบพื้นผิว",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 116
+    },
+    {
+        "type": "rating",
+        "name": "D3.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ ความเรียบเนียนของพื้นผิวหลังทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แย่มาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ดีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 117
+    },
+    {
+        "type": "rating",
+        "name": "D4.4",
+        "title": "คุณให้คะแนนบอร์ดไฟเบอร์ซีเมนต์กับเรื่องต่างๆเหล่านี้อย่างไร ในเรื่องของ แรงที่ใช้ในการทาสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ออกแรงน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ออกแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 118
+    },
+    {
+        "type": "html",
+        "name": "IntroProductE1",
+        "html": " บอร์ด XSH (สรุป)",
+        "id": 119
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingE1",
+        "title": "หลังจากที่คุณได้ทดลองทาสีไปทั้งครบสามครั้งแล้วนั้น ระดับ ความชอบโดยรวม ที่คุณมีต่อบอร์ดไฟเบอร์ซีเมนต์นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 120
+    },
+    {
+        "type": "comment",
+        "name": "LikesE1",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับผลิตภัณฑ์บอร์ดไฟเบอร์ซีเมนทดสอบนี้บ้าง ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 121
+    },
+    {
+        "type": "comment",
+        "name": "DislikesE1",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับผลิตภัณฑ์บอร์ดไฟเบอร์ซีเมนทดสอบนี้บ้าง ไม่ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 122
+    },
+    {
+        "type": "dropdown",
+        "name": "NPSE1",
+        "title": "คุณจะแนะนำผลิตภัณฑ์นี้ให้กับผู้อื่นอย่างไร กรุณาตอบเพียงคำตอบเดียว โดยที่ 0 หมายถึง คุณจะไม่แนะนำอย่างแน่นอน และ 10 หมายถึงคุณจะแนะนำอย่างแน่นอน",
+        "choices": [
+            {
+                "value": "0",
+                "text": "0"
+            },
+            {
+                "value": "1",
+                "text": "1"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "5"
+            },
+            {
+                "value": "6",
+                "text": "6"
+            },
+            {
+                "value": "7",
+                "text": "7"
+            },
+            {
+                "value": "8",
+                "text": "8"
+            },
+            {
+                "value": "9",
+                "text": "9"
+            },
+            {
+                "value": "10",
+                "text": "10"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 123
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "No",
+                "text": "ไม่ดีพอที่จะส่งมอบ"
+            },
+            {
+                "value": "Yes",
+                "text": "ดีพอแล้วที่จะส่งมอบ"
+            }
+        ],
+        "name": "ForJobDeliveryE1",
+        "title": "บอร์ดไฟเบอร์ซีเมนต์ที่คุณเพิ่งทาสีเสร็จไปนี้ ดีพอที่จะส่งมอบให้กับลูกค้า หรือ ผู้ว่าจ้างของคุณ (ลูกค้าหรือผู้ว่าจ้าง อาจจะเป็นเจ้าของบ้าน ผู้รับเหมา เป็นต้น) หรือยัง [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 124
+    },
+    {
+        "type": "comment",
+        "name": "ForJobDeliveryNoE1",
+        "title": "ทำไมคุณจึงตอบว่า แผงบอร์ด ที่คุณเพิ่งทาสีเสร็จไปนี้ ไม่ดีพอที่จะส่งมอบให้กับลูกค้า ",
+        "tooltip": "กรุณาตอบอย่างละเอียด",
+        "visibleIf": "{ForJobDeliveryE1} = 'No'",
+        "accept": "Open-ended",
+        "id": 125
+    },
+    {
+        "type": "comment",
+        "name": "ForJobDeliveryYesE1",
+        "title": "ทำไมคุณจึงตอบว่า แผงบอร์ด ที่คุณเพิ่งทาสีเสร็จไปนี้ ดีพอที่จะส่งมอบให้กับลูกค้า ",
+        "tooltip": "กรุณาตอบอย่างละเอียด",
+        "visibleIf": "{ForJobDeliveryE1} = 'Yes'",
+        "accept": "Open-ended",
+        "id": 126
+    },
+    {
+        "type": "rating",
+        "name": "E1.1",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณขุยที่อยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 127
+    },
+    {
+        "type": "rating",
+        "name": "E1.2",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณเศษๆ (ที่ไม่ใช่ขุย) ที่ติดอยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 128
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "No",
+                "text": "ไม่รับประกันงานทาสี"
+            },
+            {
+                "value": "Yes",
+                "text": "รับประกันงานทาสี"
+            }
+        ],
+        "name": "GuaranteeE1",
+        "title": "จากผลงานที่คุณเห็น คุณกล้าที่จะรับประกันงานทาสีให้กับเจ้าของบ้าน หรือผู้ว่าจ้าง หรือไม่ ",
+        "accept": "Single answer",
+        "id": 129
+    },
+    {
+        "type": "dropdown",
+        "name": "GaranteeMonthsE1",
+        "title": "คุณจะรับประกันงานทาสีให้กับเจ้าขอบ้าน หรือผู้ว่าจ้าง นานกี่เดือน กี่ปี (คิดทอนคำตอบมาเป็นหน่วยเดือน)",
+        "choices": [
+            {
+                "value": "1",
+                "text": "1"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "5"
+            },
+            {
+                "value": "6",
+                "text": "6"
+            },
+            {
+                "value": "7",
+                "text": "7"
+            },
+            {
+                "value": "8",
+                "text": "8"
+            },
+            {
+                "value": "9",
+                "text": "9"
+            },
+            {
+                "value": "10",
+                "text": "10"
+            },
+            {
+                "value": "11",
+                "text": "11"
+            },
+            {
+                "value": "12",
+                "text": "12"
+            },
+            {
+                "value": "13",
+                "text": "13"
+            },
+            {
+                "value": "14",
+                "text": "14"
+            },
+            {
+                "value": "15",
+                "text": "15"
+            },
+            {
+                "value": "16",
+                "text": "16"
+            },
+            {
+                "value": "17",
+                "text": "17"
+            },
+            {
+                "value": "18",
+                "text": "18"
+            },
+            {
+                "value": "19",
+                "text": "19"
+            },
+            {
+                "value": "20",
+                "text": "20"
+            },
+            {
+                "value": "21",
+                "text": "21"
+            },
+            {
+                "value": "22",
+                "text": "22"
+            },
+            {
+                "value": "23",
+                "text": "23"
+            },
+            {
+                "value": "24",
+                "text": "24"
+            },
+            {
+                "value": "25",
+                "text": "25"
+            },
+            {
+                "value": "26",
+                "text": "26"
+            },
+            {
+                "value": "27",
+                "text": "27"
+            },
+            {
+                "value": "28",
+                "text": "28"
+            },
+            {
+                "value": "29",
+                "text": "29"
+            },
+            {
+                "value": "30",
+                "text": "30"
+            },
+            {
+                "value": "31",
+                "text": "31"
+            },
+            {
+                "value": "32",
+                "text": "32"
+            },
+            {
+                "value": "33",
+                "text": "33"
+            },
+            {
+                "value": "34",
+                "text": "34"
+            },
+            {
+                "value": "35",
+                "text": "35"
+            },
+            {
+                "value": "36",
+                "text": "36"
+            }
+        ],
+        "visibleIf": "{GuaranteeE1} = 'Yes'",
+        "accept": "Single answer",
+        "id": 130
+    },
+    {
+        "type": "html",
+        "name": "IntroProductE2",
+        "html": "บอร์ด XSC (สรุป)",
+        "id": 131
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingE2",
+        "title": "หลังจากที่คุณได้ทดลองทาสีไปทั้งครบสามครั้งแล้วนั้น ระดับ ความชอบโดยรวม ที่คุณมีต่อบอร์ดไฟเบอร์ซีเมนต์นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 132
+    },
+    {
+        "type": "comment",
+        "name": "LikesE2",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับผลิตภัณฑ์บอร์ดไฟเบอร์ซีเมนทดสอบนี้บ้าง ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 133
+    },
+    {
+        "type": "comment",
+        "name": "DislikesE2",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับผลิตภัณฑ์บอร์ดไฟเบอร์ซีเมนทดสอบนี้บ้าง ไม่ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 134
+    },
+    {
+        "type": "dropdown",
+        "name": "NPSE2",
+        "title": "คุณจะแนะนำผลิตภัณฑ์นี้ให้กับผู้อื่นอย่างไร กรุณาตอบเพียงคำตอบเดียว โดยที่ 0 หมายถึง คุณจะไม่แนะนำอย่างแน่นอน และ 10 หมายถึงคุณจะแนะนำอย่างแน่นอน",
+        "choices": [
+            {
+                "value": "0",
+                "text": "0"
+            },
+            {
+                "value": "1",
+                "text": "1"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "5"
+            },
+            {
+                "value": "6",
+                "text": "6"
+            },
+            {
+                "value": "7",
+                "text": "7"
+            },
+            {
+                "value": "8",
+                "text": "8"
+            },
+            {
+                "value": "9",
+                "text": "9"
+            },
+            {
+                "value": "10",
+                "text": "10"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 135
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "No",
+                "text": "ไม่ดีพอที่จะส่งมอบ"
+            },
+            {
+                "value": "Yes",
+                "text": "ดีพอแล้วที่จะส่งมอบ"
+            }
+        ],
+        "name": "ForJobDeliveryE2",
+        "title": "บอร์ดไฟเบอร์ซีเมนต์ที่คุณเพิ่งทาสีเสร็จไปนี้ ดีพอที่จะส่งมอบให้กับลูกค้า หรือ ผู้ว่าจ้างของคุณ (ลูกค้าหรือผู้ว่าจ้าง อาจจะเป็นเจ้าของบ้าน ผู้รับเหมา เป็นต้น) หรือยัง [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 136
+    },
+    {
+        "type": "comment",
+        "name": "ForJobDeliveryNoE2",
+        "title": "ทำไมคุณจึงตอบว่า แผงบอร์ด ที่คุณเพิ่งทาสีเสร็จไปนี้ ไม่ดีพอที่จะส่งมอบให้กับลูกค้า ",
+        "tooltip": "กรุณาตอบอย่างละเอียด",
+        "visibleIf": "{ForJobDeliveryE2} = 'No'",
+        "accept": "Open-ended",
+        "id": 137
+    },
+    {
+        "type": "comment",
+        "name": "ForJobDeliveryYesE2",
+        "title": "ทำไมคุณจึงตอบว่า แผงบอร์ด ที่คุณเพิ่งทาสีเสร็จไปนี้ ดีพอที่จะส่งมอบให้กับลูกค้า ",
+        "tooltip": "กรุณาตอบอย่างละเอียด",
+        "visibleIf": "{ForJobDeliveryE2} = 'Yes'",
+        "accept": "Open-ended",
+        "id": 138
+    },
+    {
+        "type": "rating",
+        "name": "E2.1",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณขุยที่อยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 139
+    },
+    {
+        "type": "rating",
+        "name": "E2.2",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณเศษๆ (ที่ไม่ใช่ขุย) ที่ติดอยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 140
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "No",
+                "text": "ไม่รับประกันงานทาสี"
+            },
+            {
+                "value": "Yes",
+                "text": "รับประกันงานทาสี"
+            }
+        ],
+        "name": "GuaranteeE2",
+        "title": "จากผลงานที่คุณเห็น คุณกล้าที่จะรับประกันงานทาสีให้กับเจ้าของบ้าน หรือผู้ว่าจ้าง หรือไม่ ",
+        "accept": "Single answer",
+        "id": 141
+    },
+    {
+        "type": "dropdown",
+        "name": "GaranteeMonthsE2",
+        "title": "คุณจะรับประกันงานทาสีให้กับเจ้าขอบ้าน หรือผู้ว่าจ้าง นานกี่เดือน กี่ปี (คิดทอนคำตอบมาเป็นหน่วยเดือน)",
+        "choices": [
+            {
+                "value": "1",
+                "text": "1"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "5"
+            },
+            {
+                "value": "6",
+                "text": "6"
+            },
+            {
+                "value": "7",
+                "text": "7"
+            },
+            {
+                "value": "8",
+                "text": "8"
+            },
+            {
+                "value": "9",
+                "text": "9"
+            },
+            {
+                "value": "10",
+                "text": "10"
+            },
+            {
+                "value": "11",
+                "text": "11"
+            },
+            {
+                "value": "12",
+                "text": "12"
+            },
+            {
+                "value": "13",
+                "text": "13"
+            },
+            {
+                "value": "14",
+                "text": "14"
+            },
+            {
+                "value": "15",
+                "text": "15"
+            },
+            {
+                "value": "16",
+                "text": "16"
+            },
+            {
+                "value": "17",
+                "text": "17"
+            },
+            {
+                "value": "18",
+                "text": "18"
+            },
+            {
+                "value": "19",
+                "text": "19"
+            },
+            {
+                "value": "20",
+                "text": "20"
+            },
+            {
+                "value": "21",
+                "text": "21"
+            },
+            {
+                "value": "22",
+                "text": "22"
+            },
+            {
+                "value": "23",
+                "text": "23"
+            },
+            {
+                "value": "24",
+                "text": "24"
+            },
+            {
+                "value": "25",
+                "text": "25"
+            },
+            {
+                "value": "26",
+                "text": "26"
+            },
+            {
+                "value": "27",
+                "text": "27"
+            },
+            {
+                "value": "28",
+                "text": "28"
+            },
+            {
+                "value": "29",
+                "text": "29"
+            },
+            {
+                "value": "30",
+                "text": "30"
+            },
+            {
+                "value": "31",
+                "text": "31"
+            },
+            {
+                "value": "32",
+                "text": "32"
+            },
+            {
+                "value": "33",
+                "text": "33"
+            },
+            {
+                "value": "34",
+                "text": "34"
+            },
+            {
+                "value": "35",
+                "text": "35"
+            },
+            {
+                "value": "36",
+                "text": "36"
+            }
+        ],
+        "visibleIf": "{GuaranteeE2} = 'Yes'",
+        "accept": "Single answer",
+        "id": 142
+    },
+    {
+        "type": "html",
+        "name": "IntroProductE3",
+        "html": "บอร์ด XM (สรุป)",
+        "id": 143
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingE3",
+        "title": "หลังจากที่คุณได้ทดลองทาสีไปทั้งครบสามครั้งแล้วนั้น ระดับ ความชอบโดยรวม ที่คุณมีต่อบอร์ดไฟเบอร์ซีเมนต์นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 144
+    },
+    {
+        "type": "comment",
+        "name": "LikesE3",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับผลิตภัณฑ์บอร์ดไฟเบอร์ซีเมนทดสอบนี้บ้าง ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 145
+    },
+    {
+        "type": "comment",
+        "name": "DislikesE3",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับผลิตภัณฑ์บอร์ดไฟเบอร์ซีเมนทดสอบนี้บ้าง ไม่ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 146
+    },
+    {
+        "type": "dropdown",
+        "name": "NPSE3",
+        "title": "คุณจะแนะนำผลิตภัณฑ์นี้ให้กับผู้อื่นอย่างไร กรุณาตอบเพียงคำตอบเดียว โดยที่ 0 หมายถึง คุณจะไม่แนะนำอย่างแน่นอน และ 10 หมายถึงคุณจะแนะนำอย่างแน่นอน",
+        "choices": [
+            {
+                "value": "0",
+                "text": "0"
+            },
+            {
+                "value": "1",
+                "text": "1"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "5"
+            },
+            {
+                "value": "6",
+                "text": "6"
+            },
+            {
+                "value": "7",
+                "text": "7"
+            },
+            {
+                "value": "8",
+                "text": "8"
+            },
+            {
+                "value": "9",
+                "text": "9"
+            },
+            {
+                "value": "10",
+                "text": "10"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 147
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "No",
+                "text": "ไม่ดีพอที่จะส่งมอบ"
+            },
+            {
+                "value": "Yes",
+                "text": "ดีพอแล้วที่จะส่งมอบ"
+            }
+        ],
+        "name": "ForJobDeliveryE3",
+        "title": "บอร์ดไฟเบอร์ซีเมนต์ที่คุณเพิ่งทาสีเสร็จไปนี้ ดีพอที่จะส่งมอบให้กับลูกค้า หรือ ผู้ว่าจ้างของคุณ (ลูกค้าหรือผู้ว่าจ้าง อาจจะเป็นเจ้าของบ้าน ผู้รับเหมา เป็นต้น) หรือยัง [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 148
+    },
+    {
+        "type": "comment",
+        "name": "ForJobDeliveryNoE3",
+        "title": "ทำไมคุณจึงตอบว่า แผงบอร์ด ที่คุณเพิ่งทาสีเสร็จไปนี้ ไม่ดีพอที่จะส่งมอบให้กับลูกค้า ",
+        "tooltip": "กรุณาตอบอย่างละเอียด",
+        "visibleIf": "{ForJobDeliveryE3} = 'No'",
+        "accept": "Open-ended",
+        "id": 149
+    },
+    {
+        "type": "comment",
+        "name": "ForJobDeliveryYesE3",
+        "title": "ทำไมคุณจึงตอบว่า แผงบอร์ด ที่คุณเพิ่งทาสีเสร็จไปนี้ ดีพอที่จะส่งมอบให้กับลูกค้า ",
+        "tooltip": "กรุณาตอบอย่างละเอียด",
+        "visibleIf": "{ForJobDeliveryE3} = 'Yes'",
+        "accept": "Open-ended",
+        "id": 150
+    },
+    {
+        "type": "rating",
+        "name": "E3.1",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณขุยที่อยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 151
+    },
+    {
+        "type": "rating",
+        "name": "E3.2",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณเศษๆ (ที่ไม่ใช่ขุย) ที่ติดอยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 152
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "No",
+                "text": "ไม่รับประกันงานทาสี"
+            },
+            {
+                "value": "Yes",
+                "text": "รับประกันงานทาสี"
+            }
+        ],
+        "name": "GuaranteeE3",
+        "title": "จากผลงานที่คุณเห็น คุณกล้าที่จะรับประกันงานทาสีให้กับเจ้าของบ้าน หรือผู้ว่าจ้าง หรือไม่ ",
+        "accept": "Single answer",
+        "id": 153
+    },
+    {
+        "type": "dropdown",
+        "name": "GaranteeMonthsE3",
+        "title": "คุณจะรับประกันงานทาสีให้กับเจ้าขอบ้าน หรือผู้ว่าจ้าง นานกี่เดือน กี่ปี (คิดทอนคำตอบมาเป็นหน่วยเดือน)",
+        "choices": [
+            {
+                "value": "1",
+                "text": "1"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "5"
+            },
+            {
+                "value": "6",
+                "text": "6"
+            },
+            {
+                "value": "7",
+                "text": "7"
+            },
+            {
+                "value": "8",
+                "text": "8"
+            },
+            {
+                "value": "9",
+                "text": "9"
+            },
+            {
+                "value": "10",
+                "text": "10"
+            },
+            {
+                "value": "11",
+                "text": "11"
+            },
+            {
+                "value": "12",
+                "text": "12"
+            },
+            {
+                "value": "13",
+                "text": "13"
+            },
+            {
+                "value": "14",
+                "text": "14"
+            },
+            {
+                "value": "15",
+                "text": "15"
+            },
+            {
+                "value": "16",
+                "text": "16"
+            },
+            {
+                "value": "17",
+                "text": "17"
+            },
+            {
+                "value": "18",
+                "text": "18"
+            },
+            {
+                "value": "19",
+                "text": "19"
+            },
+            {
+                "value": "20",
+                "text": "20"
+            },
+            {
+                "value": "21",
+                "text": "21"
+            },
+            {
+                "value": "22",
+                "text": "22"
+            },
+            {
+                "value": "23",
+                "text": "23"
+            },
+            {
+                "value": "24",
+                "text": "24"
+            },
+            {
+                "value": "25",
+                "text": "25"
+            },
+            {
+                "value": "26",
+                "text": "26"
+            },
+            {
+                "value": "27",
+                "text": "27"
+            },
+            {
+                "value": "28",
+                "text": "28"
+            },
+            {
+                "value": "29",
+                "text": "29"
+            },
+            {
+                "value": "30",
+                "text": "30"
+            },
+            {
+                "value": "31",
+                "text": "31"
+            },
+            {
+                "value": "32",
+                "text": "32"
+            },
+            {
+                "value": "33",
+                "text": "33"
+            },
+            {
+                "value": "34",
+                "text": "34"
+            },
+            {
+                "value": "35",
+                "text": "35"
+            },
+            {
+                "value": "36",
+                "text": "36"
+            }
+        ],
+        "visibleIf": "{GuaranteeE3} = 'Yes'",
+        "accept": "Single answer",
+        "id": 154
+    },
+    {
+        "type": "html",
+        "name": "IntroProductE4",
+        "html": "บอร์ด YSH (สรุป)",
+        "id": 155
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingE4",
+        "title": "หลังจากที่คุณได้ทดลองทาสีไปทั้งครบสามครั้งแล้วนั้น ระดับ ความชอบโดยรวม ที่คุณมีต่อบอร์ดไฟเบอร์ซีเมนต์นี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 156
+    },
+    {
+        "type": "comment",
+        "name": "LikesE4",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับผลิตภัณฑ์บอร์ดไฟเบอร์ซีเมนทดสอบนี้บ้าง ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 157
+    },
+    {
+        "type": "comment",
+        "name": "DislikesE4",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไร กับผลิตภัณฑ์บอร์ดไฟเบอร์ซีเมนทดสอบนี้บ้าง ไม่ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 158
+    },
+    {
+        "type": "dropdown",
+        "name": "NPSE4",
+        "title": "คุณจะแนะนำผลิตภัณฑ์นี้ให้กับผู้อื่นอย่างไร กรุณาตอบเพียงคำตอบเดียว โดยที่ 0 หมายถึง คุณจะไม่แนะนำอย่างแน่นอน และ 10 หมายถึงคุณจะแนะนำอย่างแน่นอน",
+        "choices": [
+            {
+                "value": "0",
+                "text": "0"
+            },
+            {
+                "value": "1",
+                "text": "1"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "5"
+            },
+            {
+                "value": "6",
+                "text": "6"
+            },
+            {
+                "value": "7",
+                "text": "7"
+            },
+            {
+                "value": "8",
+                "text": "8"
+            },
+            {
+                "value": "9",
+                "text": "9"
+            },
+            {
+                "value": "10",
+                "text": "10"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 159
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "No",
+                "text": "ไม่ดีพอที่จะส่งมอบ"
+            },
+            {
+                "value": "Yes",
+                "text": "ดีพอแล้วที่จะส่งมอบ"
+            }
+        ],
+        "name": "ForJobDeliveryE4",
+        "title": "บอร์ดไฟเบอร์ซีเมนต์ที่คุณเพิ่งทาสีเสร็จไปนี้ ดีพอที่จะส่งมอบให้กับลูกค้า หรือ ผู้ว่าจ้างของคุณ (ลูกค้าหรือผู้ว่าจ้าง อาจจะเป็นเจ้าของบ้าน ผู้รับเหมา เป็นต้น) หรือยัง [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 160
+    },
+    {
+        "type": "comment",
+        "name": "ForJobDeliveryNoE4",
+        "title": "ทำไมคุณจึงตอบว่า แผงบอร์ด ที่คุณเพิ่งทาสีเสร็จไปนี้ ไม่ดีพอที่จะส่งมอบให้กับลูกค้า ",
+        "tooltip": "กรุณาตอบอย่างละเอียด",
+        "visibleIf": "{ForJobDeliveryE4} = 'No'",
+        "accept": "Open-ended",
+        "id": 161
+    },
+    {
+        "type": "comment",
+        "name": "ForJobDeliveryYesE4",
+        "title": "ทำไมคุณจึงตอบว่า แผงบอร์ด ที่คุณเพิ่งทาสีเสร็จไปนี้ ดีพอที่จะส่งมอบให้กับลูกค้า ",
+        "tooltip": "กรุณาตอบอย่างละเอียด",
+        "visibleIf": "{ForJobDeliveryE4} ='Yes'",
+        "accept": "Open-ended",
+        "id": 162
+    },
+    {
+        "type": "rating",
+        "name": "E4.1",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณขุยที่อยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 163
+    },
+    {
+        "type": "rating",
+        "name": "E4.2",
+        "title": "คุณให้คะแนน แผงบอร์ด กับเรื่องต่างๆเหล่านี้อย่างไร ปริมาณเศษๆ (ที่ไม่ใช่ขุย) ที่ติดอยู่บนแผ่นบอร์ดก่อนทา",
+        "rateValues": [
+            {
+                "value": "0",
+                "text": "ไม่มีเลย (0)"
+            },
+            {
+                "value": "1",
+                "text": "มีปริมาณเล็กน้อย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีปริมาณมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 164
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "No",
+                "text": "ไม่รับประกันงานทาสี"
+            },
+            {
+                "value": "Yes",
+                "text": "รับประกันงานทาสี"
+            }
+        ],
+        "name": "GuaranteeE4",
+        "title": "จากผลงานที่คุณเห็น คุณกล้าที่จะรับประกันงานทาสีให้กับเจ้าของบ้าน หรือผู้ว่าจ้าง หรือไม่ ",
+        "accept": "Single answer",
+        "id": 165
+    },
+    {
+        "type": "dropdown",
+        "name": "GaranteeMonthsE4",
+        "title": "คุณจะรับประกันงานทาสีให้กับเจ้าขอบ้าน หรือผู้ว่าจ้าง นานกี่เดือน กี่ปี (คิดทอนคำตอบมาเป็นหน่วยเดือน)",
+        "choices": [
+            {
+                "value": "1",
+                "text": "1"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "5"
+            },
+            {
+                "value": "6",
+                "text": "6"
+            },
+            {
+                "value": "7",
+                "text": "7"
+            },
+            {
+                "value": "8",
+                "text": "8"
+            },
+            {
+                "value": "9",
+                "text": "9"
+            },
+            {
+                "value": "10",
+                "text": "10"
+            },
+            {
+                "value": "11",
+                "text": "11"
+            },
+            {
+                "value": "12",
+                "text": "12"
+            },
+            {
+                "value": "13",
+                "text": "13"
+            },
+            {
+                "value": "14",
+                "text": "14"
+            },
+            {
+                "value": "15",
+                "text": "15"
+            },
+            {
+                "value": "16",
+                "text": "16"
+            },
+            {
+                "value": "17",
+                "text": "17"
+            },
+            {
+                "value": "18",
+                "text": "18"
+            },
+            {
+                "value": "19",
+                "text": "19"
+            },
+            {
+                "value": "20",
+                "text": "20"
+            },
+            {
+                "value": "21",
+                "text": "21"
+            },
+            {
+                "value": "22",
+                "text": "22"
+            },
+            {
+                "value": "23",
+                "text": "23"
+            },
+            {
+                "value": "24",
+                "text": "24"
+            },
+            {
+                "value": "25",
+                "text": "25"
+            },
+            {
+                "value": "26",
+                "text": "26"
+            },
+            {
+                "value": "27",
+                "text": "27"
+            },
+            {
+                "value": "28",
+                "text": "28"
+            },
+            {
+                "value": "29",
+                "text": "29"
+            },
+            {
+                "value": "30",
+                "text": "30"
+            },
+            {
+                "value": "31",
+                "text": "31"
+            },
+            {
+                "value": "32",
+                "text": "32"
+            },
+            {
+                "value": "33",
+                "text": "33"
+            },
+            {
+                "value": "34",
+                "text": "34"
+            },
+            {
+                "value": "35",
+                "text": "35"
+            },
+            {
+                "value": "36",
+                "text": "36"
+            }
+        ],
+        "visibleIf": "{GuaranteeE4} = 'Yes'",
+        "accept": "Single answer",
+        "id": 166
+    },
+    {
+        "type": "html",
+        "name": "IntroDirectCompare",
+        "html": "Direct Comparison",
+        "id": 167
+    },
+    {
+        "type": "matrixdropdown",
+        "columns": [
+            {
+                "name": "Column 1",
+                "title": "คุณชอบบอร์ดใดมากที่สุด",
+                "choices": [
+                    {
+                        "value": "XSC",
+                        "text": "บอร์ด XSC"
+                    },
+                    {
+                        "value": "XSH",
+                        "text": "บอร์ด XSH"
+                    },
+                    {
+                        "value": "XM",
+                        "text": "บอร์ด XM"
+                    }
+                ],
+                "isRequired": true
+            },
+            {
+                "name": "Column 2",
+                "title": "คุณชอบบอร์ดใดมากเป็นอันดับสอง",
+                "choices": [
+                    {
+                        "value": "XSC",
+                        "text": "บอร์ด XSC"
+                    },
+                    {
+                        "value": "XSH",
+                        "text": "บอร์ด XSH"
+                    },
+                    {
+                        "value": "XM",
+                        "text": "บอร์ด XM"
+                    }
+                ],
+                "isRequired": true
+            }
+        ],
+        "name": "DirectComparison",
+        "title": "จากแผงบอร์ดทั้ง 3 แผง ที่คุณได้ทดลองไปแล้วนั้น คุณชอบบอร์ดใดมากที่สุด [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 168
+    },
+    {
+        "type": "html",
+        "name": "IntroProductX1",
+        "html": "ผลิตภัณฑ์สี X สำหรับบอร์ด XSH (ก่อนทา)",
+        "id": 169
+    },
+    {
+        "type": "rating",
+        "name": "OpenX1",
+        "title": "ขอให้คุณเปิดถังสี เพื่อดูผลิตภัณฑ์สีในถังนี้โดยไม่มีการคนถังสี เราขอทราบว่าคุณคิดว่า สีนอนก้นหรือไม่อย่างไรค่ะ/ ครับ [คำตอบเดียว]",
+        "rateValues": [
+            {
+                "value": "Yes",
+                "text": "นอนก้น"
+            },
+            {
+                "value": "No",
+                "text": "ไม่นอนก้น"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 170
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingX1",
+        "title": "หลังจากที่คุณคนสีแล้ว ระดับความชอบที่คุณมีต่อผลิตภัณฑ์สีในถังนี้ เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 171
+    },
+    {
+        "type": "comment",
+        "name": "LikesX1",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไรกับผลิตภัณฑ์สีในถังนี้ ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 172
+    },
+    {
+        "type": "comment",
+        "name": "DislikesX1",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไรกับผลิตภัณฑ์สีในถังนี้  ไม่ชอบเพราะ....",
+        "accept": "Open-ended",
+        "id": 173
+    },
+    {
+        "type": "rating",
+        "name": "X1.1",
+        "title": "ระดับความเนียนของสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "เนื้อสีไม่เนียนเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "เนื้อสีเนียนมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 174
+    },
+    {
+        "type": "rating",
+        "name": "X1.2",
+        "title": "ระดับกลิ่นสารระเหย ",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่มีกลิ่นสารระเหยเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีกลิ่นสารระเหยแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 175
+    },
+    {
+        "type": "rating",
+        "name": "X1.3",
+        "title": "ระดับความเหลว-ความข้นของสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "เหลวมากเกินไป (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "กำลังดี (3)"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ข้นมากเกินไป (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 176
+    },
+    {
+        "type": "rating",
+        "name": "X1.4",
+        "title": "ระดับน้ำที่ต้องใช้ในการผสมลงไปในผลิตภัณฑ์สีถังนี้ ",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่ต้องผสมน้ำลงไปเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "ต้องผสมน้ำลงไปเพิ่ม (2)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 177
+    },
+    {
+        "type": "html",
+        "name": "IntroProductY1",
+        "html": "ผลิตภัณฑ์สี Y สำหรับบอร์ด YSH (ก่อนทา)",
+        "id": 178
+    },
+    {
+        "type": "rating",
+        "name": "OpenY1",
+        "title": "ขอให้คุณเปิดถังสี เพื่อดูผลิตภัณฑ์สีในถังนี้โดยไม่มีการคนถังสี เราขอทราบว่าคุณคิดว่า สีนอนก้นหรือไม่อย่างไรค่ะ/ ครับ [คำตอบเดียว]",
+        "rateValues": [
+            {
+                "value": "Yes",
+                "text": "นอนก้น"
+            },
+            {
+                "value": "No",
+                "text": "ไม่นอนก้น"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 179
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingY1",
+        "title": "หลังจากที่คุณคนสีแล้ว ระดับความชอบที่คุณมีต่อผลิตภัณฑ์สีในถังนี้ เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 180
+    },
+    {
+        "type": "comment",
+        "name": "LikesY1",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไรกับผลิตภัณฑ์สีในถังนี้ ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 181
+    },
+    {
+        "type": "comment",
+        "name": "DislikesY1",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไรกับผลิตภัณฑ์สีในถังนี้  ไม่ชอบเพราะ....",
+        "accept": "Open-ended",
+        "id": 182
+    },
+    {
+        "type": "rating",
+        "name": "Y1.1",
+        "title": "ระดับความเนียนของสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "เนื้อสีไม่เนียนเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "เนื้อสีเนียนมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 183
+    },
+    {
+        "type": "rating",
+        "name": "Y1.2",
+        "title": "ระดับกลิ่นสารระเหย ",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่มีกลิ่นสารระเหยเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีกลิ่นสารระเหยแรงมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 184
+    },
+    {
+        "type": "rating",
+        "name": "Y1.3",
+        "title": "ระดับความเหลว-ความข้นของสี",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "เหลวมากเกินไป (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "กำลังดี (3)"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ข้นมากเกินไป (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 185
+    },
+    {
+        "type": "rating",
+        "name": "Y1.4",
+        "title": "ระดับน้ำที่ต้องใช้ในการผสมลงไปในผลิตภัณฑ์สีถังนี้ ",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่ต้องผสมน้ำลงไปเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "ต้องผสมน้ำลงไปเพิ่ม (2)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 186
+    },
+    {
+        "type": "html",
+        "name": "IntroProductX2",
+        "html": "ผลิตภัณฑ์สี X สำหรับบอร์ด XSH (หลังทา)",
+        "id": 187
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingX2",
+        "title": "หลังจากที่คุณได้ทาสีแล้ว ระดับความชอบที่คุณมีต่อผลิตภัณฑ์สีในถังนี้ เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 188
+    },
+    {
+        "type": "comment",
+        "name": "LikesX2",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไรกับผลิตภัณฑ์สีในถังนี้ ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 189
+    },
+    {
+        "type": "comment",
+        "name": "DislikesX2",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไรกับผลิตภัณฑ์สีในถังนี้  ไม่ชอบเพราะ....",
+        "accept": "Open-ended",
+        "id": 190
+    },
+    {
+        "type": "rating",
+        "name": "X2.1",
+        "title": "ความลื่นของสีขณะกลิ้งลูกกลิ้ง",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่ลื่น (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ลื่นมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 191
+    },
+    {
+        "type": "rating",
+        "name": "X2.2",
+        "title": "ปริมาณฟองอากาศขณะทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่มีฟองอากาศเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีฟองอากาศมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 192
+    },
+    {
+        "type": "rating",
+        "name": "X2.3",
+        "title": "การไหลเยิ้มของสีขณะทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่มีการไหลเยิ้มของสีเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีการไหลเยิ้มของสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 193
+    },
+    {
+        "type": "rating",
+        "name": "X2.4",
+        "title": "ความเรียบเนียนของสีหลังจากทาสีเสร็จ",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "สีไม่เรียบเนียนเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "สีเรียบเนียนมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 194
+    },
+    {
+        "type": "rating",
+        "name": "X2.5",
+        "title": "ความสามารถในการปกปิดรอยแตกร้าว รอยแตกลายงาหลังจากทาสีเสร็จ (กลบรอยมิด)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กลบรอยไม่มิดเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กลบรอยมิดเลย (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 195
+    },
+    {
+        "type": "rating",
+        "name": "X2.6",
+        "title": "ความขึ้นเงาของสีหลังทา เมื่อมองด้วยตาเปล่า",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่ขึ้นเงาเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ขึ้นเงามาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 196
+    },
+    {
+        "type": "rating",
+        "name": "X2.7",
+        "title": "ความรวดเร็วในการแห้ง (ในมุมมองของช่างทาสีผ่านจากเนื้อสีที่ทา)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แห้งช้าเกินไปมาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "แห้งเร็วกำลังดี (3)"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "แห้งเร็วเกินไปมาก  (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 197
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Definitely not buy it",
+                "text": "จะไม่ซื้ออย่างแน่นอน"
+            },
+            {
+                "value": "Probably not buy it",
+                "text": "อาจจะไม่ซื้อ"
+            },
+            {
+                "value": "Not sure",
+                "text": "ไม่แน่ใจ"
+            },
+            {
+                "value": "Probably buy it",
+                "text": "อาจจะซื้อ"
+            },
+            {
+                "value": "Definitely buy it",
+                "text": "จะซื้ออย่างแน่นอน"
+            }
+        ],
+        "name": "PIX2",
+        "title": "ความต้องการซื้อของคุณที่มีต่อผลิตภัณฑ์สีนี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 198
+    },
+    {
+        "type": "html",
+        "name": "IntroProductY2",
+        "html": "ผลิตภัณฑ์สี Y สำหรับบอร์ด YSH (หลังทา)",
+        "id": 199
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "I don't like it a lot",
+                "text": "ไม่ชอบเลย"
+            },
+            {
+                "value": "I don't like it slightly",
+                "text": "ไม่ชอบมาก"
+            },
+            {
+                "value": "I don't like it somewhat",
+                "text": "ไม่ชอบเล็กน้อย"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "I like it somewhat",
+                "text": "ชอบเล็กน้อย"
+            },
+            {
+                "value": "I like it slightly",
+                "text": "ชอบมาก"
+            },
+            {
+                "value": "I like it a lot",
+                "text": "ชอบมากอย่างยิ่ง"
+            }
+        ],
+        "name": "LikingY2",
+        "title": "หลังจากที่คุณได้ทาสีแล้ว ระดับความชอบที่คุณมีต่อผลิตภัณฑ์สีในถังนี้ เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 200
+    },
+    {
+        "type": "comment",
+        "name": "LikesY2",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไรกับผลิตภัณฑ์สีในถังนี้ ชอบเพราะ...",
+        "accept": "Open-ended",
+        "id": 201
+    },
+    {
+        "type": "comment",
+        "name": "DislikesY2",
+        "title": "โดยรวมแล้ว คุณชอบหรือไม่ชอบอะไรกับผลิตภัณฑ์สีในถังนี้  ไม่ชอบเพราะ....",
+        "accept": "Open-ended",
+        "id": 202
+    },
+    {
+        "type": "rating",
+        "name": "Y2.1",
+        "title": "ความลื่นของสีขณะกลิ้งลูกกลิ้ง",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่ลื่น (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ลื่นมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 203
+    },
+    {
+        "type": "rating",
+        "name": "Y2.2",
+        "title": "ปริมาณฟองอากาศขณะทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่มีฟองอากาศเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีฟองอากาศมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 204
+    },
+    {
+        "type": "rating",
+        "name": "Y2.3",
+        "title": "การไหลเยิ้มของสีขณะทา",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่มีการไหลเยิ้มของสีเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "มีการไหลเยิ้มของสีมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 205
+    },
+    {
+        "type": "rating",
+        "name": "Y2.4",
+        "title": "ความเรียบเนียนของสีหลังจากทาสีเสร็จ",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "สีไม่เรียบเนียนเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "สีเรียบเนียนมาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 206
+    },
+    {
+        "type": "rating",
+        "name": "Y2.5",
+        "title": "ความสามารถในการปกปิดรอยแตกร้าว รอยแตกลายงาหลังจากทาสีเสร็จ (กลบรอยมิด)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "กลบรอยไม่มิดเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "กลบรอยมิดเลย (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 207
+    },
+    {
+        "type": "rating",
+        "name": "Y2.6",
+        "title": "ความขึ้นเงาของสีหลังทา เมื่อมองด้วยตาเปล่า",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "ไม่ขึ้นเงาเลย (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "3"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "ขึ้นเงามาก (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 208
+    },
+    {
+        "type": "rating",
+        "name": "Y2.7",
+        "title": "ความรวดเร็วในการแห้ง (ในมุมมองของช่างทาสีผ่านจากเนื้อสีที่ทา)",
+        "rateValues": [
+            {
+                "value": "1",
+                "text": "แห้งช้าเกินไปมาก (1)"
+            },
+            {
+                "value": "2",
+                "text": "2"
+            },
+            {
+                "value": "3",
+                "text": "แห้งเร็วกำลังดี (3)"
+            },
+            {
+                "value": "4",
+                "text": "4"
+            },
+            {
+                "value": "5",
+                "text": "แห้งเร็วเกินไปมาก  (5)"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 209
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Definitely not buy it",
+                "text": "จะไม่ซื้ออย่างแน่นอน"
+            },
+            {
+                "value": "Probably not buy it",
+                "text": "อาจจะไม่ซื้อ"
+            },
+            {
+                "value": "Not sure",
+                "text": "ไม่แน่ใจ"
+            },
+            {
+                "value": "Probably buy it",
+                "text": "อาจจะซื้อ"
+            },
+            {
+                "value": "Definitely buy it",
+                "text": "จะซื้ออย่างแน่นอน"
+            }
+        ],
+        "name": "PIY2",
+        "title": "ความต้องการซื้อของคุณที่มีต่อผลิตภัณฑ์สีนี้เป็นอย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 210
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "X",
+                "text": "ผลิตภัณฑ์สีทาทับหน้า ถัง X"
+            },
+            {
+                "value": "Y",
+                "text": "ผลิตภัณฑ์สีทาทับหน้า ถัง Y"
+            }
+        ],
+        "name": "XYPreference",
+        "title": "คุณชอบผลิตภัณฑ์สีทาทับหน้า ถังใดมากกว่ากัน [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 211
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Definitely buy",
+                "text": "ซื้ออย่างแน่นอน"
+            },
+            {
+                "value": "Probably buy",
+                "text": "ซื้อ"
+            },
+            {
+                "value": "Not sure",
+                "text": "ไม่แน่ใจ"
+            },
+            {
+                "value": "Probably not buy",
+                "text": "ไม่ซื้อ"
+            },
+            {
+                "value": "Definitely not buy",
+                "text": "ไม่ซื้ออย่างแน่นอน"
+            }
+        ],
+        "name": "SheraPaint",
+        "title": "หากยี่ห้อเฌอร่าผลิต สีทาไฟเบอร์ซีเมนต์โดยเฉพาะ มาจำหน่าย คุณจะเลือกซื้อหรือไม่ [คำตอบเดียว] ",
+        "accept": "Single answer",
+        "id": 212
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Interested / Promotions",
+                "text": "สนใจเข้าร่วม ก็ต่อเมื่อมีโปรโมชั่นหรือของสมนาคุณหลังจบการอบรม"
+            },
+            {
+                "value": "Interested / Certificates",
+                "text": "สนใจเข้าร่วม ก็ต่อเมื่อมีประกาศนียบัตรหลังจบการอบรม"
+            },
+            {
+                "value": "Interested / Get works from Shera",
+                "text": "สนใจเข้าร่วม ก็ต่อเมื่อมีโอกาสเข้าร่วมเป็นช่างเฌอร่า  หรือ เฌอร่าส่งงานให้"
+            },
+            {
+                "value": "Not interested",
+                "text": "ไม่สนใจเลย"
+            }
+        ],
+        "name": "SheraTraining",
+        "title": "หากบริษัทหรือยี่ห้อเฌอร่าจัดงานฝึกอบรมช่างสำหรับงานติดตั้งผลิตภัณฑ์และงานทาสี ใกล้ที่ทำงานของคุณ คุณจะสนใจเข้าร่วมการอบรมหรือไม่ อย่างไร [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 213
+    },
+    {
+        "type": "matrix",
+        "name": "ImportantFactor",
+        "title": "ต่อไปนี้เป็นข้อความที่คนทั่วไปกล่าวถึง สิ่งต่างๆที่สำคัญในการเลือก แผงบอร์ด สำหรับตัวคุณเองนั้น แต่ละข้อความต่าง ๆ เหล่านี้มีความสำคัญมากน้อยเพียงใด กรุณาใช้คะแนนตั้งแต่ 1 ถึง 5 โดยที่ 1 หมายถึงไม่สำคัญ และ 5 หมายถึงสำคัญมาก ",
+        "columns": [
+            {
+                "value": "Not important at all",
+                "text": "ไม่สำคัญเลย"
+            },
+            {
+                "value": "Not important",
+                "text": "ไม่สำคัญ"
+            },
+            {
+                "value": "Neither nor",
+                "text": "เฉยๆ"
+            },
+            {
+                "value": "Important",
+                "text": "สำคัญ"
+            },
+            {
+                "value": "Very important",
+                "text": "สำคัญมาก"
+            }
+        ],
+        "rows": [
+            {
+                "value": "Price",
+                "text": "ราคาที่เหมาะสม"
+            },
+            {
+                "value": "Trustworthy brabnd",
+                "text": "เป็นยี่ห้อที่เชื่อใจได้"
+            },
+            {
+                "value": "Ease of install",
+                "text": "ติดตั้งง่าย"
+            },
+            {
+                "value": "Ease of paint",
+                "text": "ทาสีง่าย"
+            },
+            {
+                "value": "Consume less amount of paint",
+                "text": "ใช้ปริมาณสีน้อยในการทา"
+            },
+            {
+                "value": "Smooth surface",
+                "text": "เนื้อบอร์ดเรียบ"
+            },
+            {
+                "value": "Less no. of times to paint",
+                "text": "จำนวนเที่ยวในการทาสีน้อย"
+            }
+        ],
+        "accept": "Single answer",
+        "id": 214
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Yes",
+                "text": "ได้ซื้อ"
+            },
+            {
+                "value": "No",
+                "text": "ไม่ได้ซื้อ"
+            }
+        ],
+        "name": "BuyFCinP6M",
+        "title": "ใน 6 เดือนที่ผ่านมา คุณได้ซื้อบอร์ดด้วยตัวเองบ้างหรือไม่ [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 215
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Transparent Primer",
+                "text": "สีรองพื้นแบบใส"
+            },
+            {
+                "value": "White Primer",
+                "text": "สีรองพื้นแบบสีขาว"
+            },
+            {
+                "value": "Both",
+                "text": "ทั้ง 2 แบบ"
+            }
+        ],
+        "name": "PrimerTypeUse",
+        "title": "โดยปกติแล้ว คุณใช้สีรองพื้นประเภทใด [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 216
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Definitely not buy it",
+                "text": "จะไม่ซื้ออย่างแน่นอน"
+            },
+            {
+                "value": "Probably not buy it",
+                "text": "อาจจะไม่ซื้อ"
+            },
+            {
+                "value": "Not sure",
+                "text": "ไม่แน่ใจ"
+            },
+            {
+                "value": "Probably buy it",
+                "text": "อาจจะซื้อ"
+            },
+            {
+                "value": "Definitely buy it",
+                "text": "จะซื้ออย่างแน่นอน"
+            }
+        ],
+        "name": "SheraPaintPI",
+        "title": "หากยี่ห้อเฌอร่า ผลิตสีทาไฟเบอร์ซีเมนต์ สูตรผสมรองพื้นมาในตัว (ไม่ต้องทารองพื้น) มาจำหน่าย คุณจะเลือกซื้อหรือไม่ หากมาจำหน่ายในราคาที่คุณรับได้ [คำตอบเดียว] ",
+        "accept": "Single answer",
+        "id": 217
+    },
+    {
+        "type": "html",
+        "name": "MarketPaintPrice",
+        "html": "โดยทั่วไป ราคาผลิตภัณฑ์ทาสี ที่วางขายอยู่ เป็นแบบนี้\n\nสีรองพื้นทั่วไป/สีทารองพื้นสำหรับไฟเบอร์ซีเมนต์โดยเฉพาะ\n600 บาทต่อถังขนาด 4 ลิตร\n\nสีทับหน้าทั่วไป/สีทับหน้าสำหรับไฟเบอร์ซีเมนต์\n800 บาทต่อถังขนาด 4 ลิตร\n",
+        "id": 218
+    },
+    {
+        "type": "text",
+        "name": "SheraPaintPrice",
+        "title": "ในความคิดของคุณ คุณคิดว่าราคาที่เหมาะสมสำหรับสีทาไฟเบอร์ซีเมนต์ สูตรผสมรองพื้นมาในตัว ทำให้ไม่ต้องทารองพื้น และสามารถจบงานได้ในกระป๋องเดียว บรรจุถังละ 4 ลิตร คือ ราคาเท่าไหร่ต่อถัง [คำตอบเดียว] บันทึกราคาต่อถังขนาด 4 ลิตร",
+        "accept": "Open-ended",
+        "id": 219
+    },
+    {
+        "type": "matrixdropdown",
+        "columns": [
+            {
+                "name": "Rank1",
+                "title": "สำคัญอันดับแรก",
+                "choices": [
+                    {
+                        "value": "Paint elasticity",
+                        "text": "ความยืดหยุ่นของสี"
+                    },
+                    {
+                        "value": "Heat protection",
+                        "text": "ความกันร้อน"
+                    },
+                    {
+                        "value": "Cleanable & washable",
+                        "text": "เช็ดล้างได้"
+                    },
+                    {
+                        "value": "No toxic",
+                        "text": "ปลอดสารพิษ"
+                    },
+                    {
+                        "value": "No odour",
+                        "text": "ไม่มีกลิ่น"
+                    },
+                    {
+                        "value": "Durable to weather",
+                        "text": "ทนสภาพอากาศ"
+                    },
+                    {
+                        "value": "Fully cover the cracks",
+                        "text": "ปกปิดรอยแตกได้มิด"
+                    },
+                    {
+                        "value": "No need for primer",
+                        "text": "ไม่ต้องทารองพื้น"
+                    }
+                ],
+                "isRequired": true
+            },
+            {
+                "name": "Rank2 ",
+                "title": "สำคัญอันดับ 2",
+                "choices": [
+                    {
+                        "value": "Paint elasticity",
+                        "text": "ความยืดหยุ่นของสี"
+                    },
+                    {
+                        "value": "Heat protection",
+                        "text": "ความกันร้อน"
+                    },
+                    {
+                        "value": "Clean & washable",
+                        "text": "เช็ดล้างได้"
+                    },
+                    {
+                        "value": "No toxic",
+                        "text": "ปลอดสารพิษ"
+                    },
+                    {
+                        "value": "No odour",
+                        "text": "ไม่มีกลิ่น"
+                    },
+                    {
+                        "value": "Durable to weather",
+                        "text": "ทนสภาพอากาศ"
+                    },
+                    {
+                        "value": "Cover the cracks",
+                        "text": "ปกปิดรอยแตกได้มิด"
+                    },
+                    {
+                        "value": "No need for primer",
+                        "text": "ไม่ต้องทารองพื้น"
+                    }
+                ],
+                "isRequired": true
+            },
+            {
+                "name": "Rank3 ",
+                "title": "สำคัญอันดับ 3",
+                "choices": [
+                    {
+                        "value": "Paint elasticity",
+                        "text": "ความยืดหยุ่นของสี"
+                    },
+                    {
+                        "value": "Heat protection",
+                        "text": "ความกันร้อน"
+                    },
+                    {
+                        "value": "Clean & washable",
+                        "text": "เช็ดล้างได้"
+                    },
+                    {
+                        "value": "No toxic",
+                        "text": "ปลอดสารพิษ"
+                    },
+                    {
+                        "value": "No odour",
+                        "text": "ไม่มีกลิ่น"
+                    },
+                    {
+                        "value": "Durable to weather",
+                        "text": "ทนสภาพอากาศ"
+                    },
+                    {
+                        "value": "Cover the cracks",
+                        "text": "ปกปิดรอยแตกได้มิด"
+                    },
+                    {
+                        "value": "No need for primer",
+                        "text": "ไม่ต้องทารองพื้น"
+                    }
+                ],
+                "isRequired": true
+            }
+        ],
+        "name": "PaintRank",
+        "title": "ต่อไปนี้เป็นข้อความที่คนทั่วไปกล่าวถึง คุณสมบัติของผลิตภัณฑ์สีทาทับหน้า อยากทราบว่าคุณมองหาคุณสมบัติใดเป็น 3 อันดับแรก",
+        "accept": "Single answer",
+        "id": 220
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Not slide at all",
+                "text": "ไม่ปาดสีรองพื้นเลย"
+            },
+            {
+                "value": "Not slide, just let it drop",
+                "text": "ไม่ปาดสีรองพื้น แต่ใช้วิธีปล่อยให้สีหยดลงในถัง"
+            },
+            {
+                "value": "Somewhat not slide",
+                "text": "แทบจะไม่ปาดสีรองพื้นเลย"
+            },
+            {
+                "value": "Slide from time to time",
+                "text": "ปาดสีรองพื้นบ้างไม่ปาดบ้างสลับกัน"
+            },
+            {
+                "value": "Slide all the time",
+                "text": "ปาดสีรองพื้นทุกครั้งก่อนทา"
+            }
+        ],
+        "name": "PrimerToday",
+        "title": "ข้อความใดต่อไปนี้ อธิบายการทาสีรองพื้นของคุณในวันนี้ได้ดีที่สุด",
+        "accept": "Single answer",
+        "id": 221
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "With container",
+                "text": "ปาดกับปากถังสี"
+            },
+            {
+                "value": "Wtih tray",
+                "text": "ปาดกับถาดสี"
+            },
+            {
+                "value": "With both",
+                "text": "ปาดกับทั้งปากถังสี และถาดสีสลับกัน"
+            }
+        ],
+        "name": "SlidePrimer",
+        "title": "คุณปาดสีรองพื้นกับอุปกรณ์ใด",
+        "visibleIf": "{PrimerToday} = 'Somewhat not slide' or {PrimerToday} = 'Slide from time to time' or {PrimerToday} = 'Slide all the time'",
+        "accept": "Single answer",
+        "id": 222
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Not slide at all",
+                "text": "ไม่ปาดสีทาทับหน้า (สีจริง)เลย"
+            },
+            {
+                "value": "Not slide, just let it drop",
+                "text": "ไม่ปาดสีทาทับหน้า (สีจริง)แต่ใช้วิธีปล่อยให้สีหยดลงในถัง"
+            },
+            {
+                "value": "Somewhat not slide",
+                "text": "แทบจะไม่ปาดสีทาทับหน้า (สีจริง) เลย"
+            },
+            {
+                "value": "Slide from time to time",
+                "text": "ปาดสีทาทับหน้า (สีจริง) บ้างไม่ปาดบ้างสลับกัน"
+            },
+            {
+                "value": "Slide all the time",
+                "text": "ปาดสีทาทับหน้า (สีจริง) ทุกครั้งก่อนทา"
+            }
+        ],
+        "name": "PaintToday",
+        "title": "ข้อความใดต่อไปนี้ อธิบายการทาสีทาทับหน้า (สีจริง) ของคุณในวันนี้ได้ดีที่สุด",
+        "accept": "Single answer",
+        "id": 223
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "With container",
+                "text": "ปาดกับปากถังสี"
+            },
+            {
+                "value": "Wtih tray",
+                "text": "ปาดกับถาดสี"
+            },
+            {
+                "value": "With both",
+                "text": "ปาดกับทั้งปากถังสี และถาดสีสลับกัน"
+            }
+        ],
+        "name": "SlidePaint",
+        "title": "คุณปาดสีทาทับหน้า (สีจริง) กับอุปกรณ์ใดคะ/ ครับ",
+        "visibleIf": "{PaintToday} = 'Somewhat not slide' or {PaintToday} = 'Slide from time to time' or {PaintToday} = 'Slide all the time'",
+        "accept": "Single answer",
+        "id": 224
+    },
+    {
+        "type": "html",
+        "name": "IntroDemographic",
+        "html": "คำถามประชากรศาสตร์",
+        "id": 225
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "No formal education",
+                "text": "ไม่ได้รับการศึกษาอย่างเป็นทางการ"
+            },
+            {
+                "value": "Primary school",
+                "text": "ประถมศึกษา"
+            },
+            {
+                "value": "Secondary school",
+                "text": "มัธยมศึกษาตอนต้น"
+            },
+            {
+                "value": "High School",
+                "text": "มัธยมศึกษาตอนปลาย"
+            },
+            {
+                "value": "Vocational certificate / Diploma",
+                "text": "อนุปริญญา ประกาศนียบัตร"
+            },
+            {
+                "value": "Bachelor’s degree",
+                "text": "ปริญญาตรี"
+            },
+            {
+                "value": "Higher than Bachelor’s degree",
+                "text": "ปริญญาโทหรือสูงกว่า"
+            }
+        ],
+        "name": "Education",
+        "title": "ระดับการศึกษาสูงที่สุดของคุณ [คำตอบเดียว]",
+        "accept": "Single answer",
+        "id": 226
+    },
+    {
+        "type": "radiogroup",
+        "choices": [
+            {
+                "value": "Single",
+                "text": "โสด"
+            },
+            {
+                "value": "Married without kids",
+                "text": "สมรส ไม่มีบุตร"
+            },
+            {
+                "value": "Married with kids",
+                "text": "สมรส มีบุตร"
+            },
+            {
+                "value": "Separated/ Divorced/ Widow without kids",
+                "text": "หย่าร้าง แยกทาง หม้าย ไม่มีบุตร"
+            },
+            {
+                "value": "Separated/ Divorced/ Widow with kids",
+                "text": "หย่าร้าง แยกทาง หม้าย มีบุตร"
+            }
+        ],
+        "name": "MaritalStatus",
+        "title": "สถานะภาพสมรส (คำตอบเดียว)",
+        "accept": "Single answer",
+        "id": 227
+    },
+    {
+        "type": "multipletext",
+        "name": "Humidity",
+        "title": "บันทึก % ความชื้นของแผงบอร์ดก่อนทา",
+        "items": [
+            {
+                "name": "XSC",
+                "title": "XSC"
+            },
+            {
+                "name": "XSH",
+                "title": "XSH"
+            },
+            {
+                "name": "XM",
+                "title": "XM"
+            },
+            {
+                "name": "YSH ",
+                "title": "YSH "
+            }
+        ],
+        "accept": "Open-ended",
+        "id": 228
+    },
+    {
+        "type": "multipletext",
+        "name": "Weather",
+        "title": "บันทึกสภาพอากาศ",
+        "items": [
+            {
+                "name": "Temperature at 10:00 am",
+                "title": "อุณหภูมิ เวลา 10.00 น."
+            },
+            {
+                "name": "Humidity at 10:00 am",
+                "title": "ความชื้น เวลา 10.00 น."
+            },
+            {
+                "name": "Temperature at 14:00 pm",
+                "title": "อุณหภูมิ เวลา 14.00 น."
+            },
+            {
+                "name": "Humidity at 14:00 pm",
+                "title": "ความชื้น เวลา 14.00 น."
+            }
+        ],
+        "accept": "Open-ended",
+        "id": 229
+    },
+    {
+        "type": "html",
+        "name": "IntroEnd",
+        "html": "สิ้นสุดการสัมภาษณ์\n\nสิ้นสุดการสัมภาษณ์ กดปุ่ม 'ส่งความคิดเห็น' ล่างนี้เพื่อส่งคำตอบทั่งหมดจากแบบสอบถามชุดนี้เข้าสู่ระบบสำหรับการประมวลผลต่อไป\n\nทางบริษัทขอขอบพระคุณสำหรับการสละเวลาเพื่อแสดงความคิดเห็นของคุณในโครงงานวิจัยชิ้นนี้",
+        "id": 230
+    }
+]

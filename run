@@ -1,0 +1,11 @@
+tns clean
+
+npm cache clean --force
+
+rm -rf ~/Library/Developer/Xcode/DerivedData
+
+xcodebuild clean
+
+yarn install && yarn upgrade 
+
+tns run ios

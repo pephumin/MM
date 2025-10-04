@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "module": "commonjs",
     "target": "ES2020",
     "moduleResolution": "node",
     "experimentalDecorators": true,
@@ -13,7 +13,9 @@
     "paths": {
       "~/*": ["app/*"],
       "@/*": ["app/*"]
-    }
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
   },
   "include": ["app/**/*"],
   "files": ["./references.d.ts"],

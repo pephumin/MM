@@ -1,0 +1,47 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+
+  <ActionBar>
+    <Label class="ibm7 h2" text="Member area" />
+  </ActionBar>
+
+  <ScrollView>
+    <StackLayout class="container">
+
+      <!-- Title -->
+      <Label text="Login to the system" class="title" />
+้
+      <!-- Email & Password -->
+      <StackLayout width="80%" marginTop="0" marginBottom="0">
+        <GridLayout columns="auto, *, auto" class="input-container">
+          <Label col="0" class="inputicon fas" text="&#xf0e0;"></Label>
+          <TextField col="1" hint="Your Email" text="{{ email }}" keyboardType="email" autocapitalizationType="none" />
+          <Label col="2" class="inputicon fas" text="&#xf00c;" color="green" visibility="{{ label1Visibility }}"></Label>
+        </GridLayout>
+
+        <GridLayout columns="auto, *, auto" class="input-container">
+          <Label col="0" class="inputicon fas" text="&#xf084;"></Label>
+          <TextField col="1" hint="Your Password" secure="true" text="{{ password }}" autocapitalizationType="none" />
+          <Label col="2" class="inputicon fas" text="&#xf00c;" color="green" visibility="{{ label2Visibility }}"></Label>
+        </GridLayout>
+
+        <!-- Feedback -->
+        <Label text="{{ feedbackMessage }}" class="feedback" textWrap="true" />
+
+        <!-- Login Button -->
+        <Button text="Login" tap="{{ login }}" class="btn btn-primary" />
+        <Button col="1" text="Login with Facebook" tap="{{ loginWithFacebook }}" class="btn btn-f" />
+
+      </StackLayout>
+
+      <!-- Register / Forgot Links -->
+      <StackLayout orientation="horizontal" horizontalAlignment="center" marginTop="10">
+        <Button text="Registration" tap="{{ goToRegistration }}" class="btn btn-link" />
+        <Label text=" | " />
+        <Button text="Forgot Paasword" tap="{{ goToForgotPassword }}" class="btn btn-link" />
+      </StackLayout>
+
+    </StackLayout>
+  </ScrollView>
+
+</Page>
+

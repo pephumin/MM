@@ -20,6 +20,24 @@
   font-weight: 400;
 }
 
+// Pagination controls
+.pagination-container {
+  background-color: #e7e7e7;
+  border-top-width: 1;
+  border-top-color: #e0e0e0;
+  margin: 10;
+}
+
+ActionBar {
+  background-color: #e7e7e7;
+  // color: white;
+}
+
+.pagination-text {
+  font-size: 12;
+  color: darkgrey;
+}
+
 // Custom tabstrip item class
 .navigation__item {
   &:active,
@@ -28,19 +46,152 @@
   }
 }
 
-// Common page class
-.page__content {
-  &-icon,
-  &-placeholder {
-    color: const(grey);
-    font-size: 20;
-    vertical-align: center;
-    horizontal-align: center;
-  }
 
-  &-icon {
-    font-size: 72;
-    vertical-align: top;
-    margin-top: 20%;
+.ibm7 {
+  font-family: 'IBM Plex Sans Thai', 'IBMPlexSansThai-Bold';
+  font-weight: 700;
+}
+
+.ibm6 {
+  font-family: 'IBM Plex Sans Thai', 'IBMPlexSansThai-SemiBold';
+  font-weight: 600;
+}
+
+.ibm5 {
+  font-family: 'IBM Plex Sans Thai', 'IBMPlexSansThai-Medium';
+  font-weight: 500;
+}
+
+.ibm4 {
+  font-family: 'IBM Plex Sans Thai', 'IBMPlexSansThai-Regular';
+  font-weight: 400;
+}
+
+.ibm3 {
+  font-family: 'IBM Plex Sans Thai', 'IBMPlexSansThai-Light';
+  font-weight: 300;
+}
+
+.ibm2 {
+  font-family: 'IBM Plex Sans Thai', 'IBMPlexSansThai-ExtraLight';
+  font-weight: 200;
+}
+
+.ibm1 {
+  font-family: 'IBM Plex Sans Thai', 'IBMPlexSansThai-Thin';
+  font-weight: 100;
+}
+
+.pattaya {
+  font-family: "Pattaya", "Pattaya-Regular"; 
+  font-weight: 400;
+}
+
+.opensans {
+  font-family: "Open Sans", "OpenSans-Variable";
+  font-weight: 400;
+}
+
+searchBar {
+  margin: 0;
+  border-width: 5;
+  border-color: black;
+  border-radius: 6;
+  font-family: "Roboto", "Roboto-Variable";
+  font-weight: 400;
+  color: navy;
+  placeholder-color: grey;
+  text-transform: lowercase;
+}
+
+.page {
+  background-color: #f9f9f9;
+  font-family: "Pattaya", "Pattaya-Regular"; 
+  font-weight: 400;
+}
+
+.container {
+  padding: 20;
+  vertical-align: top;
+}
+
+.title {
+  font-size: 26;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20;
+}
+
+.input-container {
+  border-width: 0;
+  border-color: lightgray;
+  padding: 0;
+}
+
+TextField {
+  margin-bottom: 12;
+  padding: 12;
+  border-width: 1;
+  border-color: #ccc;
+  border-radius: 6;
+  background-color: #fff;
+  font-family: "Roboto", "Roboto-Variable";
+  font-weight: 400;
+  font-weight: bold;
+  padding: 10;
+  color: navy;
+  placeholder-color: darkgrey;
+  text-transform: lowercase;
+}
+
+.divider {
+  margin: 20 0;
+  color: #aaa;
+  text-align: center;
+  font-size: 14;
+}
+
+.feedback {
+  color: red;
+  font-size: 14;
+  margin-top: 10;
+  margin-bottom: 10;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", "Roboto-Variable";
+  font-weight: 400;
+}
+
+.btn {
+  margin-top: 10;
+  padding: 10;
+  border-width: 3;
+  border-radius: 10;
+  font-family: "Roboto", "Roboto-Variable";
+  font-weight: 400;
+  font-size: 16;
+  &-primary {
+    background-color: #3b82f6;
+    color: white;
   }
+  &-outline {
+    border-color: #3b82f6;
+    color: #3b82f6;
+    background-color: transparent; 
+    border-width: 5;
+  }
+  &-link {
+    background-color: transparent;
+    color: #007bff;
+    font-size: 14;
+    padding: 0;
+    border: 0;
+  }
+}
+
+.inputicon {
+  font-size: 20;
+  vertical-align: middle;
+  margin-bottom: 8;
+  color: grey;
 }
