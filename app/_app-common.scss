@@ -20,6 +20,16 @@
   font-weight: 400;
 }
 
+.ic_menu_back {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  transform: rotate(45deg);
+  margin: 10px;
+}
+
 // Pagination controls
 .pagination-container {
   background-color: #e7e7e7;
@@ -35,7 +45,12 @@ ActionBar {
 
 .pagination-text {
   font-size: 12;
-  color: darkgrey;
+  color: #666666;
+}
+
+.separator {
+  font-size: 12;
+  color: #e0e0e0;
 }
 
 // Custom tabstrip item class
@@ -93,14 +108,15 @@ ActionBar {
 }
 
 searchBar {
-  margin: 0;
+  margin-bottom: 12;
+  padding: 12;
   border-width: 5;
   border-color: black;
   border-radius: 6;
   font-family: "Roboto", "Roboto-Variable";
   font-weight: 400;
   color: navy;
-  placeholder-color: grey;
+  placeholder-color: darkgrey;
   text-transform: lowercase;
 }
 

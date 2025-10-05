@@ -4,7 +4,7 @@
     <NavigationButton tap="onBackButtonTap" android.systemIcon="ic_menu_back" />
     <Label class="ibm7 h2" text="{{ title }}" />
   </ActionBar>
-
+  
   <ScrollView>
     <StackLayout class="container">
       <Image src="res://questionnaire" margin="10" />

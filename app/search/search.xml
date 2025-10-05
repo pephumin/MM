@@ -5,9 +5,10 @@
   </ActionBar>
 
   <GridLayout class="page__content">
-    <StackLayout orientation="vertical">
-      <SearchBar class="searchBar" hint="Search here..." text="" clear="onSearchClear" submit="onSearchSubmit" />
-      <Label class="inputicon fas" text="&#xf002;"></Label>
+    <Label class="page__content-icon fas" text="&#xf002;"></Label>
+    <StackLayout>
+      <!-- Search bar -->
+      <SearchBar row="0" hint="Search everything..." text="{{ searchQuery }}" submit="onSearchSubmit" clear="onSearchClear" textChange="onSearchTextChanged" />
     </StackLayout>
   </GridLayout>
 

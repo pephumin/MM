@@ -8,25 +8,24 @@ export function onNavigatingTo(args: EventData) {
   page.bindingContext = UserViewModelInstance;
 }
 
-// export function onNavigatingToDestination(args: EventData) {
-//   const page = <Page>args.object;
-//   page.bindingContext = UserViewModelInstance;
-
-//   let destination: string;
-//   const LinkId = (args.object as any).id;
-//   console.log(LinkId);
-
-//   if (LinkId === 'link1') { destination = '~/user/registration'; } 
-//   else if (LinkId === 'link2') { destination = '~/user/forgot-password'; }
-//   else if (LinkId === 'link3') { destination = '~/user/login'; }
-//   else if (LinkId === 'link4') { destination = '~/home/fhome'; }
-//   Frame.topmost().navigate(destination);
-// }
-
-export function onTextChange(args: PropertyChangeData) {
+export function onLoginTextChanged(args: PropertyChangeData) {
   const textField = args.object as TextField;
   console.log('TextField text changed:', textField.text);
-  const updatedValue = LowerCase(args.value)
+  const updatedValue = LowerCase(args.value);
   console.log('New value:', updatedValue);
   if (textField.text !== args.value) { textField.text = updatedValue; }
+  // const searchBar = <SearchBar>args.object;
+  // const page = searchBar.page;
+  // const vm = page.bindingContext as HomeViewModel;
+  // vm.setSearchQuery(searchBar.text);
 }
+
+// export function onTextChange(args: PropertyChangeData) {
+//   const textField = args.object as TextField;
+//   console.log('TextField text changed:', textField.text);
+//   const updatedValue = LowerCase(args.value)
+//   console.log('New value:', updatedValue);
+//   if (textField.text !== args.value) { textField.text = updatedValue; }
+// }
+
+

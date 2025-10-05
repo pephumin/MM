@@ -14,8 +14,6 @@ export class HomeViewModel extends Observable {
   private _totalItems: number = 1;
   private _startItem: number = 0;
   private _stopItem: number = 5;
-  // private _backgroundColor: string = '#e0e0e0';
-  // private _label1Visibility: string = 'collapse';
   private _isLoading: boolean = false;
   private _error: string = "";
 
@@ -33,7 +31,6 @@ export class HomeViewModel extends Observable {
   public goNext() { if (this._currentPage < this._totalPages) { this.currentPage = this._currentPage + 1; } }
 
   get items(): ObservableArray<HomeItem> { return this._pagedItems; }
-  get totalItems(): number { return this._items.length; }
   get searchQuery(): string { return this._searchQuery; }
   set searchQuery(value: string) { if (this._searchQuery !== value) { this.setSearchQuery(value); this._currentPage = 1; this.notifyPropertyChange("searchQuery", value); } }
   get statusFilter(): ItemStatus | null { return this._statusFilter; }
@@ -82,6 +79,7 @@ export class HomeViewModel extends Observable {
     let filtered = Array.from(this._items);
     if (this._statusFilter !== null) { filtered = filtered.filter(item => item.status === this._statusFilter); }    
     if (this._searchQuery) {
+      this._itemsPerPage = 20;
       this.totalItems = this._items.length;
       const lowerQuery = this._searchQuery.toLowerCase();
       filtered = filtered.filter(item =>

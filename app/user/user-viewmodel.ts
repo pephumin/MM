@@ -25,6 +25,7 @@ export class UserViewModel extends Observable {
   public goToForgotPassword() { Frame.topmost().navigate("~/user/forgot-password"); }
   public goToLogin() { Frame.topmost().navigate("~/user/login"); }
   public goToHome() { Frame.topmost().navigate("~/home/home"); }
+  // public loginWithFacebook() {}
 
   get email(): string { return LowerCase(this._email); }
   set email(value: string) {

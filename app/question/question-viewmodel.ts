@@ -85,6 +85,7 @@ export class QuestionViewModel extends Observable {
     let filtered = Array.from(this._items);
     if (this._statusFilter !== null) { filtered = filtered.filter(item => item.status === this._statusFilter); }    
     if (this._searchQuery) {
+      this._itemsPerPage = 20;
       this.totalItems = this._items.length;
       const lowerQuery = this._searchQuery.toLowerCase();
       filtered = filtered.filter(item =>

@@ -14,7 +14,7 @@
       <StackLayout width="80%" marginTop="0" marginBottom="0">
         <GridLayout columns="auto, *, auto" class="input-container">
           <Label col="0" class="inputicon fas" text="&#xf0e0;"></Label>
-          <TextField col="1" hint="Your Email" text="{{ email }}" keyboardType="email" autocapitalizationType="none" />
+          <TextField col="1" hint="Your Email" text="{{ email }}" keyboardType="email" autocapitalizationType="none" textChange="onTextChange" />
           <Label col="2" class="inputicon fas" text="&#xf00c;" color="green" visibility="{{ label1Visibility }}"></Label>
         </GridLayout>
 

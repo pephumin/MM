@@ -7,7 +7,7 @@
   <GridLayout rows="auto, *, auto">
 
     <!-- Search bar -->
-    <SearchBar row="0" hint="Search items..." text="{{ searchQuery }}" submit="onSearchSubmit" clear="onSearchClear" textChange="onSearchTextChanged" />
+    <SearchBar row="0" hint="Search questions..." text="{{ searchQuery }}" submit="onSearchSubmit" clear="onSearchClear" textChange="onSearchTextChanged" />
       
     <!-- List view -->
     <ListView row="1" items="{{ items }}" itemTap="onItemTap">
