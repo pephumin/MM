@@ -2,14 +2,14 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "ES2020",
-    "moduleResolution": "node",
+    // "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "noEmitHelpers": true,
     "noEmitOnError": true,
     "skipLibCheck": true,
     "lib": ["ESNext", "dom"],
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
       "~/*": ["app/*"],
       "@/*": ["app/*"]
