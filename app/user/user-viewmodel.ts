@@ -15,10 +15,10 @@ export class UserViewModel extends Observable {
 
   constructor() {
     super();
-    this.set('goToRegistration', this.goToRegistration);
-    this.set('goToForgotPassword', this.goToForgotPassword);
-    this.set('goToLogin', this.goToLogin);
-    this.set('goToHome', this.goToHome);
+    // this.set('goToRegistration', this.goToRegistration);
+    // this.set('goToForgotPassword', this.goToForgotPassword);
+    // this.set('goToLogin', this.goToLogin);
+    // this.set('goToHome', this.goToHome);
   }
 
   public goToRegistration() { Frame.topmost().navigate("~/user/registration"); }
@@ -52,7 +52,7 @@ export class UserViewModel extends Observable {
   get isLoading(): boolean { return this._isLoading; }
   set isLoading(value: boolean) { if (this._isLoading !== value) { this._isLoading = value; this.notifyPropertyChange("isLoading", value); } }
   get feedbackMessage(): string { if (this._feedbackMessage) { return SentenceCase(this._feedbackMessage); } }
-  set feedbackMessage(value: string) { if (this._feedbackMessage !== value) { this._feedbackMessage = value; this.notifyPropertyChange("feedbackMessage", value); } }
+  set feedbackMessage(value: string) { if (this._feedbackMessage !== value) { this._feedbackMessage = SentenceCase(value); this.notifyPropertyChange("feedbackMessage", value); } }
   get label1Visibility(): string { return this._label1Visibility; }
   set label1Visibility(value: string) { if (this._label1Visibility !== value) { this._label1Visibility = value; this.notifyPropertyChange("label1Visibility", value); } }
   get label2Visibility(): string { return this._label2Visibility; }

@@ -1,5 +1,4 @@
 import { runTestApp } from "@nativescript/unit-test-runner";
-// import other polyfills here
 
 declare let require: any;
 

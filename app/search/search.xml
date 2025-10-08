@@ -4,11 +4,13 @@
     <Label class="ibm7 h2" text="Search" />
   </ActionBar>
 
-  <GridLayout class="page__content">
-    <Label class="page__content-icon fas" text="&#xf002;"></Label>
-    <StackLayout>
+  <GridLayout rows="*, *" class="container">
+    <StackLayout row="0">
       <!-- Search bar -->
-      <SearchBar row="0" hint="Search everything..." text="{{ searchQuery }}" submit="onSearchSubmit" clear="onSearchClear" textChange="onSearchTextChanged" />
+      <SearchBar hint="Search..." text="{{ searchQuery }}" submit="onSearchSubmit" clear="onSearchClear" textChange="onSearchTextChanged" />
+    </StackLayout>
+    <StackLayout row="1">
+      <Label class="icon fas h1" text="&#xf002;"></Label>
     </StackLayout>
   </GridLayout>
 

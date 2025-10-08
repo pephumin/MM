@@ -13,6 +13,7 @@
 .fas {
   font-family: 'Font Awesome 5 Free', 'fa-solid-900';
   font-weight: 900;
+  text-align: center;
 }
 
 .far {
@@ -20,7 +21,7 @@
   font-weight: 400;
 }
 
-.ic_menu_back {
+.menu_back {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -35,7 +36,7 @@
   background-color: #e7e7e7;
   border-top-width: 1;
   border-top-color: #e0e0e0;
-  margin: 10;
+  margin: 0;
 }
 
 ActionBar {
@@ -107,8 +108,7 @@ ActionBar {
   font-weight: 400;
 }
 
-searchBar {
-  margin-bottom: 12;
+SearchBar {
   padding: 12;
   border-width: 5;
   border-color: black;
@@ -118,6 +118,7 @@ searchBar {
   color: navy;
   placeholder-color: darkgrey;
   text-transform: lowercase;
+  background-color: #e7e7e7;
 }
 
 .page {
@@ -127,8 +128,11 @@ searchBar {
 }
 
 .container {
-  padding: 20;
+  padding: 0;
+  margin: 0;
   vertical-align: top;
+  background-color: #e7e7e7;
+  // background-color: white;
 }
 
 .title {
@@ -142,6 +146,7 @@ searchBar {
   border-width: 0;
   border-color: lightgray;
   padding: 0;
+  margin: 0;
 }
 
 TextField {

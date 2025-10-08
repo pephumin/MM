@@ -1,7 +1,7 @@
 <Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
 
   <ActionBar>
-    <NavigationButton tap="onBackButtonTap" android.systemIcon="ic_menu_back" />
+    <NavigationButton tap="onBackButtonTap" android.systemIcon="menu_back" />
     <Label class="ibm7 h2" text="{{ title }}" />
   </ActionBar>
   
