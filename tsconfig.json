@@ -9,7 +9,7 @@
     "noEmitOnError": true,
     "skipLibCheck": true,
     "lib": ["ESNext", "dom"],
-    // "baseUrl": ".",
+    "baseUrl": ".",
     "paths": {
       "~/*": ["app/*"],
       "@/*": ["app/*"]
