@@ -8,4 +8,6 @@ xcodebuild clean
 
 yarn install && yarn upgrade 
 
+tns build ios
+
 tns run ios
