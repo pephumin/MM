@@ -15,16 +15,12 @@ export class UserViewModel extends Observable {
 
   constructor() {
     super();
-    // this.set('goToRegistration', this.goToRegistration);
-    // this.set('goToForgotPassword', this.goToForgotPassword);
-    // this.set('goToLogin', this.goToLogin);
-    // this.set('goToHome', this.goToHome);
   }
 
-  public goToRegistration() { Frame.topmost().navigate("~/user/registration"); }
-  public goToForgotPassword() { Frame.topmost().navigate("~/user/forgot-password"); }
-  public goToLogin() { Frame.topmost().navigate("~/user/login"); }
-  public goToHome() { Frame.topmost().navigate("~/home/home"); }
+  // public goToRegistration() { Frame.topmost().navigate("~/user/registration"); }
+  // public goToForgotPassword() { Frame.topmost().navigate("~/user/forgot-password"); }
+  // public goToLogin() { Frame.topmost().navigate("~/user/index"); }
+  // public goToHome() { Frame.topmost().navigate("~/home/index"); }
   // public loginWithFacebook() {}
 
   get email(): string { return LowerCase(this._email); }

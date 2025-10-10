@@ -14,7 +14,7 @@ export function onItemTap(args: ItemEventData) {
   const tappedItem = <HomeItem>view.bindingContext;
 
   page.frame.navigate({
-    moduleName: '~/home/home-itemdetail/home-itemdetail',
+    moduleName: '~/home/homedetail',
     context: tappedItem,
     animated: true,
     transition: {
@@ -43,4 +43,10 @@ export function onSearchClear(args: EventData) {
   const page = (<View>args.object).page;
   const vm = page.bindingContext as HomeViewModel;
   vm.setSearchQuery('');
+}
+
+export function onBackButtonTap(args: EventData) {
+  const view = args.object as View
+  const page = view.page as Page
+  page.frame.goBack()
 }

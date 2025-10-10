@@ -28,18 +28,18 @@
       <GridLayout rows="auto, auto, auto" columns="*">
         <StackLayout orientation="horizontal" horizontalAlignment="center" row="0">
           <Label class="ibm4" text="Total: " />
-          <Label class="ibm4" text="{{ totalItems }}" />
-          <Label class="ibm4" text=" Showing " />
-          <Label class="ibm4" text="{{ startItem }}" />
+          <Label class="ibm6" text="{{ totalItems }}" />
+          <Label class="ibm4" text=" - Showing " />
+          <Label class="ibm6" text="{{ startItem }}" />
           <Label class="ibm4" text=" to " />
-          <Label class="ibm4" text="{{ stopItem }}" />
+          <Label class="ibm6" text="{{ stopItem }}" />
         </StackLayout>
         <StackLayout orientation="horizontal" horizontalAlignment="center" row="1">
           <Button class="btn ibm4" text="<< Prev" tap="{{ goPrev }}" isEnabled="{{ currentPage > 1 }}" />
           <Label class="ibm4" text="Page " />
-          <Label class="ibm4" text="{{ currentPage }}" />
+          <Label class="ibm6" text="{{ currentPage }}" />
           <Label class="ibm4" text=" / " />
-          <Label class="ibm4" text="{{ totalPages }}" />
+          <Label class="ibm6" text="{{ totalPages }}" />
           <Button class="btn ibm4" text="Next >>" tap="{{ goNext }}" isEnabled="{{ currentPage < totalPages }}" />
         </StackLayout>
       </GridLayout>
