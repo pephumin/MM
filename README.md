@@ -1,5 +1,11 @@
-A mobile app written bpurely by y using JavaScript/TypeScript via NativeScript framework.
+A mobile app written purely by using JavaScript/TypeScript based on NativeScript framework.
 
-It is my verry first mobile application coding. Hopefully it will result to a good one.
+It is my verry first coding developed for mobile application platforms - both iOS and Android. 
 
-Currently, it is a demostration by pulling survey data from my database vias an API.
+Hopefully it will result to a good one to be used for a long run.
+
+Currently, it is for a demostration only.
+
+It pulls survey data from my survey API platform via REST Protocol.
+
+More to come soon!
