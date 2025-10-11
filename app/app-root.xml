@@ -1,19 +1,19 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
   <TabView androidTabsPosition="bottom" selectedIndex="{{ selectedTabIndex }}">
 
-    <TabViewItem title="Home">
+    <!-- <TabViewItem title="Home">
       <StackLayout>
         <Frame defaultPage="home/index" />
         <Label class="icon fas" text="&#xf002;"></Label>
         <Label class="ibm7 h2" text="Home"></Label>
       </StackLayout>
-    </TabViewItem>
+    </TabViewItem> -->
 
-    <TabViewItem title="Browse">
+    <TabViewItem title="Projects">
       <StackLayout>
-        <Frame defaultPage="browse/index" />
+        <Frame defaultPage="projects/index" />
         <Label class="icon fas" text="&#xffae;"></Label>
-        <Label class="ibm7 h2" text="Browse"></Label>
+        <Label class="ibm7 h2" text="Projects"></Label>
       </StackLayout>
     </TabViewItem>
 
@@ -25,13 +25,13 @@
       </StackLayout>
     </TabViewItem>
 
-    <TabViewItem title="Question">
+    <!-- <TabViewItem title="Question">
       <StackLayout>
         <Frame defaultPage="question/index" />
         <Label class="icon fab" text="&#xf3eb;"></Label>
         <Label class="ibm7 h2" text="Question"></Label>
       </StackLayout>
-    </TabViewItem>
+    </TabViewItem> -->
 
     <TabViewItem title="User">
       <StackLayout>

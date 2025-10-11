@@ -15,7 +15,7 @@ export enum AcceptType {
   MA = "Multiple answer"
 }
 
-export interface BaseItem {
+export interface HomeItem {
   id: number;
   title: string;
   description: string | null;
@@ -33,12 +33,40 @@ export interface BaseItem {
   rD: boolean;
 }
 
-export interface HomeItem extends BaseItem {
-  // Add any Home-specific properties here
+export interface BrowseItem {
+  id: number;
+  title: string;
+  description: string | null;
+  status: ItemStatus;
+  created: Date;
+  updated: Date;
+  userId: number;
+  cookieId: number;
+  isPrivate: PrivacyLevel;
+  userEmail: string;
+  userFullName: string;
+  companyId: number;
+  companyName: string;
+  accessLevel: number;
+  rD: boolean;
 }
 
-export interface BrowseItem extends BaseItem {
-  // Add any Browse-specific properties here
+export interface ProjectItem {
+  id: number;
+  title: string;
+  description: string | null;
+  status: ItemStatus;
+  created: Date;
+  updated: Date;
+  userId: number;
+  cookieId: number;
+  isPrivate: PrivacyLevel;
+  userEmail: string;
+  userFullName: string;
+  companyId: number;
+  companyName: string;
+  accessLevel: number;
+  rD: boolean;
 }
 
 export interface Questions {
