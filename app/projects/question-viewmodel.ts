@@ -23,16 +23,19 @@ export class QuestionViewModel extends Observable {
 
   constructor(questions: any[] = [], startIndex = 0) {
     super();
+    this.set('goPrev', this.goPrev);
+    this.set('goNext', this.goNext);
+    this.set('refresh', this.refresh);
     this._questions = Array.isArray(questions) ? questions : [];
     this._currentIndex = startIndex || 0;
     this.loadItems();
     this.notifyAll();
   }
 
-  // Pagination helpers
-  public goToPage(page: number) { if (page >= 1 && page <= this._totalPages) { this.currentPage = page; } }
-  public goPrev() { if (this._currentPage > 1) { this.currentPage--; this.notifyPropertyChange('currentPage', this._currentPage); } }
-  public goNext() { if (this._currentPage < this._totalPages) { this.currentPage++; this.notifyPropertyChange('currentPage', this._currentPage); } }
+  public goPrev() { if (this._currentPage > 1) { this.currentPage = this._currentPage - 1; } }
+  public goNext() { if (this._currentPage < this._totalPages) { this.currentPage = this._currentPage + 1; } }
+  public goDPrev() { if (this._currentPage > 1) { this.currentPage = this._currentPage - 1; } }
+  public goDNext() { if (this._currentPage < this._totalPages) { this.currentPage = this._currentPage + 1; } }
 
   // Observable properties
   get items(): ObservableArray<Questions> { return this._pagedItems; }
@@ -72,17 +75,12 @@ export class QuestionViewModel extends Observable {
   get title(): string {
     const q = this.currentQuestion;
     if (!q) return 'No Question';
-    return `${q.id}. ${q.title || q.name || ''}`;
+    return `${q.id}. ${q.title || q.type || ''}`;
   }
-
-  public async next() { this._currentIndex++; this.notifyAll(); }
-  public async previous() {  this._currentIndex--; this.notifyAll(); }
 
   private notifyAll() {
     this.notifyPropertyChange("currentQuestion", this.currentQuestion);
     this.notifyPropertyChange("title", this.title);
-    // this.notifyPropertyChange("hasNext", this.hasNext);
-    // this.notifyPropertyChange("hasPrevious", this.hasPrevious);
   }
 
   private async loadItems(): Promise<void> {
@@ -122,10 +120,10 @@ export class QuestionViewModel extends Observable {
     const hasHtml = filtered.some(item => item.type === 'html');
     if (!hasHtml) { this._backgroundColor = "#ff0000"; this._label1Visibility = "visible"; }
     else { this._backgroundColor = "#e0e0e0"; this._label1Visibility = "collapse"; }
-    this._totalPages = Math.max(1, Math.ceil(this.totalItems / this._itemsPerPage));
+    this._totalPages = Math.max(1, Math.ceil(this._totalItems / this._itemsPerPage));
     if (this._currentPage > this._totalPages) this._currentPage = this._totalPages;
     const start = (this._currentPage - 1) * this._itemsPerPage;
-    const stop = Math.min(start + this._itemsPerPage, this.totalItems);
+    const stop = Math.min(start + this._itemsPerPage, this._totalItems);
     this._startItem = start;
     this._stopItem = stop;
     const pageItems = filtered.slice(start, stop);

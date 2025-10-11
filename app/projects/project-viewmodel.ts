@@ -22,14 +22,12 @@ export class ProjectViewModel extends Observable {
     super();
     this.set('goPrev', this.goPrev);
     this.set('goNext', this.goNext);
-    this.set('goToPage', this.goToPage);
     this.set('refresh', this.refresh);
     this.loadItems();
   }
 
-  public goToPage(page: number) { if (page >= 1 && page <= this._totalPages) { this.currentPage = page; } }
-  public goPrev() { if (this._currentPage > 1) { this.currentPage = this._currentPage - 1; } }
-  public goNext() { if (this._currentPage < this._totalPages) { this.currentPage = this._currentPage + 1; } }
+  public goPrev() { this.currentPage = this._currentPage - 1; }
+  public goNext() { this.currentPage = this._currentPage + 1; }
 
   get items(): ObservableArray<ProjectItem> { return this._pagedItems; }
   get searchQuery(): string { return this._searchQuery; }

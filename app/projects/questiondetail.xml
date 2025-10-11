@@ -2,25 +2,30 @@
 
   <ActionBar>
     <NavigationButton tap="onBackButtonTap" android.systemIcon="menu_back" />
-    <Label class="ibm7 h2" text="{{ title }}" />
+    <Label class="ibm7 h2" text="{{ name }}" />
   </ActionBar>
 
   <StackLayout class="container">
     <Label class="ibm7 h3" text="Questions" marginLeft="8"></Label>
     <TextView>
       <FormattedString>
-        <Span class="pattaya" text="{{ html }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'collapse' : 'visible' }}" />
-        <Span class="pattaya" text="{{ title === '' ? '' : title }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'visible' : 'collapse' }}" />
+        <Span class="pattaya" text="{{ id }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'collapse' : 'visible' }}" />
+        <Span class="pattaya" text="{{ title }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'visible' : 'collapse' }}" />
+        <!-- <Span class="pattaya" text="{{ html.text }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'collapse' : 'visible' }}" />
+        <Span class="pattaya" text="{{ title === '' ? '' : title }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'visible' : 'collapse' }}" /> -->
       </FormattedString>
     </TextView>
     <Label class="ibm7 h3" text="Answers: " marginLeft="8"></Label>
     <TextView>
       <FormattedString>
-        <Span class="pattaya" text="{{ html }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'collapse' : 'visible' }}" />
+        <Span class="pattaya" text="{{ html.text }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'collapse' : 'visible' }}" />
         <Span class="pattaya" text="{{ title === '' ? '' : title }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'visible' : 'collapse' }}" />
       </FormattedString>
     </TextView>
-    <Label text="{{ feedbackMessage }}" class="feedback" textWrap="true" />
+    <StackLayout orientation="horizontal" class="mt-4">
+      <Button text="Previous Question" tap="onPreviousTap" class="btn btn-primary" />
+      <Button text="Next Question" tap="onNextTap" class="btn btn-primary" />
+    </StackLayout>
   </StackLayout>
 
 </Page>
