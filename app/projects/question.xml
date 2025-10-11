@@ -1,0 +1,52 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+
+  <ActionBar>
+    <Label class="ibm7 h2" text="List of Questions" />
+  </ActionBar>
+
+  <GridLayout rows="auto, *, auto">
+
+    <!-- Search bar -->
+    <SearchBar row="0" hint="Search questions..." text="{{ searchQuery }}" submit="onSearchSubmit" clear="onSearchClear" textChange="onSearchTextChanged" />
+      
+    <!-- List view -->
+    <ListView row="1" items="{{ items }}" itemTap="onItemTap">
+      <ListView.itemTemplate>
+        <GridLayout padding="16" rows="*,*" columns="20, auto, *, 60">
+          <ContentView row="0" col="0" width="20" height="20" borderRadius="10" backgroundColor="{{ type === 'html' ? '#65adf1' : '#e0e0e0' }}" />
+          <Label class="ibm5" text="{{ id }}" row="0" col="1" textWrap="true" marginLeft="8" />
+          <Label class="ibm5" text="{{ name }}" row="0" col="2" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'collapse' : 'visible' }}" />
+          <Label class="ibm5" text="{{ name }}" row="0" col="2" colSpan="2" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'visible' : 'collapse' }}" />
+          <Label class="ibm5" text="Section" row="0" col="3" color="red" visibility="{{ type === 'html' ? 'visible' : 'collapse' }}" />
+          <Label class="pattaya" text="{{ title === null ? '' : title }}" row="1" col="0" colSpan="4" textWrap="true" marginLeft="8" />
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+
+    <!-- Pagination -->
+    <StackLayout row="2" orientation="horizontal" horizontalAlignment="center" width="90%" class="pagination-container">
+      <Label text="{{ feedbackMessage }}" class="feedback" textWrap="true" />
+      <GridLayout rows="auto, auto, auto" columns="*">
+        <StackLayout orientation="horizontal" horizontalAlignment="center" row="0">
+          <Label class="ibm4" text="Total: " />
+          <Label class="ibm6" text="{{ totalItems }}" />
+          <Label class="ibm4" text=" - Showing " />
+          <Label class="ibm6" text="{{ startItem }}" />
+          <Label class="ibm4" text=" to " />
+          <Label class="ibm6" text="{{ stopItem }}" />
+        </StackLayout>
+        <StackLayout orientation="horizontal" horizontalAlignment="center" row="1">
+          <Button class="btn ibm4" text="<< Prev" tap="{{ goPrev }}" isEnabled="{{ currentPage > 1 }}" />
+          <Label class="ibm4" text="Page " />
+          <Label class="ibm6" text="{{ currentPage }}" />
+          <Label class="ibm4" text=" / " />
+          <Label class="ibm6" text="{{ totalPages }}" />
+          <Button class="btn ibm4" text="Next >>" tap="{{ goNext }}" isEnabled="{{ currentPage < totalPages }}" />
+        </StackLayout>
+      </GridLayout>
+    </StackLayout>
+
+  </GridLayout>
+
+
+</Page>
