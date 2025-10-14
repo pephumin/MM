@@ -6,10 +6,8 @@
 
   <GridLayout rows="auto, *, auto">
 
-    <!-- Search bar -->
     <SearchBar row="0" hint="Search projcts..." text="{{ searchQuery }}" submit="onSearchSubmit" clear="onSearchClear" textChange="onSearchTextChanged" />
     
-    <!-- List view -->
     <ListView row="1" items="{{ items }}" itemTap="onItemTap">
       <ListView.itemTemplate>
         <GridLayout padding="16" rows="*" columns="20, auto, *, auto">
@@ -21,7 +19,6 @@
       </ListView.itemTemplate>
     </ListView>
 
-    <!-- Pagination -->
     <StackLayout row="2" orientation="horizontal" horizontalAlignment="center" width="90%" class="pagination-container">
       <Label text="{{ feedbackMessage }}" class="feedback" textWrap="true" />
       <GridLayout rows="auto, auto, auto" columns="*">

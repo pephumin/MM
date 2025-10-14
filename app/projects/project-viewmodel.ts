@@ -32,8 +32,8 @@ export class ProjectViewModel extends Observable {
   get items(): ObservableArray<ProjectItem> { return this._pagedItems; }
   get searchQuery(): string { return this._searchQuery; }
   set searchQuery(value: string) { if (this._searchQuery !== value) { this.setSearchQuery(value); this._currentPage = 1; this.notifyPropertyChange("searchQuery", value); } }
-  get statusFilter(): ItemStatus | null { return this._statusFilter; }
-  set statusFilter(value: ItemStatus | null) { if (this._statusFilter !== value) { this.setStatusFilter(value); this.notifyPropertyChange("statusFilter", value); } }
+  get statusFilter(): ItemStatus { return this._statusFilter; }
+  set statusFilter(value: ItemStatus) { if (this._statusFilter !== value) { this.setStatusFilter(value); this.notifyPropertyChange("statusFilter", value); } }
   get isLoading(): boolean { return this._isLoading; }
   set isLoading(value: boolean) { if (this._isLoading !== value) { this._isLoading = value; this.notifyPropertyChange("isLoading", value); } }
   get error(): string { if (this._error) { return SentenceCase(this._error); } }
@@ -48,13 +48,13 @@ export class ProjectViewModel extends Observable {
     }
   }
   get totalPages(): number { return this._totalPages; }
-  set totalPages(value: ItemStatus | null) { if (this._totalPages !== value) { this._totalPages = value; this.notifyPropertyChange("totalPages", value); } }
+  set totalPages(value: number) { if (this._totalPages !== value) { this._totalPages = value; this.notifyPropertyChange("totalPages", value); } }
   get totalItems(): number { return this._totalItems; }
-  set totalItems(value: ItemStatus | null) { if (this._totalItems !== value) { this._totalItems = value; this.notifyPropertyChange("totalItems", value); } }
+  set totalItems(value: number) { if (this._totalItems !== value) { this._totalItems = value; this.notifyPropertyChange("totalItems", value); } }
   get startItem(): number { return this._startItem; }
-  set startItem(value: ItemStatus | null) { if (this._startItem !== value) { this._startItem = value; this.notifyPropertyChange("startItem", value); } }
+  set startItem(value: number) { if (this._startItem !== value) { this._startItem = value; this.notifyPropertyChange("startItem", value); } }
   get stopItem(): number { return this._stopItem; }
-  set stopItem(value: ItemStatus | null) { if (this._stopItem !== value) { this._stopItem = value; this.notifyPropertyChange("stopItem", value); } }
+  set stopItem(value: number) { if (this._stopItem !== value) { this._stopItem = value; this.notifyPropertyChange("stopItem", value); } }
   get pageNumbers(): { num: number }[] { return Array.from({ length: this._totalPages }, (_, i) => ({ num: i + 1 })); }
 
   private async loadItems(): Promise<void> {

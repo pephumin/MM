@@ -1,24 +1,24 @@
 import { Observable, ObservableArray } from '@nativescript/core';
-import { ItemStatus, Questions } from '~/common/items';
+import { ItemStatus, Questions, QuestionType } from '~/common/items';
 import { SentenceCase } from '~/common/util';
 import Questions77 from '~/common/question_77.json';
 
 export class QuestionViewModel extends Observable {
-  private _items: ObservableArray<Questions> = new ObservableArray<Questions>([]);
-  private _pagedItems: ObservableArray<Questions> = new ObservableArray<Questions>([]);
-  private _searchQuery: string = "";
-  private _statusFilter: ItemStatus | null = null;
-  private _itemsPerPage: number = 50;
-  private _currentPage: number = 1;
-  private _totalPages: number = 1;
-  private _totalItems: number = 1;
-  private _startItem: number = 0;
-  private _stopItem: number = 5;
-  private _backgroundColor: string = '#e0e0e0';
-  private _label1Visibility: string = 'collapse';
-  private _error: string = "";
-  private _questions: Questions[] = [];
-  private _currentIndex = 0;
+  public _items: ObservableArray<Questions> = new ObservableArray<Questions>([]);
+  public _pagedItems: ObservableArray<Questions> = new ObservableArray<Questions>([]);
+  public _searchQuery: string = "";
+  public _statusFilter: ItemStatus | null = null;
+  public _itemsPerPage: number = 50;
+  public _currentPage: number = 1;
+  public _totalPages: number = 1;
+  public _totalItems: number = 1;
+  public _startItem: number = 0;
+  public _stopItem: number = 5;
+  public _backgroundColor: string = '#e0e0e0';
+  public _label1Visibility: string = 'collapse';
+  public _error: string = "";
+  public _questions: Questions[] = [];
+  public _currentIndex = 0;
   public _isLoading: boolean = false;
 
   constructor(questions: any[] = [], startIndex = 0) {
@@ -34,8 +34,8 @@ export class QuestionViewModel extends Observable {
 
   public goPrev() { if (this._currentPage > 1) { this.currentPage = this._currentPage - 1; } }
   public goNext() { if (this._currentPage < this._totalPages) { this.currentPage = this._currentPage + 1; } }
-  public goDPrev() { if (this._currentPage > 1) { this.currentPage = this._currentPage - 1; } }
-  public goDNext() { if (this._currentPage < this._totalPages) { this.currentPage = this._currentPage + 1; } }
+  public goDPrev() { if (this._currentIndex > 1) { this.currentIndex = this._currentIndex - 1; } }
+  public goDNext() { if (this._currentIndex < this._totalPages) { this.currentIndex = this._currentPage + 1; } }
 
   // Observable properties
   get items(): ObservableArray<Questions> { return this._pagedItems; }
@@ -48,15 +48,21 @@ export class QuestionViewModel extends Observable {
   get error(): string { return this._error ? SentenceCase(this._error) : ''; }
   set error(value: string) { if (this._error !== value) { this._error = value; this.notifyPropertyChange("error", value); } }
 
-  // Current page info
   get currentPage(): number { return this._currentPage; }
   set currentPage(value: number) {
     if (value >= 1 && value <= this._totalPages) {
       this._currentPage = value;
       this.applyFiltersAndSort();
-      this.notifyPropertyChange('currentIndex', this._currentIndex);
       this.notifyPropertyChange('currentPage', this._currentPage);
       this.notifyPropertyChange('pageNumbers', this.pageNumbers);
+    }
+  }
+  get currentIndex(): number { return this._currentIndex; }
+  set currentIndex(value: number) {
+    if (value >= 1 && value <= this._totalItems) {
+      this._currentIndex = value;
+      this.applyFiltersAndSort();
+      this.notifyPropertyChange('currentIndex', this._currentIndex);
     }
   }
   get totalPages(): number { return this._totalPages; }
@@ -72,15 +78,23 @@ export class QuestionViewModel extends Observable {
     return this._questions[this._currentIndex] || null;
   }
 
-  get title(): string {
-    const q = this.currentQuestion;
-    if (!q) return 'No Question';
-    return `${q.id}. ${q.title || q.type || ''}`;
-  }
+  // get ptitle(): string {
+  //   const q = this.currentQuestion;
+  //   if (!q) { return 'No Question'; }
+  //   else { return `${q.id}. ${q.title || q.type || ''}`; }
+  // }
+
+//   get ptitle(): string {
+//   const q = this.currentQuestion;
+//   if (!q) { return 'No Question'; }
+//   const id = q.id !== undefined && q.id !== null ? q.id : '';
+//   const title = q.title || q.type || '';
+//   return `${id}${id ? '. ' : ''}${title}`;
+// }
 
   private notifyAll() {
     this.notifyPropertyChange("currentQuestion", this.currentQuestion);
-    this.notifyPropertyChange("title", this.title);
+    // this.notifyPropertyChange("ptitle", this.ptitle);
   }
 
   private async loadItems(): Promise<void> {
@@ -185,5 +199,35 @@ export class QuestionViewModel extends Observable {
     const index = this._questions.findIndex(q => q.id === question.id);
     if (index !== -1) { this._currentIndex = index; this.notifyAll(); }
   }
-
 }
+// export class ViewViewModel extends Observable {
+//   private _type: QuestionType;
+
+//   constructor(type: QuestionType) {
+//     super();
+//     this._type = type;
+//   this.updateQuestionType();
+//   }
+
+//   private updateQuestionType() {
+//     this.set('isGuest', !this._user?.id); // Use optional chaining for robustness
+//     this.set('welcomeMessage', this.isGuest ? 'Welcome, Guest' : `Welcome back, ${this._user.username}`);
+//   }
+
+//   // Getters compute visibility on-the-fly, reducing stored state
+//   get isGuest(): boolean {
+//     return this.get('isGuest');
+//   }
+
+//   get welcomeMessage(): string {
+//     return this.get('welcomeMessage');
+//   }
+
+//   get guestVisible(): string {
+//     return this.isGuest ? 'visible' : 'collapse';
+//   }
+
+//   get loggedInVisible(): string {
+//     return this.isGuest ? 'collapse' : 'visible';
+//   }
+// }

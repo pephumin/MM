@@ -6,39 +6,45 @@
   </ActionBar>
 
   <ScrollView>
-    <StackLayout class="container">
-      <Image src="res://questionnaire" margin="10" />
-      <Label class="ibm7 h3" text="Description: " marginLeft="15"></Label>
-      <TextView>
-        <FormattedString>
-          <Span class="ibm5" text="{{ description === null ? '' : description }}" />
-        </FormattedString>
-      </TextView>
+    <GridLayout rows="auto, auto, auto" columns="*" class="container">
 
-      <GridLayout rows="auto, auto, *" columns="*, *" marginTop="10">
-        <Label class="ibm7 h3" text="Created: " row="0" col="0" marginLeft="15"></Label>
-        <Label class="ibm7 h3" text="Updated: " row="0" col="1" marginLeft="15"></Label>
-        <StackLayout row="1" col="0">
-          <TextView>
+      <StackLayout row="0" marginTop="10">
+        <StackLayout>
+          <Label class="ibm7 h3" text="Description: " marginLeft="8"></Label>
+          <TextView autocapitalizationType="none">
             <FormattedString>
-              <Span class="ibm5" text="{{ created }}" />
+              <Span class="pdetail" text="{{ description === null ? '' : description }}" textWrap="true" marginLeft="8" />
             </FormattedString>
           </TextView>
+          <!-- <View class="horizontal-line"></View> -->
         </StackLayout>
-        <StackLayout row="1" col="1">
-          <TextView>
-            <FormattedString>
-              <Span class="ibm5" text="{{ updated }}" />
-            </FormattedString>
-          </TextView>
-        </StackLayout>
-        <StackLayout row="2" colSpan="2" paddingBottom="20">
-          <Button class="btn btn-primary" text="View questions" row="2" col="0" marginLeft="15" tap="onViewQuestions"></Button>
-          <Button class="btn btn-outlune" text="<< Go back" row="2" col="1" marginLeft="15" tap="goProject"></Button>
-        </StackLayout>
-      </GridLayout>
+      </StackLayout>
 
-    </StackLayout>
+      <StackLayout row="1">
+
+        <StackLayout row="0" orientation="horizontal">
+          <Label class="ibm7 h3" text="Project No. " marginLeft="8"></Label>
+          <Label class="ibm7 h3" text="{{ id }}" marginLeft="8"></Label>
+        </StackLayout>
+
+        <StackLayout orientation="horizontal">
+          <Label class="ibm7 h3" text="Project Type: " marginLeft="8"></Label>
+          <Label class="ibm7 h3" text="{{ type }}" marginLeft="8"></Label>
+        </StackLayout>
+
+        <StackLayout orientation="horizontal">
+          <Label class="ibm7 h3" text="Project Name: " marginLeft="8"></Label>
+          <Label class="ibm7 h3" text="{{ name }}" marginLeft="8"></Label>
+        </StackLayout>
+
+      </StackLayout>
+
+      <StackLayout row="2" colSpan="2">
+        <Button class="btn btn-primary" text="View questions" tap="onViewQuestions"></Button>
+        <Button class="btn btn-outlune" text="<< Go back" tap="goProject"></Button>
+      </StackLayout>
+
+    </GridLayout>
   </ScrollView>
 
 </Page>

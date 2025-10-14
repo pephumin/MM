@@ -1,4 +1,4 @@
-import { action, EventData, ItemEventData, NavigatedData, Page, SearchBar, View } from '@nativescript/core'
+import { EventData, ItemEventData, NavigatedData, Page, SearchBar, View } from '@nativescript/core'
 import { ProjectViewModel } from '~/projects/project-viewmodel'
 import { ProjectItem } from '~/common/items'
 import { ProjectViewModelInstance } from '~/projects/instance'

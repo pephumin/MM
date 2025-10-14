@@ -1,9 +1,9 @@
-import { EventData, Page, View } from '@nativescript/core';
+import { EventData, NavigatedData, Page, View } from '@nativescript/core';
 import { ProjectItem } from '~/common/items';
 import { ProjectViewModelInstance } from '~/projects/instance'
 import Questions77 from '~/common/question_77.json'; // fallback questions
 
-export function onNavigatingTo(args: EventData) {
+export function onNavigatingTo(args: NavigatedData) {
   const page = args.object as Page;
   const project = args.context as ProjectItem;
   if (!project) { console.error('No ProjectItem passed to ProjectDetail page!'); return; }
@@ -15,7 +15,7 @@ export function onViewQuestions(args: EventData) {
   const page = view.page as Page;
   const project = page.bindingContext as ProjectItem;
   if (!project) { console.error('ProjectItem is missing in page.bindingContext!'); return; }
-  const questionsArray = project.id && project.id.length ? project.id : Questions77;
+  const questionsArray = project.id && project.title.length ? project.id : Questions77;
 
   page.frame.navigate({
     moduleName: '~/projects/question',

@@ -8,6 +8,8 @@ xcodebuild clean
 
 yarn install && yarn upgrade 
 
+#tns plugin add @nativescript-community/ui-material-bottom-navigation
+
 tns build ios
 
-tns run ios
+tns run ios --emulator

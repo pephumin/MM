@@ -4,6 +4,19 @@ export enum ItemStatus {
   Archived = 2
 }
 
+export enum QuestionType {
+  A = "rating",
+  B = "radiogroup",
+  C = "checkbox",
+  D = "comment",
+  E = "multipletext",
+  F = "matrixdropdown",
+  G = "text",
+  H = "html",
+  I = "radiogrouphtml",
+  J = "checkboxhtml",
+}
+
 export enum PrivacyLevel {
   Public = 0,
   Private = 1
@@ -73,7 +86,7 @@ export interface Questions {
   id: number;
   name: string;
   title: string | null;
-  type: string;
+  type: QuestionType;
   html: string | null;
   accept: string | null;
   items: { 
