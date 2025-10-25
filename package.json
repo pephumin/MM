@@ -9,15 +9,14 @@
     "@nativescript/unit-test-runner": "3.0.4",
     "@xmldom/xmldom": "^0.8.1",
     "font-awesome": "4.7.0",
-    "nativescript-oauth2": "3.0.10",
-    "nativescript-ui-listview": "15.2.3"
+    "nativescript-oauth2": "3.0.10"
   },
   "devDependencies": {
     "@jsdevtools/coverage-istanbul-loader": "3.0.5",
     "@nativescript/android": "8.9.2",
     "@nativescript/facebook": "3.1.0",
     "@nativescript/google-signin": "2.1.1",
-    "@nativescript/ios": "8.9.4",
+    "@nativescript/ios": "8.9.5",
     "@nativescript/preview-cli": "1.0.14",
     "@nativescript/types": "8.9.1",
     "@nativescript/webpack": "^5.0.9",

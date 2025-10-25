@@ -1,128 +1,149 @@
 <Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
 
   <ActionBar>
-    <NavigationButton tap="onBackButtonTap" android.systemIcon="menu_back" />
-    <Label class="ibm7 h2" text="Question details" />
+    <NavigationButton tap="onBackButtonTap" android.systemIcon="menu_back"></NavigationButton>
+    <Label class="ibm7 h2" text="Question details"></Label>
   </ActionBar>
 
-  <ScrollView>
-    <GridLayout rows="*, auto, *, auto" columns="*" class="container">
+  <GridLayout id="questionContent" rows="auto, *, auto" columns="*">
 
-      <StackLayout row="0" marginTop="10" visibility="{{ type === 'html' ? 'collapse' : 'visible' }}">
-        <Label class="ibm7 h3" text="Question: " marginLeft="8"></Label>
-        <TextView autocapitalizationType="none">
-          <FormattedString>
-            <Span class="qquestion" text="{{ title }}" textWrap="true" marginLeft="8" visibility="{{ type === 'html' ? 'visible' : 'collapse' }}" />
-          </FormattedString>
-        </TextView>
-      </StackLayout>
+    <StackLayout row="0" orientation="horizontal" class="container" marginBottom="20">
+      <Label class="fas h1" color="green" text="&#xf0a1;" horizontalAlignment="right" marginRight="25" verticalAlignment="bottom"></Label>
+      <Label class="qtitle" text="{{ currentQuestion.title }}" textWrap="true"></Label>    
+    </StackLayout>
+ 
+    <StackLayout height="auto" row="1" visibility="{{ currentQuestion.type === 'html' ? 'visible' : 'collapse' }}">
+      <TextView class="qanswer" text="{{ currentQuestion.html }}" autocapitalizationType="none"></TextView>
+    </StackLayout>
 
-      <ListView row="1" items="{{ items }}" visibility="{{ type === 'multipletext' ? 'visible' : 'collapse' }}">
+    <StackLayout height="auto" row="1" visibility="{{ ((currentQuestion.type === 'text') || (currentQuestion.type === 'comment')) ? 'visible' : 'collapse' }}">
+      <TextField class="qanswer" text="" hint="short response" autocapitalizationType="none" editable="true"></TextField>
+    </StackLayout>
+
+    <StackLayout height="auto" row="1" visibility="{{ currentQuestion.type === 'rating' ? 'visible' : 'collapse' }}">
+      <GridLayout class="fas h3" rows="auto, auto, auto, auto, auto, auto" columns="*, *, *, *, *" marginBottom="30">
+        <Label text="&#xf005;" row="0" col="0"></Label>
+        <Label text="&#xf005;" row="0" col="1"></Label>
+        <Label text="&#xf005;" row="0" col="2"></Label>
+        <Label text="&#xf005;" row="0" col="3"></Label>
+        <Label text="&#xf005;" row="0" col="4"></Label>
+        <Label text="" row="1" col="0"></Label>
+        <Label text="&#xf005;" row="1" col="1"></Label>
+        <Label text="&#xf005;" row="1" col="2"></Label>
+        <Label text="&#xf005;" row="1" col="3"></Label>
+        <Label text="&#xf005;" row="1" col="4"></Label>
+        <Label text="" row="2" col="0"></Label>
+        <Label text="" row="2" col="1"></Label>
+        <Label text="&#xf005;" row="2" col="2"></Label>
+        <Label text="&#xf005;" row="2" col="3"></Label>
+        <Label text="&#xf005;" row="2" col="4"></Label>
+        <Label text="" row="3" col="0"></Label>
+        <Label text="" row="3" col="1"></Label>
+        <Label text="" row="3" col="2"></Label>
+        <Label text="&#xf005;" row="3" col="3"></Label>
+        <Label text="&#xf005;" row="3" col="4"></Label>
+        <Label text="" row="4" col="0"></Label>
+        <Label text="" row="4" col="1"></Label>
+        <Label text="" row="4" col="2"></Label>
+        <Label text="" row="4" col="3"></Label>
+        <Label text="&#xf005;" row="4" col="4"></Label>
+        <Label text="" row="5" col="0"></Label>
+        <Label text="" row="5" col="1"></Label>
+        <Label text="" row="5" col="2"></Label>
+        <Label text="" row="5" col="3"></Label>
+        <Label text="" row="5" col="4"></Label>
+        <Label text="" row="6" col="0"></Label>
+        <Label text="" row="6" col="1"></Label>
+        <Label text="" row="6" col="2"></Label>
+        <Label text="" row="6" col="3"></Label>
+        <Label text="" row="6" col="4"></Label>
+        <Label class="qanswer" text="1" row="7" col="0"></Label>
+        <Label class="qanswer" text="2" row="7" col="1"></Label>
+        <Label class="qanswer" text="3" row="7" col="2"></Label>
+        <Label class="qanswer" text="4" row="7" col="3"></Label>
+        <Label class="qanswer" text="5" row="7" col="4"></Label>
+      </GridLayout>
+    </StackLayout>
+
+    <!-- <ListPicker row="1" items="{{ choices }}" visibility="{{ type === 'dropdown' ? 'visible' : 'collapse' }}" /> -->
+
+    <ListView height="auto" row="1" items="{{ currentQuestion.choices }}" visibility="{{ currentQuestion.type === 'dropdown' ? 'visible' : 'collapse' }}">
+      <ListView.itemTemplate>
+        <StackLayout orientation="horizontal">
+          <Label class="fas" color="grey" text="&#xf0a3;"></Label>
+          <Label class="qanswer" text="{{ text }}"></Label>
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
+
+      <ListView row="1" items="{{ currentQuestion.columns }}" visibility="{{ currentQuestion.type === 'matrixdropdown' ? 'visible' : 'collapse' }}">
         <ListView.itemTemplate>
-          <GridLayout rows="auto" columns="auto, *">
-            <Label row="0" col="0" class="qanswer" text="{{ title }}" />
-            <TextField row="0" col="1" hint="short reponse" text="" />
-          </GridLayout>
+          <StackLayout>
+            <Label class="ibm7 h3" text="{{ title }}" />
+            <ListView items="{{ choices }}">
+              <ListView.itemTemplate>
+                <StackLayout orientation="horizontal" class="ml-2">
+                  <Label class="fas" color="grey" text="&#xf0a3;" />
+                  <Label class="qanswer" text="{{ text }}" />
+                </StackLayout>
+              </ListView.itemTemplate>
+            </ListView>
+          </StackLayout>
         </ListView.itemTemplate>
       </ListView>
 
-      <StackLayout row="1" visibility="{{ type === 'html' ? 'visible' : 'collapse' }}">
-        <TextView class="qanswer" text="{{ html }}" hautocapitalizationType="none" />
-      </StackLayout>
+    <ListView height="auto" row="1" items="{{ currentQuestion.choices }}" visibility="{{ currentQuestion.type === 'radiogroup' ? 'visible' : 'collapse' }}">
+      <ListView.itemTemplate>
+        <StackLayout orientation="horizontal">
+          <Label class="fas" color="grey" text="&#xf0a3;"></Label>
+          <Label class="qanswer" text="{{ text }}"></Label>
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
 
-      <StackLayout row="1" visibility="{{ type === 'text' ? 'visible' : 'collapse' }}">
-        <TextField class="qanswer" text="" hint="short response" autocapitalizationType="none" editable="true" />
-      </StackLayout>
+    <ListView height="auto" row="1" items="{{ currentQuestion.choices }}" visibility="{{ currentQuestion.type === 'checkbox' ? 'visible' : 'collapse' }}">
+      <ListView.itemTemplate>
+        <StackLayout orientation="horizontal">
+          <Label class="fas" color="grey" text="&#xf14a;"></Label>
+          <Label class="qanswer" text="{{ text }}"></Label>
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
 
-      <StackLayout row="1" visibility="{{ type === 'rating' ? 'visible' : 'collapse' }}">
-        <GridLayout class="fas h3" rows="auto, auto, auto, auto, auto, auto" columns="*, *, *, *, *" marginBottom="30">
-          <Label text="&#xf005;" row="0" col="0" />
-          <Label text="&#xf005;" row="0" col="1" />
-          <Label text="&#xf005;" row="0" col="2" />
-          <Label text="&#xf005;" row="0" col="3" />
-          <Label text="&#xf005;" row="0" col="4" />
-          <Label text="" row="1" col="0" />
-          <Label text="&#xf005;" row="1" col="1" />
-          <Label text="&#xf005;" row="1" col="2" />
-          <Label text="&#xf005;" row="1" col="3" />
-          <Label text="&#xf005;" row="1" col="4" />
-          <Label text="" row="2" col="0" />
-          <Label text="" row="2" col="1" />
-          <Label text="&#xf005;" row="2" col="2" />
-          <Label text="&#xf005;" row="2" col="3" />
-          <Label text="&#xf005;" row="2" col="4" />
-          <Label text="" row="3" col="0" />
-          <Label text="" row="3" col="1" />
-          <Label text="" row="3" col="2" />
-          <Label text="&#xf005;" row="3" col="3" />
-          <Label text="&#xf005;" row="3" col="4" />
-          <Label text="" row="4" col="0" />
-          <Label text="" row="4" col="1" />
-          <Label text="" row="4" col="2" />
-          <Label text="" row="4" col="3" />
-          <Label text="&#xf005;" row="4" col="4" />
-          <Label text="" row="5" col="0" />
-          <Label text="" row="5" col="1" />
-          <Label text="" row="5" col="2" />
-          <Label text="" row="5" col="3" />
-          <Label text="" row="5" col="4" />
-          <Label text="" row="6" col="0" />
-          <Label text="" row="6" col="1" />
-          <Label text="" row="6" col="2" />
-          <Label text="" row="6" col="3" />
-          <Label text="" row="6" col="4" />
-          <Label class="qanswer" text="1" row="7" col="0" />
-          <Label class="qanswer" text="2" row="7" col="1" />
-          <Label class="qanswer" text="3" row="7" col="2" />
-          <Label class="qanswer" text="4" row="7" col="3" />
-          <Label class="qanswer" text="5" row="7" col="4" />
+    <ListView height="auto" row="1" items="{{ currentQuestion.items }}" visibility="{{ currentQuestion.type === 'multipletext' ? 'visible' : 'collapse' }}">
+      <ListView.itemTemplate>
+        <GridLayout rows="auto" columns="auto, *">
+          <Label row="0" col="0" class="qanswer" text="{{ title }}"></Label>
+          <TextField row="0" col="1" hint="short reponse" text=""></TextField>
         </GridLayout>
-      </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
 
-      <ListView row="1" items="{{ choices }}" visibility="{{ type === 'radiogroup' ? 'visible' : 'collapse' }}">
-        <ListView.itemTemplate>
-          <StackLayout orientation="horizontal">
-            <Label class="fas" text="&#xf111;" />
-            <Label class="qanswer" text="{{ text }}" />
+    <!-- Pagination -->
+    <DockLayout row="2" class="pagination-container" stretchLastChild="true">
+      <GridLayout rows="auto auto" columns="*, auto, auto" dock="bottom">
+        <!-- <Label class="fas h1" color="lightgrey" text="&#xf201;" row="0" col="0" colspan="2" horizontalAlignment="center" verticalAlignment="bottom"></Label> -->
+        <StackLayout row="0" col="0" rowSpan="2" verticalAlignment="middle" horizontalAlignment="center">
+          <StackLayout class="h3" orientation="horizontal">
+            <Label text="{{ currentQuestion.name }}"></Label>
+            <Label text=" ("></Label>
+            <Label text="{{ currentQuestion.id }}"></Label>
+            <Label text=")"></Label>
+            <!-- <Label text="{{ currentQuestionIndex }}"></Label> -->
           </StackLayout>
-        </ListView.itemTemplate>
-      </ListView>
-
-      <ListView row="1" items="{{ choices }}" visibility="{{ type === 'checkbox' ? 'visible' : 'collapse' }}">
-        <ListView.itemTemplate>
-          <StackLayout orientation="horizontal">
-            <Label class="fas" text="&#xf111;" />
-            <Label class="qanswer" text="{{ text }}" />
+          <StackLayout class="h4" orientation="horizontal">
+            <!-- <Label text="Type: "></Label> -->
+            <Label text="{{ currentQuestion.type }}"></Label>
           </StackLayout>
-        </ListView.itemTemplate>
-      </ListView>
-
-      <StackLayout row="2" class="ref">
-        <StackLayout orientation="horizontal">
-          <Label text="Question No. " marginLeft="8"></Label>
-          <Label text="{{ id }}" marginLeft="8"></Label>
         </StackLayout>
+        <Button class="btn btn-secondary" text="<<" row="0" col="1" tap="showPreviousQuestion" isEnabled="{{ canGoPrev }}"></Button>
+        <Button class="btn btn-secondary" text=">>" row="0" col="2" tap="showNextQuestion" isEnabled="{{ canGoNext }}"></Button>
+        <Button class="btn btn-primary" text="Back" row="1" col="1" tap="goQuestion" isEnabled="true"></Button>
+        <Button class="btn btn-primary" text="Home" row="1" col="2" tap="goHome" isEnabled="true"></Button>
+      </GridLayout>
+    </DockLayout>
 
-        <StackLayout orientation="horizontal">
-          <Label text="Question Type: " marginLeft="8"></Label>
-          <Label text="{{ type }}" marginLeft="8"></Label>
-        </StackLayout>
 
-        <StackLayout orientation="horizontal">
-          <Label text="Question Name: " marginLeft="8"></Label>
-          <Label text="{{ name }}" marginLeft="8"></Label>
-        </StackLayout>
-      </StackLayout>
-
-      <StackLayout row="3" marginTop="10">
-        <Button text="<< Go Back" tap="goQuestion" class="btn btn-outline" isEnabled="true"/>
-        <!-- <GridLayout rows="auto" columns="auto, auto">
-          <Button col="1" row="0" text="Previous Question" tap="onPreviousTap" class="btn btn-primary" isEnabled="false"/>
-          <Button col="2" row="0" text="Next Question" tap="onNextTap" class="btn btn-primary" isEnabled="false"/>        
-        </GridLayout> -->
-      </StackLayout>
-
-    </GridLayout>
-  </ScrollView>
+  </GridLayout>
 
 </Page>

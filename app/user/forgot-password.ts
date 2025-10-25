@@ -12,8 +12,3 @@ export function onBackButtonTap(args: EventData) {
   const page = view.page as Page
   page.frame.goBack()
 }
-
-export function goToRegistration() { Frame.topmost().navigate("~/user/registration"); }
-export function goToForgotPassword() { Frame.topmost().navigate("~/user/forgot-password"); }
-export function goToLogin() { Frame.topmost().navigate("~/user/index"); }
-export function goToHome() { Frame.topmost().navigate("~/home/index"); }

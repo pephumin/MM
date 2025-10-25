@@ -1,7 +1,7 @@
 import { EventData, ItemEventData, NavigatedData, Page, SearchBar, View } from '@nativescript/core'
 import { ProjectViewModel } from '~/projects/project-viewmodel'
+import { ProjectViewModelInstance } from '~/common/instance'
 import { ProjectItem } from '~/common/items'
-import { ProjectViewModelInstance } from '~/projects/instance'
 
 export function onNavigatingTo(args: NavigatedData) {
   const page = <Page>args.object

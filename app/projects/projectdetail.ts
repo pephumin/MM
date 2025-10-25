@@ -1,13 +1,18 @@
-import { EventData, NavigatedData, Page, View } from '@nativescript/core';
+import { EventData, Frame, NavigatedData, Page, SwipeGestureEventData, SwipeDirection, View } from '@nativescript/core';
+import { ProjectViewModelInstance } from '~/common/instance'
 import { ProjectItem } from '~/common/items';
-import { ProjectViewModelInstance } from '~/projects/instance'
-import Questions77 from '~/common/question_77.json'; // fallback questions
+import Questions77 from '~/common/question_77.json';
 
 export function onNavigatingTo(args: NavigatedData) {
   const page = args.object as Page;
   const project = args.context as ProjectItem;
   if (!project) { console.error('No ProjectItem passed to ProjectDetail page!'); return; }
   page.bindingContext = project;
+  page.on('swipe', (event: SwipeGestureEventData) => { 
+    if (event.direction === SwipeDirection.right) {
+      page.frame.goBack(); 
+    } 
+  });
 }
 
 export function onViewQuestions(args: EventData) {
@@ -21,7 +26,7 @@ export function onViewQuestions(args: EventData) {
     moduleName: '~/projects/question',
     context: {
       questions: questionsArray,
-      currentIndex: 0
+      currentQuestionId: 0
     },
     clearHistory: false,
     animated: true,
@@ -36,6 +41,6 @@ export function onViewQuestions(args: EventData) {
 export function goProject(args: EventData) {
   const view = args.object as View;
   const page = view.page as Page;
-  if (!page.frame) { console.error('No frame found for goBack()!'); return; }
+  if (!page.frame) { console.error('No frame found!'); return; }
   page.frame.goBack();
 }

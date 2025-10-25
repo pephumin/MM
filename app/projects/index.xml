@@ -4,7 +4,7 @@
     <Label class="ibm7 h2" text="Projects" />
   </ActionBar>
 
-  <GridLayout rows="auto, *, auto">
+  <GridLayout rows="auto, *, auto" columns="*">
 
     <SearchBar row="0" hint="Search projcts..." text="{{ searchQuery }}" submit="onSearchSubmit" clear="onSearchClear" textChange="onSearchTextChanged" />
     
@@ -12,34 +12,34 @@
       <ListView.itemTemplate>
         <GridLayout padding="16" rows="*" columns="20, auto, *, auto">
           <ContentView col="0" width="20" height="20" borderRadius="10" backgroundColor="{{ status === 1 ? '#65adf1' : '#e0e0e0' }}" />
-          <Label class="ibm5" text="{{ id }}" col="1" textWrap="true" marginLeft="8" />
-          <Label class="ibm7" text="{{ title }}" col="2" textWrap="true" marginLeft="8" />
-          <Label class="ibm5" text="Published" col="3" color="#65adf1" marginRight="4" visibility="{{ status === 1 ? 'visible' : 'collapsed' }}" />
+          <Label class="ibm5" text="{{ id }}" col="1" textWrap="true" />
+          <Label class="ibm7" text="{{ title }}" col="2" textWrap="true" />
+          <Label class="ibm5" text="Published" col="3" color="#65adf1" marginRight="5" visibility="{{ status === 1 ? 'visible' : 'collapsed' }}" />
         </GridLayout>
       </ListView.itemTemplate>
-    </ListView>
+    </ListView>   
 
-    <StackLayout row="2" orientation="horizontal" horizontalAlignment="center" width="90%" class="pagination-container">
-      <Label text="{{ feedbackMessage }}" class="feedback" textWrap="true" />
-      <GridLayout rows="auto, auto, auto" columns="*">
-        <StackLayout orientation="horizontal" horizontalAlignment="center" row="0">
+    <!-- Pagination -->
+    <DockLayout row="2" class="pagination-container" stretchLastChild="true">
+      <GridLayout rows="*, *" columns="auto, *, *" dock="bottom">
+        <Button col="0" class="btn btn-primary" text="<< Prev" tap="{{ goPrev }}" isEnabled="{{ currentPage > 1 }}" />
+        <StackLayout col="1" row="0" textWrap="true" orientation="horizontal" horizontalAlignment="center" textWrap="true">
           <Label class="ibm4" text="Total: " />
           <Label class="ibm6" text="{{ totalItems }}" />
-          <Label class="ibm4" text=" Showing " />
+          <Label class="ibm4" text=" - Page " />
+          <Label class="ibm6" text="{{ currentPage }}" />
+          <Label class="ibm4" text=" of " />
+          <Label class="ibm6" text="{{ totalPages }}" />
+        </StackLayout>
+        <StackLayout col="1" row="1" textWrap="true" orientation="horizontal" horizontalAlignment="center" textWrap="true">
+          <Label class="ibm4" text="Showing " />
           <Label class="ibm6" text="{{ startItem }}" />
           <Label class="ibm4" text=" to " />
           <Label class="ibm6" text="{{ stopItem }}" />
         </StackLayout>
-        <StackLayout orientation="horizontal" horizontalAlignment="center" row="1">
-          <Button class="btn ibm4" text="<< Prev" tap="{{ goPrev }}" isEnabled="{{ currentPage > 1 }}" />
-          <Label class="ibm4" text="Page " />
-          <Label class="ibm6" text="{{ currentPage }}" />
-          <Label class="ibm4" text=" / " />
-          <Label class="ibm6" text="{{ totalPages }}" />
-          <Button class="btn ibm4" text="Next >>" tap="{{ goNext }}" isEnabled="{{ currentPage < totalPages }}" />
-        </StackLayout>
+        <Button col="2" class="btn btn-primary" text="Next >>" tap="{{ goNext }}" isEnabled="{{ currentPage < totalPages }}" />
       </GridLayout>
-    </StackLayout>
+    </DockLayout>
 
   </GridLayout>
 </Page>

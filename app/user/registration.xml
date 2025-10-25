@@ -9,7 +9,7 @@
     <StackLayout class="container">
 
       <!-- Title -->
-      <Label text="User Registratiom" class="title" />
+      <Label text="User Registratiom" textTransform="lowercase" class="title" />
 ้
       <StackLayout width="80%" marginTop="0" marginBottom="0">
         <GridLayout columns="auto, *, auto" class="input-container">

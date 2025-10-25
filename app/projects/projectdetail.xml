@@ -5,46 +5,45 @@
     <Label class="ibm7 h2" text="{{ title }}" />
   </ActionBar>
 
-  <ScrollView>
-    <GridLayout rows="auto, auto, auto" columns="*" class="container">
+  <GridLayout rows="auto, auto, auto" columns="*, auto">
 
-      <StackLayout row="0" marginTop="10">
-        <StackLayout>
-          <Label class="ibm7 h3" text="Description: " marginLeft="8"></Label>
-          <TextView autocapitalizationType="none">
-            <FormattedString>
-              <Span class="pdetail" text="{{ description === null ? '' : description }}" textWrap="true" marginLeft="8" />
-            </FormattedString>
-          </TextView>
-          <!-- <View class="horizontal-line"></View> -->
-        </StackLayout>
+    <StackLayout row="0" marginTop="10" class="container pdetail">
+      <Label class="fas h1" color="silver" text="&#xf13d;" horizontalAlignment="right" verticalAlignment="top"></Label>
+      <Label class="ibm7 h3" text="ข้อมูลโครงการ: "></Label>
+      <StackLayout orientation="horizontal">
+        <Label text="เลขที่: "></Label>
+        <Label text="{{ id }}"></Label>
       </StackLayout>
-
-      <StackLayout row="1">
-
-        <StackLayout row="0" orientation="horizontal">
-          <Label class="ibm7 h3" text="Project No. " marginLeft="8"></Label>
-          <Label class="ibm7 h3" text="{{ id }}" marginLeft="8"></Label>
-        </StackLayout>
-
-        <StackLayout orientation="horizontal">
-          <Label class="ibm7 h3" text="Project Type: " marginLeft="8"></Label>
-          <Label class="ibm7 h3" text="{{ type }}" marginLeft="8"></Label>
-        </StackLayout>
-
-        <StackLayout orientation="horizontal">
-          <Label class="ibm7 h3" text="Project Name: " marginLeft="8"></Label>
-          <Label class="ibm7 h3" text="{{ name }}" marginLeft="8"></Label>
-        </StackLayout>
-
+      <StackLayout orientation="horizontal">
+        <Label text="ชื่อโครงการ: "></Label>
+        <Label text="{{ title }}"></Label>
       </StackLayout>
-
-      <StackLayout row="2" colSpan="2">
-        <Button class="btn btn-primary" text="View questions" tap="onViewQuestions"></Button>
-        <Button class="btn btn-outlune" text="<< Go back" tap="goProject"></Button>
+      <StackLayout orientation="horizontal">
+        <Label text="ตั้งแต่: "></Label>
+        <Label class="ibm3" text="{{ created }}"></Label>
+        <View class="horizontal-line"></View>
       </StackLayout>
+      <StackLayout orientation="horizontal">
+        <Label text="อัพเดท: "></Label>
+        <Label class="ibm3" text="{{ updated }}"></Label>
+        <View class="horizontal-line"></View>
+      </StackLayout>
+    </StackLayout>
 
+    <StackLayout row="1" marginTop="10" class="container">
+      <Label class="ibm7 h3" text="รายละเอียด: "></Label>
+      <TextView autocapitalizationType="none">
+        <FormattedString>
+          <Span class="pdetail" text="{{ description === null ? '' : description }}" textWrap="true" marginLeft="8"></Span>
+        </FormattedString>
+      </TextView>
+    </StackLayout>
+
+    <GridLayout row="2" rows="*" columns="*, *">
+      <Button col="0" class="btn btn-primary" text="View questions" tap="onViewQuestions"></Button>
+      <Button col="1" class="btn btn-secondary" text="<< Go back" tap="goProject"></Button>
     </GridLayout>
-  </ScrollView>
+
+  </GridLayout>
 
 </Page>

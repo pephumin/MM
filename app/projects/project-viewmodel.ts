@@ -1,7 +1,7 @@
 import { Observable, ObservableArray } from '@nativescript/core';
 import { ProjectItem, ItemStatus, PrivacyLevel } from '~/common/items';
 import { LowerCase, SentenceCase, validateEmail } from "~/common/util";
-import { ProjectViewModelInstance } from '~/projects/instance'
+import { ProjectViewModelInstance } from '~/common/instance'
 import projectdata from '~/common/project_D.json';
 
 export class ProjectViewModel extends Observable {
@@ -20,14 +20,16 @@ export class ProjectViewModel extends Observable {
 
   constructor() {
     super();
-    this.set('goPrev', this.goPrev);
-    this.set('goNext', this.goNext);
+    // expose prev/next for the view so XML can bind tap handlers
+    this.set('goPrev', this.goPrev.bind(this));
+    this.set('goNext', this.goNext.bind(this));
     this.set('refresh', this.refresh);
     this.loadItems();
   }
 
-  public goPrev() { this.currentPage = this._currentPage - 1; }
-  public goNext() { this.currentPage = this._currentPage + 1; }
+  // navigation helpers bound to the UI
+  public goPrev() { if (this._currentPage > 1) { this.currentPage = this._currentPage - 1; } }
+  public goNext() { if (this._currentPage < this._totalPages) { this.currentPage = this._currentPage + 1; } }
 
   get items(): ObservableArray<ProjectItem> { return this._pagedItems; }
   get searchQuery(): string { return this._searchQuery; }
@@ -95,7 +97,7 @@ export class ProjectViewModel extends Observable {
     const pageItems = filtered.slice(start, stop);
     this._pagedItems.splice(0);
     this._pagedItems.push(...pageItems);
-    if (this.startItem !== start) { this.startItem = start; }
+    if (this.startItem !== start) { this.startItem = start + 1; }
     if (this.stopItem !== stop) { this.stopItem = stop; }
     this.notifyPropertyChange('items', this._pagedItems);
     this.notifyPropertyChange('currentPage', this._currentPage);

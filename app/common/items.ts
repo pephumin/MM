@@ -15,6 +15,7 @@ export enum QuestionType {
   H = "html",
   I = "radiogrouphtml",
   J = "checkboxhtml",
+  K = "dropdown"
 }
 
 export enum PrivacyLevel {
@@ -85,29 +86,21 @@ export interface ProjectItem {
 export interface Questions {
   id: number;
   name: string;
-  title: string | null;
-  type: QuestionType;
-  html: string | null;
-  accept: string | null;
-  items: { 
+  title?: string | null;
+  type?: string | null;
+  html?: string | null;
+  status?: ItemStatus;
+  accept?: string | AcceptType | null;
+  items?: { 
     name: string; 
-    title: string 
-  }[];
-  colCount: number | null;
-  columns: {
-    name: string;
-    title: string;
-    choices: { 
-      value: string; 
-      text: string 
-    }[];
-    isRequired: boolean;
-  }[]; 
-  choices: { 
+    title: string; 
+  }[] | null;
+  colCount?: number | null;
+  // columns may have varying shapes in the JSON; allow any[] for flexibility
+  columns?: any[] | null;
+  choices?: { 
     value: string; 
     text: string 
-  }[];
-  rateValues: { value: string; text: string }[];
-  status: ItemStatus;
-  acceptType: AcceptType;
+  }[] | null;
+  rateValues?: { value: string; text: string }[] | null;
 }

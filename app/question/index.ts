@@ -1,52 +1,25 @@
-import { action, EventData, ItemEventData, NavigatedData, Page, SearchBar, View } from '@nativescript/core'
-import { QuestionViewModel } from '~/question/question-viewmodel'
-import { Questions } from '~/common/items'
-import { QuestionViewModelInstance } from '~/question/question-instance'
 
-export function onNavigatingTo(args: NavigatedData) {
-  const page = <Page>args.object
+import { EventData, Page, SearchBar } from '@nativescript/core';
+import { QuestionViewModelInstance } from '~/common/instance';
+
+export function onNavigatingTo(args: EventData) {
+  const page = <Page>args.object;
+  if (!QuestionViewModelInstance.isLoaded) {
+    QuestionViewModelInstance.loadItems();
+  }
   page.bindingContext = QuestionViewModelInstance;
 }
 
-export function onItemTap(args: ItemEventData) {
-  const view = <View>args.view;
-  const page = <Page>view.page;
-  const tappedItem = <Questions>view.bindingContext;
-
-  page.frame.navigate({
-    moduleName: '~/question/questiondetail',
-    context: tappedItem,
-    animated: true,
-    transition: {
-      name: 'slide',
-      duration: 200,
-      curve: 'ease',
-    },
-  })
-}
-
 export function onSearchTextChanged(args: EventData) {
-  const searchBar = <SearchBar>args.object;
-  const page = searchBar.page;
-  const vm = page.bindingContext as QuestionViewModel;
-  vm.setSearchQuery(searchBar.text);
+  const sb = <SearchBar>args.object;
+  QuestionViewModelInstance.setSearchQuery(sb.text ?? '');
 }
 
 export function onSearchSubmit(args: EventData) {
-  const searchBar = <SearchBar>args.object;
-  const page = searchBar.page;
-  const vm = page.bindingContext as QuestionViewModel;
-  vm.setSearchQuery(searchBar.text);
+  const sb = <SearchBar>args.object;
+  QuestionViewModelInstance.setSearchQuery(sb.text ?? '');
 }
 
 export function onSearchClear(args: EventData) {
-  const page = (<View>args.object).page;
-  const vm = page.bindingContext as QuestionViewModel;
-  vm.setSearchQuery('');
-}
-
-export function onBackButtonTap(args: EventData) {
-  const view = args.object as View
-  const page = view.page as Page
-  page.frame.goBack()
+  QuestionViewModelInstance.setSearchQuery('');
 }
