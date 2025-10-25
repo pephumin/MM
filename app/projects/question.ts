@@ -1,79 +1,56 @@
-import { EventData, Frame, ItemEventData, NavigatedData, Page, SearchBar, View } from '@nativescript/core'
-import { QuestionViewModel } from '~/projects/question-viewmodel'
-import { QuestionViewModelInstance } from '~/projects/instance'
-import { Questions } from '~/common/items'
+import { EventData, Frame, ItemEventData, Page, SearchBar, View } from "@nativescript/core";
+import { QuestionViewModelInstance as qvm } from "~/common/instance";
+import type { Questions } from "~/common/items";
 
-let QviewModel: QuestionViewModel;
-
-export function onNavigatingTo(args: NavigatedData) {
-  const page = args.object as Page;
-  // if (!QuestionViewModelInstance.isLoaded) { QuestionViewModelInstance.loadItems(); QuestionViewModelInstance.isLoaded = true; }
-  if (!page.bindingContext) { page.bindingContext = QuestionViewModelInstance; }
-  if (QuestionViewModelInstance) { QviewModel = QuestionViewModelInstance; } 
-  else if (args.context) {
-    const { questions, currentIndex } = args.context;
-    QviewModel = new QuestionViewModel(questions, currentIndex);
-    Object.assign(QuestionViewModelInstance, QviewModel);
-  } 
-  else { console.error("No context or existing instance found"); return; }
-  page.bindingContext = QuestionViewModelInstance;
+export function onNavigatingTo(args: EventData) {
+  const page = <Page>args.object;
+  if (!qvm.isLoaded) { qvm.loadItems(); qvm.isLoaded = true; }
+  (qvm as any).applyFiltersAndSort?.();
+  console.log("✅ onNavigatingTo — paged items:", qvm.items?.length ?? 0);
+  page.bindingContext = qvm;
 }
 
-export function onNavigatedFrom() {
-  // Do nothing just to keep the viewmodel alive for back navigation
+let searchTimer: NodeJS.Timeout;
+
+export function onSearchTextChanged(args: EventData) {
+  const sb = args.object as SearchBar;
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    qvm.setSearchQuery(sb.text?.trim() ?? "");
+  }, 250);
 }
 
-export function goBack(args: EventData) {
-  const page = (args.object as View).page as Page;
-  page.frame.goBack();
+// export function onSearchTextChanged(args: EventData) {
+//   const sb = args.object as SearchBar;
+//   qvm.setSearchQuery(sb.text?.trim() ?? "");
+// }
+
+export function onSearchSubmit(args: EventData) {
+  const sb = args.object as SearchBar;
+  qvm.setSearchQuery(sb.text?.trim() ?? "");
+}
+
+export function onSearchClear() {
+  qvm.setSearchQuery("");
 }
 
 export function onItemTap(args: ItemEventData) {
-  const tappedItem = args.view.bindingContext as Questions;
-  const page = args.view.page;
+  const tappedItem = args.view?.bindingContext as Questions;
+  if (!tappedItem) return;
+  qvm.setCurrentQuestion(tappedItem.id);
 
-  if (!tappedItem) {
-    console.error('No tapped item found');
-    return;
-  }
-
-  const currentIndex = QuestionViewModelInstance.items.findIndex(
-    (q) => q.id === tappedItem.id
-  );
-
-  console.log(`Navigating to detail for: ${tappedItem.title} (index: ${currentIndex})`);
-
-  page.frame.navigate({
-    moduleName: '~/projects/questiondetail',
-    context: {
-      question: tappedItem,
-      index: currentIndex,
-    },
+  Frame.topmost().navigate({
+    moduleName: "projects/questiondetail",
+    context: { questionId: tappedItem.id },
     clearHistory: false,
     animated: true,
-    transition: {
-      name: 'slide',
-      duration: 200,
-      curve: 'ease',
-    },
+    transition: { name: "slide", duration: 200, curve: "ease" },
   });
 }
 
-export function onSearchTextChanged(args: EventData) {
-  const searchBar = args.object as SearchBar;
-  QviewModel.setSearchQuery(searchBar.text);
-}
-
-export function onSearchSubmit(args: EventData) {
-  const searchBar = args.object as SearchBar;
-  QviewModel.setSearchQuery(searchBar.text);
-}
-
-export function onSearchClear(args: EventData) {
-  QviewModel.setSearchQuery('');
-}
-
-export function onBackButtonTap(args: EventData) {
+export function showNextPage() { qvm.goNext(); }
+export function showPreviousPage() { qvm.goPrev(); }
+export function goBack(args: EventData) {
   const page = (args.object as View).page as Page;
   page.frame.goBack();
 }

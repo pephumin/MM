@@ -1,4 +1,4 @@
-import { DialogOptions, Dialogs, Frame, Observable } from "@nativescript/core";
+import { DialogOptions, Dialogs, Frame, Observable, Page, View } from "@nativescript/core";
 import { LoginManager, AccessToken } from '@nativescript/facebook';
 // import { GoogleSignin } from '@nativescript/google-signin';
 import { LowerCase, SentenceCase, validateEmail } from "~/common/util";
@@ -17,28 +17,39 @@ export class UserViewModel extends Observable {
     super();
   }
 
-  // public goToRegistration() { Frame.topmost().navigate("~/user/registration"); }
-  // public goToForgotPassword() { Frame.topmost().navigate("~/user/forgot-password"); }
-  // public goToLogin() { Frame.topmost().navigate("~/user/index"); }
-  // public goToHome() { Frame.topmost().navigate("~/home/index"); }
+  public goToRegistration() { Frame.topmost().navigate("~/user/registration"); }
+  public goToForgotPassword() { Frame.topmost().navigate("~/user/forgot-password"); }
+  public goToLogin() { Frame.topmost().navigate("~/user/index"); }
+  public goToHome() { Frame.topmost().navigate("~/home/index"); }
   // public loginWithFacebook() {}
 
-  get email(): string { return LowerCase(this._email); }
-  set email(value: string) {
+  // get email(): string { return LowerCase(this._email); }
+  // set email(value: string) {
+  //   const raw = (value ?? "").toString();
+  //   const trimmed = raw.trim();
+  //   const lower = LowerCase(trimmed);
+  //   console.log(`Email setter called — raw: "${raw}", lower: "${lower}"`);
+  //   if (this._email !== lower) { this._email = lower; }
+  //   if (lower.length === 0) { this.feedbackMessage = ""; } 
+  //   else if (!validateEmail(lower)) { this.feedbackMessage = "Invalid email format"; this.label1Visibility = "collapse"; } 
+  //   else { this.feedbackMessage = ""; this.label1Visibility = "visible";  }
+  // }
+  get email(): string { return this._email; }
+  set email(value: string) { 
+    this.set('_email', value.toLowerCase()); 
     const raw = (value ?? "").toString();
     const trimmed = raw.trim();
     const lower = LowerCase(trimmed);
     console.log(`Email setter called — raw: "${raw}", lower: "${lower}"`);
-    if (this._email !== lower) { this._email = lower; }
+    // if (this._email !== lower) { this._email = lower; }
     if (lower.length === 0) { this.feedbackMessage = ""; } 
     else if (!validateEmail(lower)) { this.feedbackMessage = "Invalid email format"; this.label1Visibility = "collapse"; } 
     else { this.feedbackMessage = ""; this.label1Visibility = "visible";  }
   }
   get password(): string { return this._password; }
   set password(value: string) { 
-    if (this._password !== value) { this._password = value; this.label2Visibility = "visible"; }
-    else { this.label2Visibility = "collapse";}
-    if (this.password === this.repassword) { this.label3Visibility = "visible"; } else { this.label3Visibility = "collapse"; }
+    if (this._password && this._password !== value) { this._password = value; this.label2Visibility = "visible"; } else { this.label2Visibility = "collapse";}
+    if (this._password && this._repassword && this.password === this.repassword) { this.label3Visibility = "visible"; } else { this.label3Visibility = "collapse"; }
   }
   get repassword(): string { return this._repassword; }
   set repassword(value: string) { 

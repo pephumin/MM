@@ -14,18 +14,7 @@ export function onLoginTextChanged(args: PropertyChangeData) {
   const updatedValue = LowerCase(args.value);
   console.log('New value:', updatedValue);
   if (textField.text !== args.value) { textField.text = updatedValue; }
-  // const searchBar = <SearchBar>args.object;
-  // const page = searchBar.page;
-  // const vm = page.bindingContext as HomeViewModel;
-  // vm.setSearchQuery(searchBar.text);
 }
 
-// export function onTextChange(args: PropertyChangeData) {
-//   const textField = args.object as TextField;
-//   console.log('TextField text changed:', textField.text);
-//   const updatedValue = LowerCase(args.value)
-//   console.log('New value:', updatedValue);
-//   if (textField.text !== args.value) { textField.text = updatedValue; }
-// }
 
 

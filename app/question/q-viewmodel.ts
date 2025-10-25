@@ -3,7 +3,7 @@ import { ItemStatus, PrivacyLevel, Questions } from '~/common/items';
 import { LowerCase, SentenceCase, UpperCase } from "~/common/util";
 import Questions77 from '~/common/question_77.json';
 
-export class QuestionViewModel extends Observable {
+export class QViewModel extends Observable {
   private _items: ObservableArray<Questions> = new ObservableArray<Questions>([]);
   private _pagedItems: ObservableArray<Questions> = new ObservableArray<Questions>([]);
   private _searchQuery: string = "";
