@@ -1,4 +1,4 @@
-import { EventData, Frame, NavigatedData, Page, View } from '@nativescript/core';
+import { EventData, Frame, NavigatedData, Page } from '@nativescript/core';
 import { QuestionViewModelInstance as qvm } from '~/common/instance';
 
 let pageRef: Page;
@@ -16,7 +16,7 @@ export function onNavigatingTo(args: NavigatedData) {
     qvm.setCurrentQuestion(Number(ctx.questionId));
   }
 
-  // ✅ Re-emit bindings every time this page is navigated to
+  // ✅ Re-emit bindings every time
   qvm.notifyPropertyChange('currentQuestion', qvm.currentQuestion);
   qvm.notifyPropertyChange('canGoNext', qvm.canGoNext);
   qvm.notifyPropertyChange('canGoPrev', qvm.canGoPrev);
@@ -31,6 +31,8 @@ export function showNextQuestion(_: EventData) {
   console.log('👉 next tapped');
   qvm.goNextQuestion();
   qvm.notifyPropertyChange('currentQuestion', qvm.currentQuestion);
+  qvm.notifyPropertyChange('canGoNext', qvm.canGoNext);
+  qvm.notifyPropertyChange('canGoPrev', qvm.canGoPrev);
 }
 
 export function showPreviousQuestion(_: EventData) {
@@ -38,20 +40,19 @@ export function showPreviousQuestion(_: EventData) {
   console.log('👈 prev tapped');
   qvm.goPreviousQuestion();
   qvm.notifyPropertyChange('currentQuestion', qvm.currentQuestion);
+  qvm.notifyPropertyChange('canGoNext', qvm.canGoNext);
+  qvm.notifyPropertyChange('canGoPrev', qvm.canGoPrev);
 }
 
 // --- Return to question list ---
 export function goQuestion(_: EventData) {
   console.log('🔙 Back to question list');
+  // ❌ DO NOT call qvm.off(...)
   pageRef.bindingContext = null;
 
-  // Important: do not clear qvm or remove its listeners
+  // ✅ Use goBack() to reuse the same page instance
   setTimeout(() => {
-    Frame.topmost().navigate({
-      moduleName: '~/projects/question',
-      clearHistory: false,
-      transition: { name: 'slideRight', duration: 120 },
-    });
+    Frame.topmost().goBack();
   }, 50);
 }
 
@@ -59,10 +60,9 @@ export function goQuestion(_: EventData) {
 export function goProject(_: EventData) {
   console.log('🏠 Going to project index');
 
-  // Only clear lightweight state — keep items and listeners intact
+  // ✅ Clear only lightweight state; leave listeners intact
   qvm._searchQuery = '';
   qvm._filteredQuestions = [];
-
   pageRef.bindingContext = null;
 
   Frame.topmost().navigate({
