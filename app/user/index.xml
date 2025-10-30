@@ -36,9 +36,9 @@
 
       <!-- Register / Forgot Links -->
       <StackLayout orientation="horizontal" horizontalAlignment="center" marginTop="10">
-        <Button text="Registration" tap="{{ goToRegistration }}" class="btn btn-link" />
+        <Button text="Registration" tap="goToRegistration" class="btn btn-link" />
         <Label text=" | " />
-        <Button text="Forgot Paasword" tap="{{ goToForgotPassword }}" class="btn btn-link" />
+        <Button text="Forgot Paasword" tap="goToForgotPassword" class="btn btn-link" />
       </StackLayout>
 
     </StackLayout>

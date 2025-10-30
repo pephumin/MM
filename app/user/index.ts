@@ -1,20 +1,35 @@
-import { EventData, Frame, Page, PropertyChangeData, TextField } from "@nativescript/core";
-import { UserViewModel } from "./user-viewmodel";
-import { UserViewModelInstance } from './user-instance'
-import { LowerCase } from "~/common/util";
+import { EventData, Frame, Page, View } from "@nativescript/core";
+import { UserViewModelInstance as uvm } from "~/common/instance";
 
 export function onNavigatingTo(args: EventData) {
-  const page = <Page>args.object;
-  page.bindingContext = UserViewModelInstance;
+  const page = args.object as Page;
+  page.bindingContext = uvm;
 }
 
-export function onLoginTextChanged(args: PropertyChangeData) {
-  const textField = args.object as TextField;
-  console.log('TextField text changed:', textField.text);
-  const updatedValue = LowerCase(args.value);
-  console.log('New value:', updatedValue);
-  if (textField.text !== args.value) { textField.text = updatedValue; }
+export function goToRegistration(args: EventData) {
+  const view = args.object as View;
+  const page = view.page as Page;
+
+  setTimeout(() => {
+    page.frame.navigate({
+      moduleName: "~/user/registration",
+      context: { email: uvm.email },
+      animated: true,
+      transition: { name: "slideLeft", duration: 150 },
+    });
+  }, 0);
 }
 
+export function goToForgotPassword(args: EventData) {
+  const view = args.object as View;
+  const page = view.page as Page;
 
-
+  setTimeout(() => {
+    page.frame.navigate({
+      moduleName: "~/user/forgot-password",
+      context: { email: uvm.email },
+      animated: true,
+      transition: { name: "slideLeft", duration: 150 },
+    });
+  }, 0);
+}
