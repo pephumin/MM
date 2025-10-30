@@ -38,9 +38,13 @@ export function onViewQuestions(args: EventData) {
   });
 }
 
-export function goProject(args: EventData) {
-  const view = args.object as View;
-  const page = view.page as Page;
-  if (!page.frame) { console.error('No frame found!'); return; }
-  page.frame.goBack();
+// export function goProject(args: EventData) {
+//   const view = args.object as View;
+//   const page = view.page as Page;
+//   if (!page.frame) { console.error('No frame found!'); return; }
+//   page.frame.goBack();
+// }
+
+export function goProject() {
+  Frame.topmost().navigate("~/projects/index");
 }

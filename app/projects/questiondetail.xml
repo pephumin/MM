@@ -139,7 +139,7 @@
         <Button class="btn btn-secondary" text="<<" row="0" col="1" tap="showPreviousQuestion" isEnabled="{{ canGoPrev }}"></Button>
         <Button class="btn btn-secondary" text=">>" row="0" col="2" tap="showNextQuestion" isEnabled="{{ canGoNext }}"></Button>
         <Button class="btn btn-primary" text="Back" row="1" col="1" tap="goQuestion" isEnabled="true"></Button>
-        <Button class="btn btn-primary" text="Home" row="1" col="2" tap="goHome" isEnabled="true"></Button>
+        <Button class="btn btn-primary" text="Home" row="1" col="2" tap="goProject" isEnabled="true"></Button>
       </GridLayout>
     </DockLayout>
 

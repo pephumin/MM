@@ -54,3 +54,41 @@ export function goBack(args: EventData) {
   const page = (args.object as View).page as Page;
   page.frame.goBack();
 }
+
+// export function goProject() {
+//   // 💣 Before clearing history, detach listeners from singleton
+//   qvm.off(Observable.propertyChangeEvent);
+//   qvm.isLoaded = false; // force reload next time
+//   qvm._filteredQuestions = [];
+//   qvm._searchQuery = "";
+//   qvm._items.splice(0);
+//   // 🧹 Cleanly unbind, but don't mutate qvm yet
+//   page.bindingContext = null;
+
+//   setTimeout(() => {
+//     console.log('🏠 Navigating home (safe clear)...');
+//     Frame.topmost().navigate({
+//       moduleName: "~/projects/index",
+//       clearHistory: true,
+//       transition: { name: "fade", duration: 150 },
+//     });
+//   }, 50);
+// }
+
+export function goProject() {
+  // 💣 Before clearing history, detach listeners from singleton
+  qvm.off(Observable.propertyChangeEvent);
+  qvm.isLoaded = false; // force reload next time
+  qvm._filteredQuestions = [];
+  qvm._searchQuery = "";
+  qvm._items.splice(0);
+
+  setTimeout(() => {
+    console.log('🏠 Navigating home (safe clear)...');
+    Frame.topmost().navigate({
+      moduleName: "~/projects/index",
+      clearHistory: true,
+      transition: { name: "fade", duration: 150 },
+    });
+  }, 50);
+}

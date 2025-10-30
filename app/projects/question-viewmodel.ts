@@ -216,13 +216,15 @@ export class QuestionViewModel extends Observable {
     };
   }
 
-  // --- Question navigation inside detail ---
+
   public goNextQuestion() {
     const list = this.activeQuestions.length ? this.activeQuestions : this._items;
     if (this._currentIndex < list.length - 1) {
       this._currentIndex++;
       this._currentId = Number(list[this._currentIndex].id);
       this.notifyPropertyChange("currentQuestion", this.currentQuestion);
+      this.notifyPropertyChange("canGoNext", this.canGoNext);
+      this.notifyPropertyChange("canGoPrev", this.canGoPrev);
     } else {
       console.warn("🚫 Already at last question");
     }
@@ -234,19 +236,10 @@ export class QuestionViewModel extends Observable {
       this._currentIndex--;
       this._currentId = Number(list[this._currentIndex].id);
       this.notifyPropertyChange("currentQuestion", this.currentQuestion);
+      this.notifyPropertyChange("canGoNext", this.canGoNext);
+      this.notifyPropertyChange("canGoPrev", this.canGoPrev);
     } else {
       console.warn("🚫 Already at first question");
-    }
-  }
-
-  public pauseReactivity() {
-    try {
-      this.isLoading = false
-      this._searchQuery = ''
-      this._pagedItems.splice(0)
-      console.log('⏸️ ViewModel reactivity paused for safe teardown.')
-    } catch (err) {
-      console.warn('⚠️ pauseReactivity failed:', err)
     }
   }
 
