@@ -16,24 +16,7 @@ export class UserViewModel extends Observable {
   constructor() {
     super();
   }
-
-  public goToRegistration() { Frame.topmost().navigate("~/user/registration"); }
-  public goToForgotPassword() { Frame.topmost().navigate("~/user/forgot-password"); }
-  public goToLogin() { Frame.topmost().navigate("~/user/index"); }
-  public goToHome() { Frame.topmost().navigate("~/home/index"); }
-  // public loginWithFacebook() {}
-
-  // get email(): string { return LowerCase(this._email); }
-  // set email(value: string) {
-  //   const raw = (value ?? "").toString();
-  //   const trimmed = raw.trim();
-  //   const lower = LowerCase(trimmed);
-  //   console.log(`Email setter called — raw: "${raw}", lower: "${lower}"`);
-  //   if (this._email !== lower) { this._email = lower; }
-  //   if (lower.length === 0) { this.feedbackMessage = ""; } 
-  //   else if (!validateEmail(lower)) { this.feedbackMessage = "Invalid email format"; this.label1Visibility = "collapse"; } 
-  //   else { this.feedbackMessage = ""; this.label1Visibility = "visible";  }
-  // }
+  
   get email(): string { return this._email; }
   set email(value: string) { 
     this.set('_email', value.toLowerCase()); 
