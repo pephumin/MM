@@ -1,4 +1,4 @@
-import { EventData, Frame, Page, View } from "@nativescript/core";
+import { EventData, Page, View } from "@nativescript/core";
 import { UserViewModelInstance as uvm } from "~/common/instance";
 
 export function onNavigatingTo(args: EventData) {

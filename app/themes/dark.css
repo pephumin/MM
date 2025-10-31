@@ -1,0 +1,6 @@
+/* app/themes/dark.css */
+@import './_variables.css';
+Page {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}

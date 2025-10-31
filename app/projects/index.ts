@@ -1,7 +1,7 @@
-import { EventData, ItemEventData, NavigatedData, Page, SearchBar, View } from '@nativescript/core'
-import { ProjectViewModel } from '~/projects/project-viewmodel'
-import { ProjectViewModelInstance } from '~/common/instance'
-import { ProjectItem } from '~/common/items'
+import { EventData, ItemEventData, NavigatedData, Page, SearchBar, View } from '@nativescript/core';
+import { ProjectViewModel } from '~/projects/project-viewmodel';
+import { ProjectViewModelInstance } from '~/common/instance';
+import { ProjectItem } from '~/common/items';
 
 export function onNavigatingTo(args: NavigatedData) {
   const page = <Page>args.object
@@ -44,3 +44,4 @@ export function onSearchClear(args: EventData) {
   const vm = page.bindingContext as ProjectViewModel;
   vm.setSearchQuery('');
 }
+
