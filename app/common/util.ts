@@ -1,4 +1,16 @@
-import { Frame, Observable, ObservableArray } from "@nativescript/core";
+import { Application, Frame, Observable, ObservableArray } from "@nativescript/core";
+import Theme from '@nativescript/theme';
+
+let isDark = false;
+
+export function toggleTheme() {
+  isDark = !isDark;
+  const theme = isDark ? 'dark' : 'light';
+  console.log(`🎨 Switching to ${theme} theme`);
+
+  Theme.setMode(isDark ? Theme.Dark : Theme.Light);
+  Application.setCssFileName(`themes/${theme}.css`);
+}
 
 export function goTo(page: string) {
   Frame.topmost().navigate(page);

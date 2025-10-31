@@ -205,15 +205,34 @@ export class QuestionViewModel extends Observable {
     console.log(`📊 Page ${this._currentPage}/${this._totalPages} | Showing ${this._startItem}-${this._stopItem} of ${this._totalItems}`);
   }
 
+  // private processItem(item: any): Questions {
+  //   return {
+  //     ...item,
+  //     id: Number(item.id),
+  //     title: String(item.title || '').trim(),
+  //     name: SentenceCase(String(item.name || '')),
+  //     type: String(item.type || '').trim(),
+  //     colCount: Number(item.colCount || 0)
+  //   };
+  // }
+
   private processItem(item: any): Questions {
-    return {
+    const processed: Questions = {
       ...item,
       id: Number(item.id),
       title: String(item.title || '').trim(),
-      name: SentenceCase(String(item.name || '')),
+      name: String(item.name || ''),
       type: String(item.type || '').trim(),
-      colCount: Number(item.colCount || 0)
     };
+
+    if (processed.type === 'matrixdropdown' && Array.isArray(processed.columns)) {
+      processed.columns = processed.columns.map(col => ({
+        ...col,
+        selectedIndex: col.selectedIndex ?? 0,
+        choiceTexts: (col.choices || []).map((c: any) => String(c.text || '')),
+      }));
+    }
+    return processed;
   }
 
 

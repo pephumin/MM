@@ -1,0 +1,14 @@
+/* app/themes/_variables.css */
+:root {
+  --color-primary: #1565c0;
+  --color-secondary: #42a5f5;
+  --color-background: #ffffff;
+  --color-text: #111111;
+}
+
+[data-theme="dark"] {
+  --color-primary: #90caf9;
+  --color-secondary: #1e88e5;
+  --color-background: #121212;
+  --color-text: #eeeeee;
+}

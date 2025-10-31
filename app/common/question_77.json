@@ -83,7 +83,8 @@
                         "text": "ผู้หญิง"
                     }
                 ],
-                "isRequired": true
+                "isRequired": true,
+                "selectedIndex": 1
             },
             {
                 "name": "Age",
@@ -106,7 +107,8 @@
                         "text": "55 ปีหรือมากกว่า"
                     }
                 ],
-                "isRequired": true
+                "isRequired": true,
+                "selectedIndex": 2
             },
             {
                 "name": "SES",
@@ -129,7 +131,8 @@
                         "text": "SES-D (7,500-17,999 บาท)"
                     }
                 ],
-                "isRequired": true
+                "isRequired": true,
+                "selectedIndex": 0
             }
         ],
         "name": "Demographic",
